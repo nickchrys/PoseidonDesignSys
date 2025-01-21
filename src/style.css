@@ -1,11 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
+  /*-Colors-*/
+  --gradient-bg-color: #4c365d;
+  --pos-blue: #566688;
+  --pos-grey: #D9D9D9;
+  --pos-yellow: #FEB96E;
+  --pos-green: #78B97A;
+  --pos-red: #C9403B;
+  --bg-color: #FFFFE2;
+  --inner-shadow-color: #EEEED2;
+  --top-gradient: linear-gradient(158deg, var(--gradient-bg-color) 0%, var(--pos-blue) 100%);
+  --side-gradient: linear-gradient(79deg, var(--pos-blue) 61%, var(--gradient-bg-color) 100%);
+  --drop-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #ffffffde;
+  background: var(--gradient-bg-color);
+  background: var(--top-gradient);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,6 +35,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -30,32 +48,102 @@ body {
   min-height: 100vh;
 }
 
+.displayDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 400px;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+h3 {
+  font-weight: 300;
 }
+
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.card {
-  padding: 2em;
+/*Come back to this style for Text Field*/
+.loginButton {
+  background-color: var(--pos-grey);
+  color: black;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 20px;
+  border-style: none;
+  height: 50px;
+  width: 185px;
+  box-shadow: var(--drop-shadow);
+}
+
+.gradButton {
+  background: var(--gradient-bg-color);
+  background: var(--side-gradient);
+  color: var(--pos-yellow);
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  border-style: none;
+  height: 58px;
+  width: 285px;
+  box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.gradButtonSmall {
+  background: var(--gradient-bg-color);
+  background: var(--side-gradient);
+  color: var(--pos-yellow);
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  border-style: none;
+  height: 27px;
+  width: 102px;
+  box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.dropdownButton {
+  background-color: var(--pos-grey);
+  color: black;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  border-style: none;
+  height: 29px;
+  width: 83px;
+  box-shadow: var(--drop-shadow);
+}
+
+.textField {
+  background-color: var(--pos-grey);
+  background-repeat: no-repeat;
+  color: black;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  border-radius: 20px;
+  border-style: none;
+  height: 60px;
+  width: 330px;
+  max-width: 330px;
+  box-shadow: var(--drop-shadow);
+  padding-left: 5%;
+  box-sizing: border-box;
 }
 
 #app {
@@ -70,9 +158,11 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
