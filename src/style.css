@@ -17,7 +17,9 @@
   --inner-shadow-color: #EEEED2;
   --top-gradient: linear-gradient(158deg, var(--gradient-bg-color) 0%, var(--pos-blue) 100%);
   --side-gradient: linear-gradient(79deg, var(--pos-blue) 61%, var(--gradient-bg-color) 100%);
-  --drop-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --block-gradient: linear-gradient(85deg, var(--gradient-bg-color) 12%, #566688cc 52%, #00000000 100%);
+  --drop-shadow: 0 4px 4px 0px #00000040;
+  --inner-shadow: inset 0px 4px 4px 0px #00000040;
 
   color-scheme: light dark;
   color: #ffffffde;
@@ -142,8 +144,58 @@ button:focus-visible {
   width: 330px;
   max-width: 330px;
   box-shadow: var(--drop-shadow);
-  padding-left: 5%;
   box-sizing: border-box;
+  padding: 5%;
+}
+
+.eventBlock {
+  position: relative;
+  width: 334.05px;
+  max-width: 334.05px;
+  height: 129px;
+  background: var(--block-gradient), url('https://tripspi-prod.imgix.net/blogs/vG3JS5lXOE/d2aJg-luis-fernando-felipe-alves-9mckk9YMglY-unsplash.jpg?ixlib=js-2.3.2&w=1024&auto=compress&fit=crop&s=f13ee1017771d50b761d3a2170de100a');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  border-style: none;
+
+}
+
+.eventBlockImage {
+
+}
+
+.eventBlockContent {
+
+}
+
+.eventBlockDetails {
+  position: absolute;
+  text-align: left;
+  left: 25px;
+  bottom: 22px;
+}
+
+.eventBlockDetails h2,
+.eventBlockDetails h4 {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;;
+  font-size: 24px;
+  font-weight: 400;
+  margin: -6px;
+  padding: 0px;
+}
+
+.eventBlockDetails h4 {
+  font-size: 20px;
+}
+
+.eventContainer {
+  width: 334.05px;
+  max-width: 334.05px;
+  padding: 5px;
+  background-color: var(--inner-shadow-color);
+  border-radius: 10px;
+  box-shadow: var(--inner-shadow);
 }
 
 #app {

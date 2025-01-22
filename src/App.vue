@@ -1,6 +1,7 @@
 <script setup>
 import PButton from './components/PButton.vue'
 import PTextField from './components/PTextField.vue'
+import PEventBlock from './components/PEventBlock.vue'
 import './style.css'
 </script>
 
@@ -28,6 +29,17 @@ import './style.css'
       <h3>Text Field</h3>
       <PTextField class="textField" label="Enter Username" />
     </div>
+
+    <div>
+      <h2>PEventBlock</h2>
+      <h3>EventFull</h3>
+      <div class="eventContainer">
+        <PEventBlock class="eventBlock" organization="Organization" event="Event 1" :startDate="new Date(2025-10-5)"
+          :endDate="new Date(2025-10-12)"
+          bgImage="https://tripspi-prod.imgix.net/blogs/vG3JS5lXOE/d2aJg-luis-fernando-felipe-alves-9mckk9YMglY-unsplash.jpg?ixlib=js-2.3.2&w=1024&auto=compress&fit=crop&s=f13ee1017771d50b761d3a2170de100a" />
+      </div>
+    </div>
+
   </div>
 
 
