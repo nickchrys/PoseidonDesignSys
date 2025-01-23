@@ -2,6 +2,7 @@
 import PButton from './components/PButton.vue'
 import PTextField from './components/PTextField.vue'
 import PEventBlock from './components/PEventBlock.vue'
+import PFlight from './components/PFlight.vue'
 import './style.css'
 </script>
 
@@ -32,11 +33,18 @@ import './style.css'
 
     <div>
       <h2>PEventBlock</h2>
-      <h3>EventFull</h3>
       <div class="eventContainer">
-        <PEventBlock class="eventBlock" organization="Organization" event="Event 1" :startDate="new Date(2025-10-5)"
-          :endDate="new Date(2025-10-12)"
-          bgImage="https://tripspi-prod.imgix.net/blogs/vG3JS5lXOE/d2aJg-luis-fernando-felipe-alves-9mckk9YMglY-unsplash.jpg?ixlib=js-2.3.2&w=1024&auto=compress&fit=crop&s=f13ee1017771d50b761d3a2170de100a" />
+        <PEventBlock class="eventBlock" organization="Organization" event="Event 1" :startDate="new Date('2025-11-8')"
+          :endDate="new Date('2025-11-12')"
+          bgImage='https://images.unsplash.com/photo-1556743595-0c9952ae2645?q=80&w=2007&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' />
+      </div>
+    </div>
+
+    <div>
+      <h2>PFlight</h2>
+      <div class="eventContainer">
+        <PFlight class="flight-block" :flightDate="new Date('2024-11-7')" flightDepTime="12:30" flightArrTime="14:45" flightRoute="EWR-ROC" seatNumber="3B" flightType="Nonstop" flightGate="41C" flightClass="Economy" price="156"
+        airline="United"/>
       </div>
     </div>
 
@@ -44,20 +52,3 @@ import './style.css'
 
 
 </template>
-
-<style>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>

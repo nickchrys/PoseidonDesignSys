@@ -1,57 +1,76 @@
 <script setup>
 import { ref, computed } from 'vue'
+import moreIcon from '../assets/img/more.svg'
 
 const props = defineProps({
     label: String,
     organization: {
-        organization: String,
+        type: String,
         default: 'organization'
     },
     event: {
-        event: String,
+        type: String,
         default: 'event'
     },
     startDate: {
-        startDate: new Date(),
+        type: Date,
         default: new Date(2025, 1, 1)
     },
     endDate: {
-        startDate: new Date(),
+        type: Date,
         default: new Date(2025, 1, 1)
     },
     bgImage: {
-        bgImage: String,
+        type: String,
         default: 'bgImage'
     },
     class: String
 });
 
-const formattedStartDate = computed(() => { 
-    return props.startDate.toLocaleDateString('en-US', {
-    month: 'short',
-    day: 'numeric',
-    });
+const getOrdIndicator = (day) => {
+    if (day > 3 && day < 21) return 'th';
+    switch (day % 10) {
+        case 1: return 'st';
+        case 2: return 'nd';
+        case 3: return 'rd';
+        default: return 'th';
+    }
+}
+
+const formattedStartDate = computed(() => {
+    const day = props.startDate.getDate();
+    const month = props.startDate.toLocaleDateString('en-US', { month: 'short' });
+    return `${month}. ${day}${getOrdIndicator(day)}`;
 });
 
-const formattedEndDate = computed(() => { 
-    return props.endDate.toLocaleDateString('en-US', {
-    month: 'short',
-    day: 'numeric',
-    });
+const formattedEndDate = computed(() => {
+    const day = props.endDate.getDate();
+    const month = props.endDate.toLocaleDateString('en-US', { month: 'short' });
+    return `${month}. ${day}${getOrdIndicator(day)}`;
 });
-//style="{ backgroundImage: `url(${bgImage})` }"
+
 const input = ref('')
 </script>
 
 <template>
     <div :class='class'>
-        <div class="eventBlockImage">
-            <div class="eventBlockContent">
-                <h3>{{ formattedStartDate }} - {{ formattedEndDate }}</h3>
-                <div class="eventBlockDetails">
-                    <h2>{{ organization }}</h2>
-                    <h4>{{ event }}</h4>
-                </div>
+        <div class="eventBlock" :style="{
+            background: `var(--block-gradient), url(${props.bgImage})`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
+        }">
+            <svg class="more-icon" xmlns="http://www.w3.org/2000/svg" width="29" height="5" viewBox="-0.5 -0.5 30 6">
+                <g fill="#D9D9D9">
+                    <circle cx="2.5" cy="2.5" r="2.5" stroke="black" stroke-width="0.3"/>
+                    <circle cx="14.5" cy="2.5" r="2.5" stroke="black" stroke-width="0.3"/>
+                    <circle cx="26.5" cy="2.5" r="2.5" stroke="black" stroke-width="0.3"/>
+                </g>
+            </svg>
+            <h3 class="event-block-dates">{{ formattedStartDate }} - {{ formattedEndDate }}</h3>
+            <div class="eventBlockDetails">
+                <h2>{{ organization }}</h2>
+                <h4>{{ event }}</h4>
             </div>
         </div>
     </div>

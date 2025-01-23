@@ -148,37 +148,32 @@ button:focus-visible {
   padding: 5%;
 }
 
+/* This can be used for the Event Header as well */
 .eventBlock {
   position: relative;
   width: 334.05px;
   max-width: 334.05px;
   height: 129px;
-  background: var(--block-gradient), url('https://tripspi-prod.imgix.net/blogs/vG3JS5lXOE/d2aJg-luis-fernando-felipe-alves-9mckk9YMglY-unsplash.jpg?ixlib=js-2.3.2&w=1024&auto=compress&fit=crop&s=f13ee1017771d50b761d3a2170de100a');
-  background-size: cover;
-  background-repeat: no-repeat;
   border-radius: 5px;
   border-style: none;
+  box-shadow: var(--drop-shadow);
 
 }
 
-.eventBlockImage {
-
-}
-
-.eventBlockContent {
-
+.event-block-dates {
+  font-size: 14px;
+  padding-top: 8px;
 }
 
 .eventBlockDetails {
   position: absolute;
   text-align: left;
-  left: 25px;
-  bottom: 22px;
+  left: 22px;
+  bottom: 19px;
 }
 
 .eventBlockDetails h2,
 .eventBlockDetails h4 {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;;
   font-size: 24px;
   font-weight: 400;
   margin: -6px;
@@ -187,6 +182,7 @@ button:focus-visible {
 
 .eventBlockDetails h4 {
   font-size: 20px;
+  padding-left: 1px;
 }
 
 .eventContainer {
@@ -196,6 +192,100 @@ button:focus-visible {
   background-color: var(--inner-shadow-color);
   border-radius: 10px;
   box-shadow: var(--inner-shadow);
+}
+
+.more-icon {
+  position: absolute;
+  right: 11px;
+  top: 11px;
+  color: var(--pos-grey);
+  display: block;
+}
+
+.flight-block {
+  height: 102px;
+  width: 335px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--pos-grey);
+  box-shadow: var(--drop-shadow);
+  border-radius: 6px;
+  color: black;
+
+}
+
+.airline-logo {
+  height: 58px;
+  width: 58px;
+}
+
+.airline-text {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.airline {
+  margin-left: 15px;
+  margin-right: 15px;
+  height: 82px;
+}
+
+/*Come back to fix spacing */
+.flight-info-mid-content {
+  width: 151px;
+  text-align: left;
+}
+
+.date-time-container {
+  position: relative;
+}
+
+.flight-details {
+  display: flex;
+  flex-wrap: wrap;
+  width: 139px;
+  padding-left: 5px;
+}
+
+.flight-date {
+  font-size: 20px;
+  font-weight: 450;
+  margin: 0;
+}
+
+.flight-details h5 {
+  flex: 1 1 35%;
+  margin: 0;
+  font-weight: 450;
+  font-size: 13px;
+}
+
+.flight-time {
+  font-size: 16px;
+  font-weight: 450;
+  margin: 0;
+}
+
+.flight-class {
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.flight-price {
+  color: var(--pos-green);
+  font-size: 14px;
+  margin: 0;
+}
+
+.class-price-container {
+  display: flex;
+  flex-direction: column;
+  height: 33px;
+  width: 59px;
+  padding-left: 15px;
 }
 
 #app {
