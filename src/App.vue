@@ -34,7 +34,10 @@ import './style.css'
     <div>
       <h2>PEventBlock</h2>
       <div class="eventContainer">
-        <PEventBlock class="eventBlock" organization="Organization" event="Event 1" :startDate="new Date('2025-11-8')"
+        <PEventBlock class="eventBlock" 
+          organization="Organization" 
+          event="Event 1" 
+          :startDate="new Date('2025-11-8')"
           :endDate="new Date('2025-11-12')"
           bgImage='https://images.unsplash.com/photo-1556743595-0c9952ae2645?q=80&w=2007&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' />
       </div>
@@ -43,8 +46,9 @@ import './style.css'
     <div>
       <h2>PFlight</h2>
       <div class="eventContainer">
-        <PFlight class="flight-block" :flightDate="new Date('2024-11-7')" flightDepTime="12:30" flightArrTime="14:45" flightRoute="EWR-ROC" seatNumber="3B" flightType="Nonstop" flightGate="41C" flightClass="Economy" price="156"
-        airline="United"/>
+        <PFlight class="flight-block" :flightDate="new Date('2024-11-7')" flightDepTime="12:30" flightArrTime="14:45"
+          flightRoute="EWR-ROC" seatNumber="3B" flightType="Nonstop" flightGate="41C" flightClass="Economy" price="156"
+          airline="United" />
       </div>
     </div>
 
