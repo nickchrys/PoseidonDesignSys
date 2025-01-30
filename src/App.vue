@@ -3,6 +3,7 @@ import PButton from './components/PButton.vue'
 import PTextField from './components/PTextField.vue'
 import PEventBlock from './components/PEventBlock.vue'
 import PFlight from './components/PFlight.vue'
+import PProfilePic from './components/PProfilePic.vue'
 import './style.css'
 </script>
 
@@ -50,6 +51,25 @@ import './style.css'
           flightRoute="EWR-ROC" seatNumber="3B" flightType="Nonstop" flightGate="41C" flightClass="Economy" price="156"
           airline="United" />
       </div>
+    </div>
+
+    <div>
+      <h2>PProfilePic</h2>
+      <div>
+        <PProfilePic class="profile-pic-small" profileImage='https://media.licdn.com/dms/image/v2/D5603AQH6HnVE-AYPnw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1669255177815?e=1743638400&v=beta&t=6G9Svq9PfuMXtPFzi6KCU2Ksitp_FFvS9z9jrm1o1PY'/>
+        <PProfilePic class="profile-pic-big" profileImage='https://media.licdn.com/dms/image/v2/D5603AQH6HnVE-AYPnw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1669255177815?e=1743638400&v=beta&t=6G9Svq9PfuMXtPFzi6KCU2Ksitp_FFvS9z9jrm1o1PY'/>
+      </div>
+    </div>
+
+    <div>
+      <h2>PEventHeader</h2>
+    
+        <PEventBlock class="event-header" 
+          organization="Organization" 
+          event="Event 1" 
+          :startDate="new Date('2025-11-8')"
+          :endDate="new Date('2025-11-12')"
+          bgImage='https://images.unsplash.com/photo-1556743595-0c9952ae2645?q=80&w=2007&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' />
     </div>
 
   </div>
