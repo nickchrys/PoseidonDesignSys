@@ -1,6 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
-import moreIcon from '../assets/img/more.svg'
+import { computed } from 'vue'
 
 const props = defineProps({
     label: String,
@@ -49,7 +48,6 @@ const formattedEndDate = computed(() => {
     return `${month}. ${day}${getOrdIndicator(day)}`;
 });
 
-const input = ref('')
 </script>
 
 <template>

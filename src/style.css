@@ -359,6 +359,69 @@ h3 {
   object-fit: cover;
 }
 
+.finance-block {
+  height: 155px;
+  width: 335px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 6px;
+  background-color: var(--pos-grey);
+  box-shadow: var(--drop-shadow);
+  color: black;
+}
+
+.finance-block h1 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.finance-block h2 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.finance-block h3 {
+  font-size: 13px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.finance-button-pic {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 11px;
+  padding-top: 12px;
+}
+
+.finance-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-top: 17px;
+  padding-left: 10px;
+  text-align: left;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.mail-icon {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.phone-icon {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.finance-icon .icon-{
+  fill: var(--gradient-bg-color);
+}
+
 #app {
   max-width: 1280px;
   margin: 0 auto;

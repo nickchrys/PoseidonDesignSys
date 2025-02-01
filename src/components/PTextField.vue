@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue'
 
 defineProps({
     label: String,
@@ -10,7 +9,6 @@ defineProps({
     class: String
 })
 
-const input = ref('')
 </script>
 
 <template>
