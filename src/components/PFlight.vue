@@ -47,7 +47,10 @@ const props = defineProps({
         type: String,
         default: ''
     },
-    class: String
+    design: {
+        type: String,
+        default: 'default',
+    }
 });
 
 const getOrdIndicator = (day) => {
@@ -77,38 +80,33 @@ const formatFlightDate = computed(() => {
     return `${weekday}, ${month}. ${day}${ordIndicator}`;
 });
 
-
-
 </script>
 
 <template>
 
-    <div :class="class">
-        <div class="flight-block">
-            <div class="airline">
-                <img class="airline-logo" :src="`src/assets/img/AirlineLogos/${ props.airline }.png `" alt="Airline Logo" />
-                <h5 class="airline-text">{{ props.airline }}</h5>
+    <div :class="design">
+        <div class="p-flight__airline">
+            <img class="p-flight__airline-logo" :src="`src/assets/img/AirlineLogos/${airline}.png `"
+                alt="Airline Logo" />
+            <h5 class="p-flight__airline-text">{{ airline }}</h5>
+        </div>
+        <div class="flight-info-mid-content">
+            <div class="date-time-container">
+                <h5 class="p-flight__date">{{ formatFlightDate }}</h5>
+                <h5 class="p-flight__time">{{ formatTime(flightDepTime) }} - {{ formatTime(flightArrTime)
+                    }}
+                </h5>
             </div>
-            <div class="flight-info-mid-content">
-                <div class="date-time-container">
-                    <h5 class="flight-date">{{ formatFlightDate }}</h5>
-                    <h5 class="flight-time">{{ formatTime(props.flightDepTime) }} - {{ formatTime(props.flightArrTime)
-                        }}
-
-                    </h5>
-                </div>
-                <div class="flight-details">
-                    <h5>{{ props.flightRoute }}</h5>
-                    <h5>Seat {{ props.seatNumber }}</h5>
-                    <h5>{{ props.flightType }}</h5>
-                    <h5>Gate {{ props.flightGate }}</h5>
-                </div>
-
+            <div class="p-flight__details">
+                <h5>{{ flightRoute }}</h5>
+                <h5>Seat {{ seatNumber }}</h5>
+                <h5>{{ flightType }}</h5>
+                <h5>Gate {{ flightGate }}</h5>
             </div>
-            <div class="class-price-container">
-                <h5 class="flight-class">{{ props.flightClass }}</h5>
-                <h5 class="flight-price">${{ props.price }}</h5>
-            </div>
+        </div>
+        <div class="class-price-container">
+            <h5 class="p-flight__class">{{ flightClass }}</h5>
+            <h5 class="p-flight__price">${{ price }}</h5>
         </div>
     </div>
 

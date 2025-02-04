@@ -23,8 +23,17 @@ const props = defineProps({
         type: String,
         default: 'bgImage'
     },
-    class: String
+    design: {
+    type: String,
+    default: 'default',
+  }
 });
+
+  const base = 'p-event';
+  const giveDesign = computed(() => {
+    const design = props.design !== 'default' ? `${base}--${props.design}` : base;
+    return [design]
+  })
 
 const getOrdIndicator = (day) => {
     if (day > 3 && day < 21) return 'th';
@@ -51,13 +60,13 @@ const formattedEndDate = computed(() => {
 </script>
 
 <template>
-    <div :class='class' :style="{
-        background: `var(--block-gradient), url(${props.bgImage})`,
+    <div :class='giveDesign' :style="{
+        background: `var(--gradient), url(${props.bgImage})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center'
     }">
-        <svg class="back-icon" v-if="props.class === 'event-header'" xmlns="http://www.w3.org/2000/svg" width="16"
+        <svg class="back-icon" v-if="giveDesign.includes('p-event--header')" xmlns="http://www.w3.org/2000/svg" width="16"
             height="32" viewBox="0 0 16 32">
             <path fill="currentColor" fill-rule="evenodd"
                 d="m3.343 12l7.071 7.071L9 20.485l-7.778-7.778a1 1 0 0 1 0-1.414L9 3.515l1.414 1.414z" />
@@ -69,8 +78,8 @@ const formattedEndDate = computed(() => {
                 <circle cx="26.5" cy="2.5" r="2.5" stroke="black" stroke-width="0.3" />
             </g>
         </svg>
-        <h3 class="event-block-dates">{{ formattedStartDate }} - {{ formattedEndDate }}</h3>
-        <div class="eventBlockDetails">
+        <h3 class="p-event__dates">{{ formattedStartDate }} - {{ formattedEndDate }}</h3>
+        <div class="p-event__details">
             <h2>{{ organization }}</h2>
             <h4>{{ event }}</h4>
         </div>
