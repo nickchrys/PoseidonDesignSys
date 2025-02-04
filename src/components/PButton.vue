@@ -14,7 +14,12 @@ const props = defineProps({
   design: {
     type: String,
     default: 'default',
-    validator: (value) => ['default', 'login', 'gradient', 'gradient-small', 'dropdown'].includes(value)
+    validator: (value) => ['default', 'login', 'gradient', 'gradient-small', 'dropdown', 'shop'].includes(value)
+  },
+  price: {
+    type: Number,
+    default: 0,
+    required: false
   },
   class: {
     type: String,
@@ -32,5 +37,6 @@ const props = defineProps({
 </script>
 
 <template>
-  <button :class='giveDesign'>{{ label }}</button>
+  <button v-if="giveDesign.includes('p-button--shop')" :class='giveDesign'>{{ label }} <br> {{ price }}</button>
+  <button v-else :class='giveDesign'>{{ label }}</button>
 </template>

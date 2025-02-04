@@ -29,15 +29,19 @@ import './style.css'
     </div>
 
     <div>
+      <p>design="shop"</p>
+      <PButton design="shop" label="Buy" />
+    </div>
+
+    <div>
       <h2>PDropDown</h2>
       <div class="p-dropdown__container">
         <PDropDown design="p-dropdown" dropDownLabel="Airlines" :options="['United', 'Delta', 'American', 'Spirit']" />
         <PDropDown design="p-dropdown" dropDownLabel="Price" :options="['Lowest', 'Highest']" />
+        <PDropDown design="p-dropdown" dropDownLabel="Time" :options="['Earliest', 'Latest']" />
+        <PDropDown design="p-dropdown" dropDownLabel="Class" :options="['Economy', 'Business', 'First']" />
       </div>
     </div>
-
-    <p>design="shop"</p>
-    
 
     <div>
       <h2>PTextField</h2>
@@ -58,19 +62,24 @@ import './style.css'
         :endDate="new Date('2025-11-12')"
         bgImage='https://images.unsplash.com/photo-1556743595-0c9952ae2645?q=80&w=2007&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' />
     </div>
-    
+
     <p>design="admin"</p>
     <p>design="finance"</p>
 
     <div>
       <h2>PFlight</h2>
       <div class="p-event__container">
-        <PFlight design="p-flight" :flightDate="new Date('2024-11-7')" flightDepTime="12:30" flightArrTime="14:45"
-          flightRoute="EWR-ROC" seatNumber="3B" flightType="Nonstop" flightGate="41C" flightClass="Economy" :price=156
-          airline="United" />
+        <PFlight design="block" :flightDate="new Date('2024-11-7')" flightDepTime="12:30" flightArrTime="14:45"
+          origin="EWR" destination="ROC" seatNumber="3B" flightType="Nonstop" flightGate="41C" flightClass="Economy"
+          :price=156 airline="United" />
       </div>
     </div>
     <p>design="shop"</p>
+    <div class="p-event__container">
+      <PFlight design="shop" :flightDate="new Date('2024-11-7')" flightDepTime="12:30" flightArrTime="14:45"
+        origin="EWR" destination="ROC" seatNumber="3B" flightType="Nonstop" flightGate="41C" flightClass="Economy"
+        :price=156 airline="United" />
+    </div>
     <p>design="finance"</p>
 
     <div>
@@ -78,10 +87,10 @@ import './style.css'
       <div>
         <p>design="small"</p>
         <PProfilePic design="small"
-          profileImage='https://media.licdn.com/dms/image/v2/D5603AQH6HnVE-AYPnw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1669255177815?e=1743638400&v=beta&t=6G9Svq9PfuMXtPFzi6KCU2Ksitp_FFvS9z9jrm1o1PY' />
+          profileImage='https://m.media-amazon.com/images/M/MV5BYzQ1ZDljZGEtNTliZC00ODkyLTgxODctNDQxNDRiZmI3ZmMyXkEyXkFqcGc@._V1_.jpg' />
         <p>design="big"</p>
         <PProfilePic design="big"
-          profileImage='https://media.licdn.com/dms/image/v2/D5603AQH6HnVE-AYPnw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1669255177815?e=1743638400&v=beta&t=6G9Svq9PfuMXtPFzi6KCU2Ksitp_FFvS9z9jrm1o1PY' />
+          profileImage='https://m.media-amazon.com/images/M/MV5BYzQ1ZDljZGEtNTliZC00ODkyLTgxODctNDQxNDRiZmI3ZmMyXkEyXkFqcGc@._V1_.jpg' />
       </div>
     </div>
 
@@ -89,10 +98,8 @@ import './style.css'
       <h2>PFinanceBlock</h2>
       <PFinanceBlock design="p-finance" name="Timothy Wagner" jobTitle="Finance Manager" email="TWagner49@gmail.com"
         phoneNum="246-123-5124"
-        profileImage="https://media.licdn.com/dms/image/v2/D5603AQH6HnVE-AYPnw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1669255177815?e=1743638400&v=beta&t=6G9Svq9PfuMXtPFzi6KCU2Ksitp_FFvS9z9jrm1o1PY" />
+        profileImage="https://m.media-amazon.com/images/M/MV5BYzQ1ZDljZGEtNTliZC00ODkyLTgxODctNDQxNDRiZmI3ZmMyXkEyXkFqcGc@._V1_.jpg" />
     </div>
-
-
 
   </div>
 
