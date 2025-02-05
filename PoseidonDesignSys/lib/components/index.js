@@ -1,4 +1,4 @@
-export { default as PButton } from './PButton/PButton.vue'
+export { default as PButton } from './PButton.vue'
 export { default as PDropDown } from './PDropDown.vue'
 export { default as PEvent } from './PEvent.vue'
 export { default as PFinanceBlock } from './PFinanceBlock.vue'

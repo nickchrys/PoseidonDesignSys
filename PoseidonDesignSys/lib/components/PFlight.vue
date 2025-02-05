@@ -55,10 +55,6 @@ const props = defineProps({
         type: String,
         default: 'Airline'
     },
-    airlineLogo: {
-        type: String,
-        default: ''
-    },
     design: {
         type: String,
         default: 'default',
@@ -98,14 +94,17 @@ const formatFlightDate = computed(() => {
     return `${weekday}, ${month}. ${day}${ordIndicator}`;
 });
 
+const airlineLogo = computed(() => {
+    return `Poseidon-Design-System/PoseidonDesignSys/lib/assets/img/AirlineLogos/${props.airline}.png`;
+});
+
 </script>
 
 <template>
 
     <div :class="giveDesign">
         <div class="p-flight__airline">
-            <img class="p-flight__airline-logo" :src="`src/assets/img/AirlineLogos/${airline}.png `"
-                alt="Airline Logo" />
+            <img class="p-flight__airline-logo" :src="airlineLogo" :alt="`${airline} Logo`"/>
             <h5 class="p-flight__airline-text">{{ airline }}</h5>
         </div>
         <div class=".p-flight__info">
