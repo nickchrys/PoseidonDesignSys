@@ -1,0 +1,18 @@
+{
+  "name": "@poseidon/design-system",
+  "version": "0.1.0",
+  "main": "dist/poseidon-ds.umd.js",
+  "module": "dist/poseidon-ds.es.js",
+  "style": "dist/style.css",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  }
+}

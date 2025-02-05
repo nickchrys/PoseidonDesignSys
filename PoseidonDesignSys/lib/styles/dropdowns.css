@@ -1,0 +1,65 @@
+
+/*=====================-PDROPDOWN-=============================================================*/
+
+.p-button--dropdown {
+  padding: 5px 0px 9px 9px;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  background-color: var(--pos-grey);
+  border-style: none;
+}
+
+.p-dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  height: 29px;
+  width: fit-content;
+  background-color: var(--pos-grey);
+  box-shadow: var(--drop-shadow);
+}
+
+.p-dropdown__container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.p-dropdown__icon {
+  padding: 12px 7px 12px 7px;
+}
+
+.p-dropdown__menu {
+  display: block;
+  position: absolute;
+  margin-top: 3px;
+  top: 100%;
+  padding-left: 0%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  color: black;
+  border-radius: 6px;
+  width: fit-content;
+  min-width: 100%;
+  background-color: var(--pos-grey);
+  box-shadow: var(--drop-shadow);
+}
+
+.p-dropdown__menu li {
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  list-style-type: none;
+}
+
+.p-dropdown__menu li:hover {
+  background-color: var(--pos-dark-grey);
+}

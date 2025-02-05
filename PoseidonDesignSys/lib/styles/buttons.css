@@ -1,0 +1,69 @@
+
+/*=====================-PBUTTON-=============================================================*/
+
+.p-button {
+  font-family: var(--font-secondary);
+  cursor: pointer;
+  border: none;
+}
+
+.p-button--login {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 20px;
+  height: 50px;
+  width: 185px;
+  background-color: var(--pos-grey);
+  box-shadow: var(--drop-shadow);
+}
+
+.p-button--login:hover {
+  background-color: var(--pos-yellow);
+  color: black;
+}
+
+.p-button--gradient {
+  color: var(--pos-yellow);
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  height: 58px;
+  width: 285px;
+  background: var(--side-gradient);
+  box-shadow: var(--drop-shadow)
+}
+
+.p-button--gradient-small {
+  color: var(--pos-yellow);
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  height: 27px;
+  width: 102px;
+  background: var(--side-gradient);
+  box-shadow: var(--drop-shadow);
+}
+
+.p-button--shop {
+  color: var(--pos-yellow);
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 6px;
+  height: 64px;
+  width: 92px;
+  background: var(--side-gradient);
+  box-shadow: var(--drop-shadow);
+}
+
+/*=====================-PDROPDOWN-=============================================================*/
+
+.p-button--dropdown {
+  padding: 5px 0px 9px 9px;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  background-color: var(--pos-grey);
+  border-style: none;
+}

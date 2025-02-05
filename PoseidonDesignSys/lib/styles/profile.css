@@ -1,0 +1,33 @@
+/*=====================-P-PROFILE-PIC-=============================================================*/
+
+.p-profilepic--small {
+  background-color: var(--pos-grey);
+  border: 2px solid var(--pos-yellow);
+  box-shadow: var(--drop-shadow);
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
+
+.p-profilepic--small img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.p-profilepic--big {
+  background-color: var(--pos-grey);
+  border: 2px solid var(--pos-yellow);
+  box-shadow: var(--drop-shadow);
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+}
+
+.p-profilepic--big img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  object-fit: cover;
+}

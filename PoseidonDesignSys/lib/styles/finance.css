@@ -1,0 +1,65 @@
+/*================-P-FINANCE-==================================================================*/
+
+.p-finance {
+  max-height: 155px;
+  min-height: 155px;
+  max-width: 335px;
+  min-width: 335px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 6px;
+  background-color: var(--pos-grey);
+  box-shadow: var(--drop-shadow);
+  color: black;
+  margin: 11px;
+}
+
+.p-finance h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.p-finance h2 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+  padding-bottom: 1px;
+  padding-left: 4px;
+}
+
+.p-finance h3 {
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 2px;
+}
+
+.finance-button-pic-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 10px;
+  padding-top: 8px;
+}
+
+.finance-button-pic-container button {
+  box-shadow: none;
+}
+
+.p-finance__info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 23px;
+  padding-left: 15px;
+  text-align: left;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.p-finance__mail,
+.p-finance__phone {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  padding-bottom: 2px;
+}

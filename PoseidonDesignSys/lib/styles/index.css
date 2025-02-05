@@ -1,0 +1,26 @@
+@import './variables.css';
+@import './components/buttons.css';
+@import './components/dropdowns.css';
+@import './components/events.css';
+@import './components/finance.css';
+@import './components/flights.css';
+@import './components/profile.css';
+@import './components/textfields.css';
+
+body {
+  margin: 0;
+  min-width: 320px;
+  height: 100%;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  color: var(--pos-grey);
+  background: var(--side-gradient);
+}
+
+.display-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+}

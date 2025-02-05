@@ -1,0 +1,19 @@
+/*===================-P-TEXT-FIELD-===============================================================*/
+
+.p-textfield {
+  background-color: var(--pos-grey);
+  color: black;
+  font-size: 20px;
+  border-radius: 20px;
+  border-style: none;
+  height: 60px;
+  width: 330px;
+  max-width: 330px;
+  box-shadow: var(--drop-shadow);
+  box-sizing: border-box;
+  padding: 5%;
+}
+
+.p-textfield:focus {
+  outline: 2px solid var(--gradient-bg-color);
+}

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /*-Colors-*/
+
+  --pos-blue: #566688;
+  --pos-grey: #D9D9D9;
+  --pos-dark-grey: #818181;
+  --pos-yellow: #FEB96E;
+  --pos-green: #78B97A;
+  --pos-red: #C9403B;
+  --pos-inner-yellow: #EEEED2;
+
+  /*-Gradients-*/
+
+  --gradient-bg-color: #4c365d;
+  --top-gradient: linear-gradient(158deg, var(--gradient-bg-color) 0%, var(--pos-blue) 100%);
+  --side-gradient: linear-gradient(79deg, var(--pos-blue) 61%, var(--gradient-bg-color) 100%);
+  --gradient: linear-gradient(85deg, var(--gradient-bg-color) 12%, #566688cc 52%, #00000000 100%);
+
+  /*-Shadows-*/
+
+  --drop-shadow: 0 4px 4px 0px #00000040;
+  --inner-shadow: inset 0px 4px 4px 0px #00000040;
+
+  /*-Fonts-*/
+
+  --font-primary: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-secondary: Lato, sans-serif;
+}
