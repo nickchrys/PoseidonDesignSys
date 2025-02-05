@@ -1,11 +1,11 @@
 @import './variables.css';
-@import './components/buttons.css';
-@import './components/dropdowns.css';
-@import './components/events.css';
-@import './components/finance.css';
-@import './components/flights.css';
-@import './components/profile.css';
-@import './components/textfields.css';
+@import './buttons.css';
+@import './dropdowns.css';
+@import './events.css';
+@import './finance.css';
+@import './flights.css';
+@import './profile.css';
+@import './textfields.css';
 
 body {
   margin: 0;
