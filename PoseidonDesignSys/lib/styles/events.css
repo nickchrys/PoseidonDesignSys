@@ -11,11 +11,12 @@
   border-radius: 5px;
   border-style: none;
   box-shadow: var(--drop-shadow);
+  margin-top: 2px;
 }
 
 .p-event__dates {
   font-size: 14px;
-  padding-top: 8px;
+  font-weight: 200;
 }
 
 .p-event__details {
@@ -39,8 +40,10 @@
 }
 
 .p-event__container {
+  display: flex;
+  flex-direction: column;
   width: 334.05px;
-  padding: 5px;
+  padding: 6px;
   background-color: var(--pos-inner-yellow);
   border-radius: 10px;
   box-shadow: var(--inner-shadow);
