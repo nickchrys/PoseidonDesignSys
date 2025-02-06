@@ -54,6 +54,7 @@
   height: 203px;
   width: 393px;
   border-radius: 0%;
+  margin-top: 0px;
 }
 
 .p-event--header .p-event__details {
@@ -75,13 +76,14 @@
 .p-event--header .p-event__details h4 {
   font-size: 36px;
   height: 36px;
-  padding-top: 16px;
+  padding-top: 13px;
 }
 
 .p-event--header .p-event__dates {
   font-size: 20px;
   padding-top: 139px;
-  font-weight: 300;
+  font-weight: 200;
+  margin: 0;
 }
 
 .more-icon {
