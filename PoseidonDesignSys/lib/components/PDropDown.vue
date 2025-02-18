@@ -16,10 +16,10 @@ const props = defineProps({
         validator: (value) => value.every(item => typeof item === 'string')
     },
     design: {
-    type: String,
-    default: '',
-    validator: (value) => ['event', 'flight'].includes(value)
-  }
+        type: String,
+        default: '',
+        validator: (value) => ['event', 'flight'].includes(value)
+    }
 });
 
 const base = 'p-dropdown';
@@ -43,11 +43,12 @@ const selectOption = (option) => {
 </script>
 
 <template>
-    
+
     <div :class="giveDesign">
         <div class="dropdown-trigger" @click="toggleDropDown">
             <PButton design="dropdown" :label="dropDownLabel"></PButton>
-            <svg :class="`${giveDesign}__icon`" xmlns="http://www.w3.org/2000/svg" width="9" height="4" viewBox="0 0 9 4">
+            <svg :class="`${giveDesign}__icon`" xmlns="http://www.w3.org/2000/svg" width="9" height="4"
+                viewBox="0 0 9 4">
                 <path fill="currentColor" d="M4.5 4L0 0h9L4.5 4z" />
             </svg>
         </div>
