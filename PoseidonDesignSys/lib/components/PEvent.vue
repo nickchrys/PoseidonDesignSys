@@ -8,9 +8,9 @@ const props = defineProps({
         type: String,
         default: 'organization'
     },
-    event: {
+    name: {
         type: String,
-        default: 'event'
+        default: 'name'
     },
     startDate: {
         type: Date,
@@ -20,9 +20,29 @@ const props = defineProps({
         type: Date,
         default: new Date(2025, 1, 1)
     },
-    bgImage: {
+    pictureLink: {
         type: String,
-        default: 'bgImage'
+        default: 'pictureLink'
+    },
+    description: {
+        type: String,
+        default: 'description'
+    },
+    maxBudget: {
+        type: Number,
+        default: 0
+    },
+    currentBudget: {
+        type: Number,
+        default: 0
+    },
+    createdBy: {
+        type: String,
+        default: 'createdBy'
+    },
+    financeMan: {
+        type: String,
+        default: 'financeMan'
     },
     design: {
         type: String,
@@ -63,10 +83,16 @@ const emit = defineEmits(['eventClick', 'backClick'])
 const handleEventClick = () => {
     emit('eventClick', {
         organization: props.organization,
-        event: props.event,
+        name: props.name,
         startDate: props.startDate,
         endDate: props.endDate,
-        bgImage: props.bgImage
+        pictureLink: props.pictureLink,
+        description: props.description,
+        maxBudget: props.maxBudget,
+        currentBudget: props.currentBudget,
+        createdBy: props.createdBy,
+        financeMan: props.financeMan,
+        inviteLink: props.inviteLink
     })
 }
 
@@ -79,13 +105,13 @@ const handleBackClick = (e) => {
 
 <template>
     <div :class='giveDesign' @click="handleEventClick" :style="{
-        background: `var(--gradient), url(${props.bgImage})`,
+        background: `var(--gradient), url(${props.pictureLink})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center'
     }">
-        <svg class="back-icon" v-if="giveDesign.includes('p-event--header')"  @click="handleBackClick" xmlns="http://www.w3.org/2000/svg"
-            width="16" height="32" viewBox="0 0 16 32">
+        <svg class="back-icon" v-if="giveDesign.includes('p-event--header')" @click="handleBackClick"
+            xmlns="http://www.w3.org/2000/svg" width="16" height="32" viewBox="0 0 16 32">
             <path fill="currentColor" fill-rule="evenodd"
                 d="m3.343 12l7.071 7.071L9 20.485l-7.778-7.778a1 1 0 0 1 0-1.414L9 3.515l1.414 1.414z" />
         </svg>
@@ -99,7 +125,7 @@ const handleBackClick = (e) => {
         <h3 class="p-event__dates">{{ formattedStartDate }} - {{ formattedEndDate }}</h3>
         <div class="p-event__details">
             <h2>{{ organization }}</h2>
-            <h4>{{ event }}</h4>
+            <h4>{{ name }}</h4>
         </div>
     </div>
 </template>

@@ -3,6 +3,8 @@
 import { ref } from 'vue'
 import { PButton } from './index'
 
+const emit = defineEmits(['option-selected']);
+
 const props = defineProps({
     dropDownLabel: {
         type: String,
@@ -29,6 +31,7 @@ const toggleDropDown = () => {
 const selectOption = (option) => {
     dropDown.value = false;
     dropDownLabel.value = option;
+    emit('option-selected', option);
 };
 </script>
 
@@ -42,7 +45,7 @@ const selectOption = (option) => {
             </svg>
         </div>
         <ul v-if="dropDown" class="p-dropdown__menu">
-            <li v-for="option in options" @click="selectOption(option)">
+            <li v-for="option in options" :value="option" @click="selectOption(option)">
                 {{ option }}
             </li>
         </ul>
