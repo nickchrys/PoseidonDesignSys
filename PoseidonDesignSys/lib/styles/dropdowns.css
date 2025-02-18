@@ -1,7 +1,7 @@
 
 /*=====================-PDROPDOWN-=============================================================*/
 
-.p-button--dropdown {
+.p-dropdown--flight .p-button--dropdown {
   padding: 5px 0px 9px 9px;
   color: black;
   font-size: 14px;
@@ -9,9 +9,17 @@
   border-radius: 6px;
   background-color: var(--pos-grey);
   border-style: none;
+  height: 29px;
 }
 
-.p-dropdown {
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.p-dropdown--flight {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -31,11 +39,11 @@
   align-items: center;
 }
 
-.p-dropdown__icon {
+.p-dropdown--flight__icon {
   padding: 12px 7px 12px 7px;
 }
 
-.p-dropdown__menu {
+.p-dropdown--flight__menu {
   display: block;
   position: absolute;
   margin-top: 3px;
@@ -52,7 +60,7 @@
   box-shadow: var(--drop-shadow);
 }
 
-.p-dropdown__menu li {
+.p-dropdown--flight__menu li {
   padding: 5px;
   font-size: 12px;
   font-weight: 400;
@@ -60,6 +68,64 @@
   list-style-type: none;
 }
 
-.p-dropdown__menu li:hover {
+.p-dropdown--flight__menu li:hover {
+  background-color: var(--pos-dark-grey);
+}
+
+.p-dropdown--event {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  color: black;
+  font-weight: bold;
+  border-radius: 6px;
+  height: 40px;
+  width: fit-content;
+  background-color: var(--pos-grey);
+  box-shadow: var(--drop-shadow);
+}
+
+.p-dropdown--event .p-button--dropdown{
+  padding: 5px 0px 9px 9px;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  background-color: var(--pos-grey);
+  border-style: none;
+  height: 40px;
+  width: 90px;
+}
+
+.p-dropdown--event__icon {
+  padding: 12px 7px 12px 7px;
+}
+
+.p-dropdown--event__menu {
+  display: block;
+  position: absolute;
+  margin-top: 3px;
+  top: 100%;
+  padding-left: 0%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  color: black;
+  border-radius: 6px;
+  width: fit-content;
+  min-width: 100%;
+  background-color: var(--pos-grey);
+  box-shadow: var(--drop-shadow);
+}
+
+.p-dropdown--event__menu li {
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  list-style-type: none;
+}
+
+.p-dropdown--event__menu li:hover {
   background-color: var(--pos-dark-grey);
 }

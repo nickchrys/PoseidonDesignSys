@@ -14,6 +14,19 @@
   padding: 5%;
 }
 
+.p-textfield--small {
+  background-color: var(--pos-grey);
+  color: black;
+  font-size: 16px;
+  border-radius: 6px;
+  border-style: none;
+  height: 40px;
+  width: 122px;
+  box-shadow: var(--drop-shadow);
+  box-sizing: border-box;
+  padding: 5%;
+}
+
 .p-textfield:focus {
   outline: 2px solid var(--gradient-bg-color);
 }

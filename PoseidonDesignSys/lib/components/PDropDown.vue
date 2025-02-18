@@ -1,6 +1,6 @@
 <script setup>
 
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { PButton } from './index'
 
 const emit = defineEmits(['option-selected']);
@@ -17,9 +17,16 @@ const props = defineProps({
     },
     design: {
     type: String,
-    default: 'default',
+    default: '',
+    validator: (value) => ['event', 'flight'].includes(value)
   }
 });
+
+const base = 'p-dropdown';
+const giveDesign = computed(() => {
+    const design = props.design !== 'default' ? `${base}--${props.design}` : base;
+    return design
+})
 
 const dropDown = ref(false);
 const dropDownLabel = ref(props.dropDownLabel);
@@ -36,15 +43,15 @@ const selectOption = (option) => {
 </script>
 
 <template>
-
-    <div :class="design">
-        <div :class="design" @click="toggleDropDown">
+    
+    <div :class="giveDesign">
+        <div class="dropdown-trigger" @click="toggleDropDown">
             <PButton design="dropdown" :label="dropDownLabel"></PButton>
-            <svg class='p-dropdown__icon' xmlns="http://www.w3.org/2000/svg" width="9" height="4" viewBox="0 0 9 4">
+            <svg :class="`${giveDesign}__icon`" xmlns="http://www.w3.org/2000/svg" width="9" height="4" viewBox="0 0 9 4">
                 <path fill="currentColor" d="M4.5 4L0 0h9L4.5 4z" />
             </svg>
         </div>
-        <ul v-if="dropDown" class="p-dropdown__menu">
+        <ul v-if="dropDown" :class="`${giveDesign}__menu`">
             <li v-for="option in options" :value="option" @click="selectOption(option)">
                 {{ option }}
             </li>

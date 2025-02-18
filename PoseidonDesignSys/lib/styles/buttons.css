@@ -55,15 +55,3 @@
   background: var(--side-gradient);
   box-shadow: var(--drop-shadow);
 }
-
-/*=====================-PDROPDOWN-=============================================================*/
-
-.p-button--dropdown {
-  padding: 5px 0px 9px 9px;
-  color: black;
-  font-size: 14px;
-  font-weight: bold;
-  border-radius: 6px;
-  background-color: var(--pos-grey);
-  border-style: none;
-}
