@@ -107,7 +107,7 @@ const airlineLogo = computed(() => {
             <img class="p-flight__airline-logo" :src="airlineLogo" :alt="`${airline} Logo`"/>
             <h5 class="p-flight__airline-text">{{ airline }}</h5>
         </div>
-        <div class=".p-flight__info">
+        <div class="p-flight__info">
             <div class="date-time-container">
                 <h5 class="p-flight__date">{{ formatFlightDate }}</h5>
                 <h5 class="p-flight__time">{{ formatTime(flightDepTime) }} - {{ formatTime(flightArrTime)
