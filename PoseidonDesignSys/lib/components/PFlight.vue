@@ -118,7 +118,7 @@ const formatFlightDate = computed(() => {
                             <div class="p-flight--itinerary__place">
                                 <h3>Departure</h3>
                                 <h2>{{ origin }}</h2>
-                                <h3>City, State</h3>
+                                <h4>City, State</h4>
                             </div>
                             <div class="p-flight--itinerary__time">
                                 <h3>{{ formatTime(flightDepTime) }}</h3>
@@ -132,7 +132,7 @@ const formatFlightDate = computed(() => {
                             <div class="p-flight--itinerary__place">
                                 <h3>Arrival</h3>
                                 <h2>{{ destination }}</h2>
-                                <h3>City, State</h3>
+                                <h4>City, State</h4>
                             </div>
                             <div class="p-flight--itinerary__time">
                                 <h3>{{ formatTime(flightArrTime) }}</h3>
@@ -141,10 +141,27 @@ const formatFlightDate = computed(() => {
                         </div>
                     </div>
                     <div class="p-flight--itinerary__info">
-                        <h3>{{ flightNumber }}</h3>
-                        <h3>{{ flightType }}</h3>
-                        <h3>{{ flightClass }}</h3>
-                        <h3>{{ seatNumber }}</h3>
+
+                        <div class="p-flight--itinerary__info-container">
+                            <h4>Flight</h4>
+                            <h3>{{ flightNumber }}</h3>
+                        </div>
+
+                        <div class="p-flight--itinerary__info-container">
+                            <h4>Class</h4>
+                            <h3>{{ flightClass }}</h3>
+                        </div>
+
+                        <div class="p-flight--itinerary__info-container">
+                            <h4>Seat</h4>
+                            <h3>{{ seatNumber }}</h3>
+                        </div>
+
+                        <div class="p-flight--itinerary__info-container">
+                            <h4>Type</h4>
+                            <h3>{{ flightType }}</h3>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -159,7 +176,7 @@ const formatFlightDate = computed(() => {
                 <div class="date-time-container">
                     <h5 class="p-flight__date">{{ formatFlightDate }}</h5>
                     <h5 class="p-flight__time">{{ formatTime(flightDepTime) }} - {{ formatTime(flightArrTime)
-                        }}
+                    }}
                     </h5>
                 </div>
                 <div class="p-flight__details">
