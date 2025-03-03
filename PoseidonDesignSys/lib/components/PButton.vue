@@ -1,5 +1,7 @@
 <script setup>
 import { computed } from 'vue';
+import { useRouter } from 'vue-router';
+//import api from '../../../src/assets/scripts/api.js';
 
 /**
  * @component PButton
@@ -24,19 +26,38 @@ const props = defineProps({
   class: {
     type: String,
     default: '',
+  },
+  offerId: {
+    type: String,
+    required: false
   }
-  })
+})
 
-  const base = 'p-button';
-  const giveDesign = computed(() => {
-    const design = props.design !== 'default' ? `${base}--${props.design}` : base;
-    return [design, base]
-  })
+const base = 'p-button';
+const giveDesign = computed(() => {
+  const design = props.design !== 'default' ? `${base}--${props.design}` : base;
+  return [design, base]
+})
 
+const router = useRouter();
+
+const confirmPurchase = async () => {
+  alert('Purchase confirmed: ' + props.offerId);
+
+  //Api stuff here
+  // try {
+  //   const response
+  // }
+
+  router.push({ name: 'Event' });
+}
 
 </script>
 
 <template>
-  <button v-if="giveDesign.includes('p-button--shop')" :class='giveDesign'>{{ label }} <br> {{ price }}</button>
+  <button v-if="giveDesign.includes('p-button--shop')" :class='giveDesign' @click="confirmPurchase">
+    <p class="p-button--shop__label">{{ label }}</p>
+    <p class="p-button--shop__price">${{ price }}</p>
+  </button>
   <button v-else :class='giveDesign'>{{ label }}</button>
 </template>

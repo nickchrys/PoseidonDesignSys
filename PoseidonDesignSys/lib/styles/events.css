@@ -1,16 +1,14 @@
 /*==============-P-EVENT-====================================================================*/
 
-.p-event {}
-
 .p-event--block {
   position: relative;
-  width: 334.05px;
-  max-width: 334.05px;
-  height: 129px;
+  width: 335px;
+  max-width: 335px;
+  height: 130px;
   border-radius: 5px;
   border-style: none;
   box-shadow: var(--drop-shadow);
-  margin-top: 2px;
+  margin-top: 1px;
 }
 
 .p-event__dates {
@@ -103,6 +101,41 @@
   display: block;
 }
 
+.p-event--itinerary-header {
+  height: 204px;
+  width: 393px;
+  background-color: var(--pos-grey);
+  box-shadow: var(--drop-shadow);
+  border-radius: 0 0 6px 6px;
+}
+
+.p-event--itinerary-header img {
+  height: 101px;
+  width: 101px;
+  padding-top: 15px;
+}
+
+.p-event--itinerary-header h1 {
+  font-size: 36px;
+  font-family: 'Lato', sans-serif;
+  background: var(--top-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+  line-height: 1;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.p-event--itinerary-header h2 {
+  font-size: 32px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  margin: 0;
+  line-height: 1;
+}
+
 .back-icon {
   position: absolute;
   left: 18px;
@@ -110,4 +143,9 @@
   color: var(--pos-grey);
   display: block;
   cursor: pointer;
+}
+
+.p-event--itinerary-header .back-icon {
+  padding: 10px;
+  color: black;
 }

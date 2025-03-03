@@ -102,30 +102,50 @@ const handleBackClick = (e) => {
 }
 
 </script>
-
 <template>
-    <div :class='giveDesign' @click="handleEventClick" :style="{
-        background: `var(--gradient), url(${props.pictureLink})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center'
-    }">
-        <svg class="back-icon" v-if="giveDesign.includes('p-event--header')" @click="handleBackClick"
-            xmlns="http://www.w3.org/2000/svg" width="16" height="32" viewBox="0 0 16 32">
-            <path fill="currentColor" fill-rule="evenodd"
-                d="m3.343 12l7.071 7.071L9 20.485l-7.778-7.778a1 1 0 0 1 0-1.414L9 3.515l1.414 1.414z" />
-        </svg>
-        <svg class="more-icon" xmlns="http://www.w3.org/2000/svg" width="29" height="5" viewBox="-0.5 -0.5 30 6">
-            <g fill="#D9D9D9">
-                <circle cx="2.5" cy="2.5" r="2.5" stroke="black" stroke-width="0.3" />
-                <circle cx="14.5" cy="2.5" r="2.5" stroke="black" stroke-width="0.3" />
-                <circle cx="26.5" cy="2.5" r="2.5" stroke="black" stroke-width="0.3" />
-            </g>
-        </svg>
-        <h3 class="p-event__dates">{{ formattedStartDate }} - {{ formattedEndDate }}</h3>
-        <div class="p-event__details">
-            <h2>{{ organization }}</h2>
-            <h4>{{ name }}</h4>
+
+    <template v-if="giveDesign.includes('p-event--itinerary-header')">
+        <div :class="giveDesign">
+            <svg class="back-icon" @click="handleBackClick" xmlns="http://www.w3.org/2000/svg" width="16" height="32"
+                viewBox="0 0 16 32">
+                <path fill="currentColor" fill-rule="evenodd"
+                    d="m3.343 12l7.071 7.071L9 20.485l-7.778-7.778a1 1 0 0 1 0-1.414L9 3.515l1.414 1.414z" />
+            </svg>
+            <div class="p-event--itinerary-header">
+                <img :src="props.pictureLink" alt="Airline Logo" />
+                <h1>{{ props.organization }}</h1>
+                <h2>Flight itinerary</h2>
+
+            </div>
         </div>
-    </div>
+    </template>
+
+
+    <template v-else>
+        <div :class='giveDesign' @click="handleEventClick" :style="{
+            background: `var(--gradient), url(${props.pictureLink})`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
+        }">
+            <svg class="back-icon" v-if="giveDesign.includes('p-event--header')" @click="handleBackClick"
+                xmlns="http://www.w3.org/2000/svg" width="16" height="32" viewBox="0 0 16 32">
+                <path fill="currentColor" fill-rule="evenodd"
+                    d="m3.343 12l7.071 7.071L9 20.485l-7.778-7.778a1 1 0 0 1 0-1.414L9 3.515l1.414 1.414z" />
+            </svg>
+            <svg class="more-icon" xmlns="http://www.w3.org/2000/svg" width="29" height="5" viewBox="-0.5 -0.5 30 6">
+                <g fill="#D9D9D9">
+                    <circle cx="2.5" cy="2.5" r="2.5" stroke="black" stroke-width="0.3" />
+                    <circle cx="14.5" cy="2.5" r="2.5" stroke="black" stroke-width="0.3" />
+                    <circle cx="26.5" cy="2.5" r="2.5" stroke="black" stroke-width="0.3" />
+                </g>
+            </svg>
+            <h3 class="p-event__dates">{{ formattedStartDate }} - {{ formattedEndDate }}</h3>
+            <div class="p-event__details">
+                <h2>{{ organization }}</h2>
+                <h4>{{ name }}</h4>
+            </div>
+        </div>
+    </template>
+
 </template>

@@ -55,3 +55,15 @@
   background: var(--side-gradient);
   box-shadow: var(--drop-shadow);
 }
+
+.p-button--shop p {
+  margin: 0;
+  line-height: 1;
+}
+
+
+
+.p-button--shop__price {
+  padding-top: 5px;
+  font-size: 20px;
+}
