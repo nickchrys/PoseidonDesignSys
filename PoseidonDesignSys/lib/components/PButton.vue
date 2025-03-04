@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from 'vue';
 import { useRouter } from 'vue-router';
-//import api from '../../../src/assets/scripts/api.js';
+import api from '../../../../src/assets/scripts/api.js';
 
 /**
  * @component PButton
@@ -30,6 +30,10 @@ const props = defineProps({
   offerId: {
     type: String,
     required: false
+  },
+  passId: {
+    type: String,
+    required: false
   }
 })
 
@@ -42,14 +46,23 @@ const giveDesign = computed(() => {
 const router = useRouter();
 
 const confirmPurchase = async () => {
-  alert('Purchase confirmed: ' + props.offerId);
+  alert('Purchase confirmed - Offer ID: ' + props.offerId + ' Passenger ID: ' + props.passId);
 
-  //Api stuff here
-  // try {
-  //   const response
-  // }
-
-  router.push({ name: 'Event' });
+  return api.apiFetch('/flights/hold', {
+    method: 'POST',
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      offerID: props.offerId,
+      passID: props.passId
+    })
+  }).then(
+      response => console.log(response)
+    ).then(
+      router.push({ name: 'Event' })
+    )
 }
 
 </script>
