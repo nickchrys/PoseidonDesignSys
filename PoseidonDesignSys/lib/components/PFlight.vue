@@ -7,17 +7,22 @@ const props = defineProps({
     flightDate: {
         type: Date,
         default: new Date(2025, 1, 1),
-        required: true
+        
+    },
+    passangerName: {
+        type: String,
+        default: 'Name',
+        required: false
     },
     origin: {
         type: String,
         default: 'QWE',
-        required: true
+        
     },
     destination: {
         type: String,
         default: 'ZXC',
-        required: true
+        
     },
     flightDepTime: {
         type: String,
@@ -100,6 +105,18 @@ const formatFlightDate = computed(() => {
     const weekday = props.flightDate.toLocaleDateString('en-US', { weekday: 'short' });
     const ordIndicator = getOrdIndicator(day);
     return `${weekday}, ${month}. ${day}${ordIndicator}`;
+
+});
+
+const formatLongFlightDate = computed(() => {
+    const options = { weekday: 'long', month: 'long', day: 'numeric' };
+    const date = props.flightDate.toLocaleDateString('en-US', options);
+    const day = props.flightDate.getDate();
+    const month = props.flightDate.toLocaleDateString('en-US', { month: 'long' });
+    const weekday = props.flightDate.toLocaleDateString('en-US', { weekday: 'long' });
+    const year = props.flightDate.getFullYear();
+    const ordIndicator = getOrdIndicator(day);
+    return `${weekday}, ${month} ${day}${ordIndicator} ${year}`;
 });
 
 
@@ -111,7 +128,7 @@ const formatFlightDate = computed(() => {
 
         <template v-if="giveDesign.includes('p-flight--itinerary')">
             <div class>
-                <h3>{{ flightDate }}</h3>
+                <h3 class="p-flight--itinerary__date">{{ formatLongFlightDate }}</h3>
                 <div class="p-flight--itinerary__container">
                     <div class="p-flight--itinerary__time-place">
                         <div class="p-flight--itinerary__depart-container">
@@ -169,6 +186,20 @@ const formatFlightDate = computed(() => {
                     </div>
                 </div>
             </div>
+        </template>
+
+        <template v-else-if="giveDesign.includes('p-flight--finance')">
+            <div class="p-flight__airline">
+                <img class="p-flight__airline-logo" :src="logoURL" :alt="`${airline} Logo`" />
+                <h5 class="p-flight__airline-text">{{ airline }}</h5>
+            </div>
+            <div class="p-flight__info">
+                <h5 class="p-flight--finance__name">{{ passangerName }}'s Ticket</h5>
+                <h5 class="p-flight__class">{{ flightClass }}</h5>
+                <h5 class="p-flight__date">{{ formatFlightDate }}</h5>
+                <h5 class="p-flight__time">{{ formatTime(flightDepTime) }} - {{ formatTime(flightArrTime) }}</h5>
+            </div>
+            <h5 class="p-flight__price">${{ price }}</h5>
         </template>
 
         <template v-else>

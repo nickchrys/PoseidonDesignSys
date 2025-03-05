@@ -1,6 +1,6 @@
 /*==============-P-EVENT-====================================================================*/
 
-.p-event--block {
+.p-event--block, .p-event--block-finance {
   position: relative;
   width: 335px;
   max-width: 335px;
@@ -9,6 +9,15 @@
   border-style: none;
   box-shadow: var(--drop-shadow);
   margin-top: 1px;
+}
+
+.p-event__budget {
+  position: absolute;
+  left: 15px;
+  top: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .p-event__dates {

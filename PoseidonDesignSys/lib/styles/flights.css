@@ -1,6 +1,6 @@
 /*=============-P-FLIGHT-===============================================================*/
 
-.p-flight--block {
+.p-flight--block, .p-flight--shop, .p-flight--finance{
   height: 102px;
   width: 335px;
   display: flex;
@@ -12,17 +12,6 @@
   color: black;
 }
 
-.p-flight--shop {
-  height: 102px;
-  width: 335px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: var(--pos-grey);
-  box-shadow: var(--drop-shadow);
-  border-radius: 6px;
-  color: black;
-}
 
 .p-flight--itinerary {
   display: flex;
@@ -33,11 +22,16 @@
   border-radius: 6px;
   color: black;
   width: 343px;
-  height: 276px;
+  height: 270px;
 }
 
-.p-flight--itinerary h3 {
+.p-flight--itinerary__date {
   margin: 0;
+  padding-bottom: 3px;
+  padding-left: 25px;
+  font-size: 20px;
+  font-weight: 600;
+  align-content: center;
 }
 
 .p-flight--itinerary__container {
@@ -46,7 +40,7 @@
   align-items: center;
   color: black;
   width: 313px;
-  padding-bottom: 24px;
+  padding-bottom: 9px;
 }
 
 .p-flight--itinerary__time-place {
@@ -101,22 +95,16 @@
 .p-flight--itinerary__place h4 {
   font-size: 13px;
   font-weight: 500;
+  max-height: 13px;
+  min-width: 90px;
 }
 
 .p-flight--itinerary__time h3 {
   font-size: 26px;
   font-weight: 500;
-  padding-left: 6px;
   max-height: 26px;
   width: 120px;
-}
-
-.p-flight--itinerary__arrive-container .p-flight--itinerary__time h3 {
-  font-size: 26px;
-  font-weight: 500;
-  padding-left: 30px;
-  max-height: 26px;
-  width: 120px;
+  margin-right: 50;
 }
 
 .p-flight--itinerary__info {
@@ -166,7 +154,6 @@
 
 .p-flight__info {
   min-width: 158px;
-
 }
 
 .date-time-container {
@@ -225,8 +212,8 @@
 }
 
 .p-flight__airline-text {
-  font-size: 10px;
-  line-height: 1.1;
+  font-size: 12px;
+  line-height: 0.6;
   font-weight: 600;
   margin: 0;
   width: 58px;
@@ -237,6 +224,45 @@
   margin-right: 15px;
   height: 82px;
   width: 58px;
+}
+
+.p-flight--finance .p-flight__info h5{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.p-flight--finance__name {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.p-flight--finance .p-flight__class {
+  font-size: 16px;
+  padding-bottom: 1px;
+}
+
+.p-flight--finance .p-flight__date, .p-flight--finance .p-flight__time {
+  font-size: 13px;
+  height: 18px;
+  padding-bottom: 1px;
+}
+
+.p-flight--finance .p-flight__price {
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.p-flight--finance .p-flight__airline-logo {
+  padding-top: 5px;
+}
+
+.p-flight--finance .p-flight__airline-text {
+  font-size: 12px;
+  line-height: 0.6;
 }
 
 .class-price-container {

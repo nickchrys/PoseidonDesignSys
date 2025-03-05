@@ -101,6 +101,17 @@ const handleBackClick = (e) => {
     emit('backClick')
 }
 
+const budgetColor = computed(() => {
+    const budgetThreshold = props.maxBudget * 0.3;
+    if (props.currentBudget > budgetThreshold) {
+        return 'var(--pos-green)';
+    } else if (props.currentBudget >= 0) {
+        return 'var(--pos-yellow)';
+    } else {
+        return 'var(--pos-red)';
+    }
+});
+
 </script>
 <template>
 
@@ -135,12 +146,14 @@ const handleBackClick = (e) => {
             </svg>
             <svg class="more-icon" xmlns="http://www.w3.org/2000/svg" width="29" height="5" viewBox="-0.5 -0.5 30 6">
                 <g fill="#D9D9D9">
-                    <circle cx="2.5" cy="2.5" r="2.5" stroke="black" stroke-width="0.3" />
-                    <circle cx="14.5" cy="2.5" r="2.5" stroke="black" stroke-width="0.3" />
-                    <circle cx="26.5" cy="2.5" r="2.5" stroke="black" stroke-width="0.3" />
+                    <circle cx="2.5" cy="2.5" r="2.5" stroke="black" stroke-width="0.5" />
+                    <circle cx="14.5" cy="2.5" r="2.5" stroke="black" stroke-width="0.5" />
+                    <circle cx="26.5" cy="2.5" r="2.5" stroke="black" stroke-width="0.5" />
                 </g>
             </svg>
             <h3 class="p-event__dates">{{ formattedStartDate }} - {{ formattedEndDate }}</h3>
+            <h3 class="p-event__budget" v-if="giveDesign.includes('p-event--block-finance')"
+                :style="{ color: budgetColor }">Budget <br>${{ currentBudget }}</h3>
             <div class="p-event__details">
                 <h2>{{ organization }}</h2>
                 <h4>{{ name }}</h4>
