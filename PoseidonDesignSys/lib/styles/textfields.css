@@ -30,3 +30,7 @@
 .p-textfield:focus {
   outline: 2px solid var(--gradient-bg-color);
 }
+
+.p-textfield--small:focus {
+  outline: 2px solid var(--gradient-bg-color);
+}

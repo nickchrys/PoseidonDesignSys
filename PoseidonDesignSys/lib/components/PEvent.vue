@@ -13,11 +13,11 @@ const props = defineProps({
         default: 'name'
     },
     startDate: {
-        type: Date,
+        type: [Date, String],
         default: new Date(2025, 1, 1)
     },
     endDate: {
-        type: Date,
+        type: [Date, String],
         default: new Date(2025, 1, 1)
     },
     pictureLink: {
@@ -66,15 +66,23 @@ const getOrdIndicator = (day) => {
     }
 }
 
+const parseDate = (date) => {
+    return date ? (typeof date === 'string' ? new Date(date) : date) : null;
+}
+
 const formattedStartDate = computed(() => {
-    const day = props.startDate.getDate();
-    const month = props.startDate.toLocaleDateString('en-US', { month: 'short' });
+    const date = parseDate(props.startDate);
+    if (!date) return '';
+    const day = date.getDate();
+    const month = date.toLocaleDateString('en-US', { month: 'short' });
     return `${month}. ${day}${getOrdIndicator(day)}`;
 });
 
 const formattedEndDate = computed(() => {
-    const day = props.endDate.getDate();
-    const month = props.endDate.toLocaleDateString('en-US', { month: 'short' });
+    const date = parseDate(props.endDate);
+    if (!date) return '';
+    const day = date.getDate();
+    const month = date.toLocaleDateString('en-US', { month: 'short' });
     return `${month}. ${day}${getOrdIndicator(day)}`;
 });
 

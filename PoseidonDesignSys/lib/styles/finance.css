@@ -11,13 +11,14 @@
   background-color: var(--pos-grey);
   box-shadow: var(--drop-shadow);
   color: black;
-  margin: 11px;
+  margin: 0px;
 }
 
 .p-finance h1 {
   font-size: 24px;
   font-weight: 600;
   margin: 0;
+  padding: 0;
 }
 
 .p-finance h2 {
