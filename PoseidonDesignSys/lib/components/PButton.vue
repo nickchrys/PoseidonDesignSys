@@ -53,7 +53,8 @@ const router = useRouter();
     <p class="p-button--shop__price">${{ price }}</p>
   </button>
   <button v-else :class='giveDesign'>
-    <p class="p-button__label">{{ label }}</p>
+    <p v-if='giveDesign.includes("p-button--planner")' class="p-button__planner-label">{{ label }}</p>
+    <p v-else class="p-button__label"> {{ label }}</p>
     <p class="plus-icon" v-if='giveDesign.includes("p-button--planner")'>+</p>
   </button>
 </template>
