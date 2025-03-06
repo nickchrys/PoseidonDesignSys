@@ -16,7 +16,7 @@ const props = defineProps({
   design: {
     type: String,
     default: 'default',
-    validator: (value) => ['default', 'login', 'gradient', 'gradient-small', 'dropdown', 'shop'].includes(value)
+    validator: (value) => ['default', 'planner', 'login', 'gradient', 'gradient-small', 'dropdown', 'shop'].includes(value)
   },
   price: {
     type: Number,
@@ -59,10 +59,10 @@ const confirmPurchase = async () => {
       passID: props.passId
     })
   }).then(
-      response => console.log(response)
-    ).then(
-      router.push({ name: 'Event' })
-    )
+    response => console.log(response)
+  ).then(
+    router.push({ name: 'Event' })
+  )
 }
 
 </script>
@@ -72,5 +72,8 @@ const confirmPurchase = async () => {
     <p class="p-button--shop__label">{{ label }}</p>
     <p class="p-button--shop__price">${{ price }}</p>
   </button>
-  <button v-else :class='giveDesign'>{{ label }}</button>
+  <button v-else :class='giveDesign'>
+    <p class="p-button__label">{{ label }}</p>
+    <p class="plus-icon" v-if='giveDesign.includes("p-button--planner")'>+</p>
+  </button>
 </template>

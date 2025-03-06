@@ -1,6 +1,6 @@
 /*==============-P-EVENT-====================================================================*/
 
-.p-event--block, .p-event--block-finance {
+.p-event--block, .p-event--block-finance, .p-event--block-planner {
   position: relative;
   width: 335px;
   max-width: 335px;
@@ -100,6 +100,17 @@
   color: var(--pos-grey);
   display: block;
   cursor: pointer;
+}
+
+.pencil-icon {
+  border: 1px solid var(--pos-grey);
+  background: var(--top-gradient);
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  padding: 5px;
 }
 
 .p-event--header .more-icon {

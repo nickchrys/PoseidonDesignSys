@@ -61,9 +61,40 @@
   line-height: 1;
 }
 
-
-
 .p-button--shop__price {
   padding-top: 5px;
   font-size: 20px;
+}
+
+.p-button--planner {
+  width: 334px;
+  height: 34px;
+  background-color: var(--pos-grey);
+  border-radius: 5px;
+  box-shadow: var(--drop-shadow);
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content:center;
+  gap: 4px;
+}
+
+.p-button--planner .p-button__label {
+  background: var(--top-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 3px;
+}
+
+.plus-icon {
+  font-size: 25px;
+  font-weight: 900;
+  margin: 0;
+  background: var(--top-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
