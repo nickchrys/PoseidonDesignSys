@@ -16,12 +16,28 @@
   object-fit: cover;
 }
 
-.p-profilepic--big {
+.p-profilepic--finance {
   background-color: var(--pos-grey);
   border: 2px solid var(--pos-yellow);
   box-shadow: var(--drop-shadow);
   height: 100px;
   width: 100px;
+  border-radius: 100%;
+}
+
+.p-profilepic--finance img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.p-profilepic--big {
+  background-color: var(--pos-grey);
+  border: 2px solid var(--pos-yellow);
+  box-shadow: var(--drop-shadow);
+  height: 190px;
+  width: 190px;
   border-radius: 100%;
 }
 

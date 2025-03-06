@@ -35,7 +35,7 @@ const props = defineProps({
 
     <div :class='design'>
         <div class="finance-button-pic-container">
-            <PProfilePic design='big' :profileImage="profileImage" />
+            <PProfilePic design='finance' :profileImage="profileImage" />
             <PButton design='gradient-small' label='Talk with me!' />
         </div>
         <div class="p-finance__info">
