@@ -113,7 +113,7 @@ const budgetColor = computed(() => {
     const budgetThreshold = props.maxBudget * 0.3;
     if (props.currentBudget > budgetThreshold) {
         return 'var(--pos-green)';
-    } else if (props.currentBudget >= 0) {
+    } else if (props.currentBudget >= 0 && props.currentBudget <= budgetThreshold) {
         return 'var(--pos-yellow)';
     } else {
         return 'var(--pos-red)';
@@ -161,7 +161,7 @@ const budgetColor = computed(() => {
             </svg>
             <h3 class="p-event__dates">{{ formattedStartDate }} - {{ formattedEndDate }}</h3>
             <h3 class="p-event__budget" v-if="giveDesign.includes('p-event--block-finance')"
-                :style="{ color: budgetColor }">Budget <br>${{ currentBudget }}</h3>
+                :style="{ color: budgetColor }">Budget <br>${{ currentBudget }}/${{ maxBudget }}</h3>
             <div class="p-event__details">
                 <h2>{{ organization }}</h2>
                 <h4>{{ name }}</h4>
