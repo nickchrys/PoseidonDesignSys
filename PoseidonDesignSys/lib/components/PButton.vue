@@ -45,30 +45,10 @@ const giveDesign = computed(() => {
 
 const router = useRouter();
 
-const confirmPurchase = async () => {
-  alert('Purchase confirmed - Offer ID: ' + props.offerId + ' Passenger ID: ' + props.passId);
-
-  return api.apiFetch('/flights/hold', {
-    method: 'POST',
-    credentials: 'include',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      offerID: props.offerId,
-      passID: props.passId
-    })
-  }).then(
-    response => console.log(response)
-  ).then(
-    router.push({ name: 'Event' })
-  )
-}
-
 </script>
 
 <template>
-  <button v-if="giveDesign.includes('p-button--shop')" :class='giveDesign' @click="confirmPurchase">
+  <button v-if="giveDesign.includes('p-button--shop')" :class='giveDesign'>
     <p class="p-button--shop__label">{{ label }}</p>
     <p class="p-button--shop__price">${{ price }}</p>
   </button>
