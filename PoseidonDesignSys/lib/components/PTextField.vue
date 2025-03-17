@@ -11,6 +11,10 @@ const props = defineProps({
     design: {
         type: String,
         default: 'default',
+    },
+    maxlength: {
+        type: Number,
+        default: 400
     }
 })
 
@@ -22,8 +26,25 @@ const giveDesign = computed(() => {
     return [design]
 })
 
+// Compute the remaining characters
+const remainingCharacters = computed(() => {
+    return props.maxlength - input.value.length;
+})
+
 </script>
 
 <template>
-    <input :class="giveDesign" v-model="input" :type="type" :placeholder="label" />
+
+    <template v-if="giveDesign.includes('p-textfield--textarea')">
+        <div class="p-textfield__textarea-container">
+            <textarea :class="giveDesign" v-model="input" :placeholder="label" :maxlength="maxlength"></textarea>
+            <small class="p-textfield__char-counter">{{ remainingCharacters }} characters left</small>
+        </div>
+    </template>
+
+    <template v-else>
+        <input :class="giveDesign" v-model="input" :type="type" :placeholder="label" />
+    </template>
+
+
 </template>

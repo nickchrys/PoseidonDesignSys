@@ -1,6 +1,6 @@
 /*==============-P-EVENT-====================================================================*/
 
-.p-event--block, .p-event--block-finance, .p-event--block-planner {
+.p-event--block, .p-event--block-finance, .p-event--small-header, .p-event--block-planner {
   position: relative;
   width: 335px;
   max-width: 335px;
@@ -53,6 +53,7 @@
   background-color: var(--pos-inner-yellow);
   border-radius: 10px;
   box-shadow: var(--inner-shadow);
+  align-items: center;
 }
 
 .p-event--header {
@@ -91,6 +92,30 @@
   padding-top: 139px;
   font-weight: 200;
   margin: 0;
+}
+
+.p-event--small-header {
+  color: var(--pos-white);
+  background: var(--top-gradient);
+  margin: 0px;
+  width: 100%;
+  max-width: 393px;
+  height: 120px;
+  border-radius: 0%;
+}
+
+.p-event--small-header h2 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-top: 42px;
+}
+
+.p-event--small-header .back-icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+  color: var(--pos-white);
 }
 
 .more-icon {
