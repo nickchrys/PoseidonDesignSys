@@ -9,6 +9,7 @@
   border-style: none;
   box-shadow: var(--drop-shadow);
   margin-top: 1px;
+  color: var(--pos-white);
 }
 
 .p-event__budget {
@@ -23,6 +24,7 @@
 .p-event__dates {
   font-size: 14px;
   font-weight: 200;
+  color: var(--pos-white);
 }
 
 .p-event__details {
@@ -30,19 +32,20 @@
   text-align: left;
   left: 22px;
   bottom: 19px;
+  color: var(--pos-white);
 }
 
 .p-event__details h2,
 .p-event__details h4 {
   font-size: 24px;
   font-weight: 400;
-  margin: -6px;
+  margin: 6px;
   padding: 0px;
+  line-height: 1;
 }
 
 .p-event__details h4 {
   font-size: 20px;
-  padding-left: 1px;
 }
 
 .p-event__container {
@@ -56,7 +59,7 @@
   align-items: center;
 }
 
-.p-event--header {
+.p-event--header, .p-event--header-edit {
   position: relative;
   height: 203px;
   width: 393px;
@@ -64,7 +67,7 @@
   margin-top: 0px;
 }
 
-.p-event--header .p-event__details {
+.p-event--header .p-event__details, .p-event--header-edit .p-event__details {
   text-align: center;
   position: absolute;
   left: 87px;
@@ -74,20 +77,20 @@
 }
 
 .p-event--header .p-event__details h2,
-.p-event--header .p-event__details h4 {
+.p-event--header .p-event__details h4, .p-event--header-edit .p-event__details h2,
+.p-event--header-edit .p-event__details h4 {
   font-size: 38px;
   font-weight: 400;
   height: 36px;
 }
 
-.p-event--header .p-event__details h4 {
+.p-event--header .p-event__details h4, .p-event--header-edit .p-event__details h4 {
   font-size: 36px;
   height: 36px;
-  padding-top: 13px;
   white-space: nowrap;
 }
 
-.p-event--header .p-event__dates {
+.p-event--header .p-event__dates, .p-event--header-edit .p-event__dates {
   font-size: 20px;
   padding-top: 139px;
   font-weight: 200;
@@ -185,7 +188,7 @@
   position: absolute;
   left: 18px;
   top: 15px;
-  color: var(--pos-grey);
+  color: var(--pos-white);
   display: block;
   cursor: pointer;
 }

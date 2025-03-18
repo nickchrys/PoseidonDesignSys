@@ -1,9 +1,13 @@
 <script setup>
 
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
+import { format } from 'date-fns';
+
+const emit = defineEmits(['update:description', 'update:modelValue', 'input', 'update:label'])
 
 const props = defineProps({
-    label: String,
+    label: [String, Date],
+    modelValue: [String, Date],
     type: {
         type: String,
         default: 'text'
@@ -15,36 +19,105 @@ const props = defineProps({
     maxlength: {
         type: Number,
         default: 400
+    },
+    description: {
+        type: String,
+        default: 'description'
     }
 })
 
-const input = ref('')
+const input = ref(props.modelValue || '')
 
-const base = 'p-textfield';
+const baseClass = 'p-textfield'
 const giveDesign = computed(() => {
-    const design = props.design !== 'default' ? `${base}--${props.design}` : base;
-    return [design]
+    return props.design !== 'default' ? `${baseClass}--${props.design}` : baseClass
 })
 
-// Compute the remaining characters
+// Compute the remaining characters dynamically
 const remainingCharacters = computed(() => {
-    return props.maxlength - input.value.length;
+    const targetValue = props.type === 'textarea-edit' ? props.description : input.value
+    return props.maxlength - (targetValue?.length || 0)
 })
+
+const showDatePicker = (event) => {
+    event.target.type = 'date'
+}
+
+const hideDatePicker = (event) => {
+    if (!input.value) {
+        event.target.type = 'text'
+    }
+}
+
+watch(() => props.modelValue, (newValue) => {
+    if (newValue !== undefined) {
+        input.value = newValue
+    }
+}, { immediate: true })
+
+const updateValue = (value) => {
+    if (props.type === 'date') {
+        const dateValue = new Date(value)
+        const formattedDate = format(dateValue, 'yyyy-MM-dd');
+        input.value = formattedDate
+        emit('update:modelValue', formattedDate)
+        emit('update:label', formattedDate)
+        emit('input', formattedDate)
+    } else {
+        input.value = value
+        emit('update:modelValue', value)
+        emit('update:description', value)
+        emit('input', value)
+    }
+}
 
 </script>
 
 <template>
-
-    <template v-if="giveDesign.includes('p-textfield--textarea')">
+    <template v-if="giveDesign.includes('p-textfield--textarea-edit')">
         <div class="p-textfield__textarea-container">
-            <textarea :class="giveDesign" v-model="input" :placeholder="label" :maxlength="maxlength"></textarea>
+            <textarea 
+                :class="giveDesign" 
+                :placeholder="props.description || label" 
+                v-model="input" 
+                :maxlength="maxlength"
+                @input="e => updateValue(e.target.value)"
+            ></textarea>
+            <small class="p-textfield__char-counter">{{ remainingCharacters }} characters left</small>
+        </div>
+    </template>
+
+    <template v-else-if="type === 'date'">
+        <input 
+            :class="giveDesign" 
+            v-model="input" 
+            type="text" 
+            :placeholder="label" 
+            @focus="showDatePicker" 
+            @blur="hideDatePicker"
+            @input="e => updateValue(e.target.value)"
+        />
+    </template>
+
+    <template v-else-if="giveDesign.includes('p-textfield--textarea')">
+        <div class="p-textfield__textarea-container">
+            <textarea 
+                :class="giveDesign" 
+                v-model="input" 
+                :placeholder="label" 
+                :maxlength="maxlength"
+            ></textarea>
             <small class="p-textfield__char-counter">{{ remainingCharacters }} characters left</small>
         </div>
     </template>
 
     <template v-else>
-        <input :class="giveDesign" v-model="input" :type="type" :placeholder="label" />
+        <input 
+            :class="giveDesign" 
+            v-model="input" 
+            :type="type" 
+            :placeholder="label"
+            @input="e => updateValue(e.target.value)"
+        />
     </template>
-
-
 </template>

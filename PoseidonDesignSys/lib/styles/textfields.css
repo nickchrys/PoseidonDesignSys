@@ -1,6 +1,9 @@
 /*===================-P-TEXT-FIELD-===============================================================*/
 
-.p-textfield, .p-textfield--small, .p-textfield--textarea {
+.p-textfield,
+.p-textfield--small,
+.p-textfield--textarea,
+.p-textfield--textarea-edit {
   background-color: var(--pos-grey);
   color: black;
   font-size: 20px;
@@ -22,7 +25,8 @@
   width: 122px;
 }
 
-.p-textfield--textarea {
+.p-textfield--textarea,
+.p-textfield--textarea-edit {
   resize: none;
   max-height: 500px;
   min-height: auto;
@@ -36,7 +40,8 @@
   margin-top: 5px;
 }
 
-.p-textfield__textarea-container {
+.p-textfield__textarea-container,
+.p-textfield--textarea-edit .p-textfield__textarea-container {
   position: relative;
   background-color: var(--pos-grey);
   border-radius: 20px;
@@ -52,21 +57,79 @@
   left: 20px;
   font-size: 12px;
   color: var(--pos-dark-grey);
-  pointer-events: none; 
+  pointer-events: none;
+}
+
+#Title, #Title .p-textfield__textarea-container, #Title .p-textfield--textarea-edit {
+  resize: none;
+  max-height: 39px;
+  width: 200px;
+  max-width: 350px; 
+  color: var(--pos-white);
+  box-shadow: none;
+  font-size: 32px;
+  scrollbar-color: transparent transparent;
+  padding: 0;
+  margin: 0;
+  margin-top: px;
+  text-align: center; 
+  border-radius: 10px;
+  background: rgba(217, 217, 217, 0.1);
+}
+
+#Title .p-textfield--textarea-edit {
+  outline: var(--pos-grey) 1.5px solid;
+}
+
+#Title .p-textfield__char-counter {
+  display: none;
+}
+
+#Dates {
+  max-height: 28px;
+  height: 28px;
+  width: 130px;
+  max-width: 130px; 
+  color: var(--pos-white);
+  box-shadow: none;
+  font-size: 16px;
+  scrollbar-color: transparent transparent;
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
+  text-align: center; 
+  border-radius: 10px;
+  background: rgba(217, 217, 217, 0.3);
+  border: var(--pos-white) 1.5px solid;
+}
+
+#Dates::placeholder {
+  color: var(--pos-white);
+}
+
+#Dates:focus {
+  border: var(--pos-yellow) 1.5px solid;
+  outline: var(--pos-yellow) 1.5px solid;
+  margin: auto;
 }
 
 .p-textfield:focus {
-  outline: 2px solid var(--gradient-bg-color);
+  outline: 2px solid var(--pos-yellow);
 }
 
 .p-textfield--small:focus {
-  outline: 2px solid var(--gradient-bg-color);
+  outline: 2px solid var(--pos-yellow);
 }
 
-.p-textfield__textarea-container:focus-within {
-  outline: 2px solid var(--gradient-bg-color);
+.p-textfield__textarea-container:focus-within,
+.p-textfield--textarea-edit .p-textfield__textarea-container:focus-within {
+  outline: 2px solid var(--pos-yellow);
 }
 
-.p-textfield--textarea:focus {
+.p-textfield--textarea:focus,
+.p-textfield--textarea-edit:focus {
   outline: none;
 }
+
+
+
