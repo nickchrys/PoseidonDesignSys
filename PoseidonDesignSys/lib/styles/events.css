@@ -30,8 +30,8 @@
 .p-event__details {
   position: absolute;
   text-align: left;
-  left: 22px;
-  bottom: 19px;
+  left: 12px;
+  bottom: 10px;
   color: var(--pos-white);
 }
 

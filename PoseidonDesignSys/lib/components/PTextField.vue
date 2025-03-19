@@ -66,7 +66,6 @@ const updateValue = (value) => {
     } else {
         input.value = value
         emit('update:modelValue', value)
-        emit('update:description', value)
         emit('input', value)
     }
 }
@@ -106,6 +105,7 @@ const updateValue = (value) => {
                 v-model="input" 
                 :placeholder="label" 
                 :maxlength="maxlength"
+                @input="e => updateValue(e.target.value)"
             ></textarea>
             <small class="p-textfield__char-counter">{{ remainingCharacters }} characters left</small>
         </div>
