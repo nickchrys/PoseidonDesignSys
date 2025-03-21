@@ -64,3 +64,26 @@
   gap: 4px;
   padding-bottom: 2px;
 }
+
+
+.p-finance--invite {
+  min-width: 315px;
+  max-width: 315px;
+  min-height: 95px;
+  max-height: 95px;
+  display: flex; 
+  justify-content: left; 
+  align-items: center; 
+  flex-direction: row;
+  gap: 15px;
+}
+
+.p-finance--invite .pic-container {
+  padding-left: 10px;
+}
+
+.p-finance--invite h1{
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
