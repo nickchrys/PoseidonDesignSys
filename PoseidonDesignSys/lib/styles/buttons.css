@@ -39,6 +39,10 @@
   box-shadow: var(--drop-shadow)
 }
 
+.p-button--gradient-small .p-button__label {
+  font-size: 12px;
+}
+
 .p-button--gradient-small {
   color: var(--pos-yellow);
   font-size: 12px;
