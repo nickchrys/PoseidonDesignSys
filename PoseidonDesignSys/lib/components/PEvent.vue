@@ -123,10 +123,10 @@ const emitUpdate = (field, value) => {
 
             <!-- Event Details -->
             <h3 v-if="giveDesign.includes('p-event--header-edit')" class="p-event__dates">
-                <PTextFiedld v-model="editableStartDate" design="" id="Dates" type="date" :label="formatDate(startDate)"
+                <PTextFiedld v-model="editableStartDate" design="" id="Dates" type="date"
                     @input="value => emitUpdate('startDate', value)" />
                 -
-                <PTextFiedld v-model="editableEndDate" design="" id="Dates" type="date" :label="formatDate(endDate)"
+                <PTextFiedld v-model="editableEndDate" design="" id="Dates" type="date"
                     @input="value => emitUpdate('endDate', value)" />
             </h3>
             <h3 v-else-if="!giveDesign.includes('p-event--small-header')" class="p-event__dates">{{

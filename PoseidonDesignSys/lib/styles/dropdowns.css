@@ -1,7 +1,7 @@
 
 /*=====================-PDROPDOWN-=============================================================*/
 
-.p-dropdown--flight .p-button--dropdown {
+.p-dropdown--flight, .p-button--dropdown {
   padding: 5px 0px 9px 9px;
   color: black;
   font-size: 14px;
@@ -128,4 +128,9 @@
 
 .p-dropdown--event__menu li:hover {
   background-color: var(--pos-dark-grey);
+}
+
+.p-button--dropdown .p-button__label {
+  margin: 0;
+  font-size: 14px;
 }
