@@ -3,7 +3,8 @@
 .p-textfield,
 .p-textfield--small,
 .p-textfield--textarea,
-.p-textfield--textarea-edit {
+.p-textfield--textarea-edit,
+.p-textfield--login-small {
   background-color: var(--pos-grey);
   color: black;
   font-size: 20px;
@@ -23,6 +24,11 @@
   border-style: none;
   height: 40px;
   width: 122px;
+}
+
+.p-textfield--login-small {
+  width: 156px;
+  height: 60px;
 }
 
 .p-textfield--textarea,
