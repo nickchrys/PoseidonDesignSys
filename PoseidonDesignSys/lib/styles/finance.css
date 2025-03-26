@@ -76,6 +76,10 @@
   align-items: center; 
   flex-direction: row;
   gap: 15px;
+  border-radius: 6px;
+  background-color: var(--pos-grey);
+  box-shadow: var(--drop-shadow);
+  color: black;
 }
 
 .p-finance--invite .pic-container {
@@ -85,5 +89,9 @@
 .p-finance--invite h1{
   font-size: 24px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
+}
+
+.p-finance--invite.selected {
+  border: 2px solid var(--pos-yellow);
 }

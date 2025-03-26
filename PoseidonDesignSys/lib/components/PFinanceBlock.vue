@@ -30,18 +30,15 @@ const props = defineProps({
     }
 })
 
-const base = 'p-finance';
 const giveDesign = computed(() => {
-  const design = props.design !== 'default' ? `${base}--${props.design}` : base;
-  return [design, base]
-})
+    return props.design !== 'default' ? `p-finance--${props.design}` : 'p-finance';
+});
 
 </script>
 
 <template>
 
     <template v-if="giveDesign.includes('p-finance--invite')">
-            
             <div :class='giveDesign'> 
                 <div class="pic-container">
                     <PProfilePic design='med' :profileImage="profileImage" />
