@@ -18,7 +18,7 @@ const props = defineProps({
     design: {
         type: String,
         default: '',
-        validator: (value) => ['event', 'flight'].includes(value)
+        validator: (value) => ['event', 'flight', 'login'].includes(value)
     }
 });
 

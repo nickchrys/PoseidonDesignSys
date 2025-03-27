@@ -1,7 +1,7 @@
 
 /*=====================-PDROPDOWN-=============================================================*/
 
-.p-dropdown--flight, .p-button--dropdown {
+.p-dropdown--flight, .p-dropdown--login, .p-button--dropdown {
   padding: 5px 0px 9px 9px;
   color: black;
   font-size: 14px;
@@ -19,7 +19,7 @@
   cursor: pointer;
 }
 
-.p-dropdown--flight {
+.p-dropdown--flight, .p-dropdown--login {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -39,11 +39,11 @@
   align-items: center;
 }
 
-.p-dropdown--flight__icon {
+.p-dropdown--flight__icon, .p-dropdown--login__icon {
   padding: 12px 7px 12px 7px;
 }
 
-.p-dropdown--flight__menu {
+.p-dropdown--flight__menu, .p-dropdown--login__menu {
   display: block;
   position: absolute;
   margin-top: 3px;
@@ -60,7 +60,7 @@
   box-shadow: var(--drop-shadow);
 }
 
-.p-dropdown--flight__menu li {
+.p-dropdown--flight__menu li, .p-dropdown--login__menu li {
   padding: 5px;
   font-size: 12px;
   font-weight: 400;
@@ -68,7 +68,7 @@
   list-style-type: none;
 }
 
-.p-dropdown--flight__menu li:hover {
+.p-dropdown--flight__menu li:hover, .p-dropdown--login__menu li:hover {
   background-color: var(--pos-dark-grey);
 }
 
@@ -85,10 +85,21 @@
   box-shadow: var(--drop-shadow);
 }
 
+.p-dropdown--login {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 20px;
+  height: 50px;
+  width: 146px;
+  background-color: var(--pos-grey);
+  box-shadow: var(--drop-shadow);
+}
+
 .p-dropdown--event .p-button--dropdown{
   padding: 5px 0px 9px 9px;
   color: black;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   border-radius: 6px;
   background-color: var(--pos-grey);
@@ -133,4 +144,10 @@
 .p-button--dropdown .p-button__label {
   margin: 0;
   font-size: 14px;
+}
+
+.p-dropdown--login .p-button__label {
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
 }
