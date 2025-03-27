@@ -18,6 +18,8 @@ const props = defineProps({
     createdBy: { type: String, default: 'createdBy' },
     financeMan: { type: Object, default: () => ({}) },
     design: { type: String, default: 'default' },
+    autoapprove: { type: Boolean, default: false },
+    autoapprove_threshold: { type: Number, default: 0 }
 });
 
 const emit = defineEmits(['eventClick', 'backClick', 'editClick', 'update']);
