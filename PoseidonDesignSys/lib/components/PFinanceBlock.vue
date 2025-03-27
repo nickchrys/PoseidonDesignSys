@@ -49,6 +49,17 @@ const giveDesign = computed(() => {
             </div>
     </template>
 
+    <template v-else-if="giveDesign.includes('p-finance--new-user')">
+            <div :class='giveDesign'> 
+                <div class="pic-container">
+                    <PProfilePic design='med' :profileImage="profileImage" />
+                </div>
+                <div class="p-finance__info-new">
+                    <h1>{{ email }}</h1>
+                </div>
+            </div>
+    </template>
+
     <template v-else>
 
         <div :class='giveDesign'>
