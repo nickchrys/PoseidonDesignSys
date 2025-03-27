@@ -10,6 +10,7 @@ const props = defineProps({
     name: { type: String, default: 'name' },
     startDate: { type: [Date, String], default: () => new Date(2025, 1, 1) },
     endDate: { type: [Date, String], default: () => new Date(2025, 1, 1) },
+    destinationCode: { type: String, default: '---' },
     pictureLink: { type: String, default: 'pictureLink' },
     description: { type: String, default: 'description' },
     maxBudget: { type: Number, default: 0 },
