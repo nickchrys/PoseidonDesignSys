@@ -9,6 +9,10 @@ const props = defineProps({
         default: new Date(2025, 1, 1),
         
     },
+    flightID: {
+        type: String,
+        default: '',
+    },
     passangerName: {
         type: String,
         default: 'Name',

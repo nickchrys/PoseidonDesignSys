@@ -49,7 +49,7 @@ const formatDateForBackend = (date) => {
 const budgetColor = computed(() => {
     const threshold = props.maxBudget * 0.3;
     if (props.maxBudget > threshold) return 'var(--pos-green)';
-    if (props.maxBudget >= 0) return 'var(--pos-yellow)';
+    if (props.currentBudget >= 0) return 'var(--pos-yellow)';
     return 'var(--pos-red)';
 });
 
@@ -136,7 +136,7 @@ const emitUpdate = (field, value) => {
                 formatDate(startDate) }} - {{ formatDate(endDate) }}</h3>
             <h3 v-if="giveDesign.includes('p-event--block-finance')" class="p-event__budget"
                 :style="{ color: budgetColor }">
-                Budget <br />${{ maxBudget }}
+                Budget <br />${{ currentBudget }}/${{ maxBudget }}
             </h3>
             <div class="p-event__details">
                 <h2 v-if="!giveDesign.includes('p-event--small-header')">{{ props.organization }}</h2>
