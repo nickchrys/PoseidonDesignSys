@@ -13,7 +13,6 @@
   height: 60px;
   width: 330px;
   max-width: 330px;
-  box-shadow: var(--drop-shadow);
   box-sizing: border-box;
   padding: 5%;
 }
