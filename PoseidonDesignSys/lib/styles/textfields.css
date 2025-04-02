@@ -1,5 +1,14 @@
 /*===================-P-TEXT-FIELD-===============================================================*/
 
+@keyframes border-fill {
+  0% {
+    border-color: transparent; /* Start with no border */
+  }
+  100% {
+    border-color: var(--pos-yellow); /* End with the desired border color */
+  }
+}
+
 .p-textfield,
 .p-textfield--small,
 .p-textfield--textarea,
@@ -15,6 +24,8 @@
   max-width: 330px;
   box-sizing: border-box;
   padding: 5%;
+  transition: background-color 0.1s ease;
+  border: 2px solid transparent;
 }
 
 .p-textfield--small {
@@ -115,11 +126,14 @@
 #Dates:focus {
   border: var(--pos-yellow) 1.5px solid;
   outline: var(--pos-yellow) 1.5px solid;
+  
   margin: auto;
 }
 
 .p-textfield:focus {
-  outline: 2px solid var(--pos-yellow);
+  background-color: rgb(255, 233, 209);
+  animation: border-fill 0.1s forwards;
+  outline: none;
 }
 
 .p-textfield--small:focus {
