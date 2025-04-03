@@ -22,7 +22,7 @@ const props = defineProps({
     },
     profileImage: {
         type: String,
-        default: 'src/assets/defaultPP.PNG'
+        default: ''
     },
     design: {
         type: String,
