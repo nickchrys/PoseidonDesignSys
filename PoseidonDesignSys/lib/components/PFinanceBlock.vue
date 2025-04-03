@@ -65,7 +65,7 @@ const giveDesign = computed(() => {
         <div :class='giveDesign'>
             <div class="finance-button-pic-container">
                 <PProfilePic design='finance' :profileImage="profileImage" />
-                <PButton design='gradient-small' label='Talk with me!' />
+                <!-- <PButton design='gradient-small' label='Talk with me!' /> -->
             </div>
             <div class="p-finance__info">
                 <h1>{{ name }}</h1>
