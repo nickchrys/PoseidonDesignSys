@@ -203,7 +203,7 @@ const formatLongFlightDate = computed(() => {
                 <h5 class="p-flight__date">{{ formatFlightDate }}</h5>
                 <h5 class="p-flight__time">{{ formatTime(flightDepTime) }} - {{ formatTime(flightArrTime) }}</h5>
             </div>
-            <h5 class="p-flight__price">${{ price }}</h5>
+            <h5 class="p-flight__price">{{ price.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }}</h5>
         </template>
 
         <template v-else>
@@ -228,7 +228,7 @@ const formatLongFlightDate = computed(() => {
             </div>
             <div class="class-price-container">
                 <h5 class="p-flight__class">{{ flightClass }}</h5>
-                <h5 class="p-flight__price">${{ price }}</h5>
+                <h5 class="p-flight__price">{{ price.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }}</h5>
             </div>
         </template>
     </div>

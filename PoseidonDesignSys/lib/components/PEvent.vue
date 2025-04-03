@@ -136,7 +136,7 @@ const emitUpdate = (field, value) => {
                 formatDate(startDate) }} - {{ formatDate(endDate) }}</h3>
             <h3 v-if="giveDesign.includes('p-event--block-finance')" class="p-event__budget"
                 :style="{ color: budgetColor }">
-                Budget <br />${{ currentBudget }}/${{ maxBudget }}
+                Budget <br />{{ new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(currentBudget) }}/{{ new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(maxBudget) }}
             </h3>
             <div class="p-event__details">
                 <h2 v-if="!giveDesign.includes('p-event--small-header')">{{ props.organization }}</h2>
