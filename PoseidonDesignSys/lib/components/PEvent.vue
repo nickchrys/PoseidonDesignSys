@@ -1,13 +1,13 @@
 <script setup>
 import { computed, ref } from 'vue';
-import PTextFiedld from './PTextField.vue';
+import PTextField from './PTextField.vue';
 import { format, parseISO } from 'date-fns';
 
 
 const props = defineProps({
     id: { type: Number },
-    organization: { type: String, default: 'organization' },
-    name: { type: String, default: 'name' },
+    organization: { type: Object, default: () => ({}) },
+    eventName: { type: String, default: 'name' },
     startDate: { type: [Date, String], default: () => new Date(2025, 1, 1) },
     endDate: { type: [Date, String], default: () => new Date(2025, 1, 1) },
     destinationCode: { type: String, default: '---' },
@@ -90,7 +90,7 @@ const emitUpdate = (field, value) => {
             </svg>
             <div class="p-event--itinerary-header">
                 <img :src="props.pictureLink" alt="Airline Logo" />
-                <h1>{{ props.organization }}</h1>
+                <h1>{{ props.organization.name }}</h1>
                 <h2>Flight itinerary</h2>
 
             </div>
@@ -126,10 +126,10 @@ const emitUpdate = (field, value) => {
 
             <!-- Event Details -->
             <h3 v-if="giveDesign.includes('p-event--header-edit')" class="p-event__dates">
-                <PTextFiedld v-model="editableStartDate" design="" id="Dates" type="date"
+                <PTextField v-model="editableStartDate" design="" id="Dates" type="date"
                     @input="value => emitUpdate('startDate', value)" />
                 -
-                <PTextFiedld v-model="editableEndDate" design="" id="Dates" type="date"
+                <PTextField v-model="editableEndDate" design="" id="Dates" type="date"
                     @input="value => emitUpdate('endDate', value)" />
             </h3>
             <h3 v-else-if="!giveDesign.includes('p-event--small-header')" class="p-event__dates">{{
@@ -139,10 +139,10 @@ const emitUpdate = (field, value) => {
                 Budget <br />{{ new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(currentBudget) }}/{{ new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(maxBudget) }}
             </h3>
             <div class="p-event__details">
-                <h2 v-if="!giveDesign.includes('p-event--small-header')">{{ props.organization }}</h2>
-                <h4 v-if="!giveDesign.includes('p-event--header-edit')">{{ name }}</h4>
+                <h2 v-if="!giveDesign.includes('p-event--small-header')">{{ props.organization.name }}</h2>
+                <h4 v-if="!giveDesign.includes('p-event--header-edit')">{{ eventName }}</h4>
                 <h4 v-else>
-                    <PTextFiedld v-model="editableName" design="textarea-edit" id="Title" :description="name"
+                    <PTextField v-model="editableName" design="textarea-edit" id="Title" :description="eventName"
                         @update:modelValue="value => emitUpdate('name', value)" />
                 </h4>
             </div>
