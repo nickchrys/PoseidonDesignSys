@@ -139,7 +139,7 @@ const priceColor = computed(() => {
             const ratio = props.price / threshold;
             if (ratio > .9) return 'var(--pos-red)';       // More than 90% of threshold → Expensive
             if (ratio < 0.5) return 'var(--pos-green)';     // Below half threshold → Cheap
-            return 'var(--pos-orange)'; 
+            return 'var(--pos-yellow)'; 
         } else {
             return null;
         }
@@ -251,7 +251,7 @@ const priceColor = computed(() => {
             </div>
             <div class="class-price-container">
                 <h5 class="p-flight__class">{{ flightClass }}</h5>
-                <h5 class="p-flight__price" :style="{ color: priceColor }">{{ price.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }}</h5>
+                <h5 class="p-flight__price" :style="{ color: priceColor }">{{ Math.round(price).toLocaleString('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 }) }}</h5>
             </div>
         </template>
     </div>
