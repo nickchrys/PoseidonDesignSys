@@ -34,8 +34,8 @@ const giveDesign = computed(() => {
 const dropDown = ref(false)
 const dropDownLabel = computed(() => props.dropDownLabel)
 
-const departureRange = ref([480, 1020]) // 08:00 to 17:00
-const arrivalRange = ref([540, 1200]) // 09:00 to 20:00
+const departureRange = ref([0, 1440]) // 00:00 to 24:00
+const arrivalRange = ref([0, 1440]) // 00:00 to 24:00
 
 const toggleDropDown = () => {
     dropDown.value = !dropDown.value
@@ -47,6 +47,20 @@ const formatTime = (minutes) => {
   const period = h < 12 || h === 24 ? 'AM' : 'PM'
   const hour12 = h % 12 === 0 ? 12 : h % 12
   return `${hour12}:${String(m).padStart(2, '0')} ${period}`
+}
+
+const formatTime24hr = (minutes) => {
+  const h = Math.floor(minutes / 60)
+  const m = minutes % 60
+  return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`
+}
+
+const onDepRangeChange = (value, index) => {
+    emit('range-updated', { type: 'departure', value: value.map(formatTime24hr) })
+}
+
+const onArrRangeChange = (value, index) => {
+    emit('range-updated', { type: 'arrival', value: value.map(formatTime24hr) })
 }
 
 </script>
@@ -66,14 +80,14 @@ const formatTime = (minutes) => {
                 <label>Departure Time: {{ formatTime(departureRange[0]) }} - {{ formatTime(departureRange[1]) }}</label>
                 <VueSlider v-model="departureRange" :min="minTime" :max="maxTime" :interval="60" :tooltip="'hover'"
                     :tooltip-formatter="formatTime" :dot-size="16" :lazy="true" :marks="false"
-                    :process-style="{ backgroundColor: '#FEB96E' }" @drag-end="emit('range-updated', { departureRange, arrivalRange })"/>
+                    :process-style="{ backgroundColor: '#FEB96E' }" @change="onDepRangeChange"/>
             </div>
 
             <div class="slider-group">
                 <label>Arrival Time: {{ formatTime(arrivalRange[0]) }} - {{ formatTime(arrivalRange[1]) }}</label>
                 <VueSlider v-model="arrivalRange" :min="minTime" :max="maxTime" :interval="60" :tooltip="'hover'"
                     :tooltip-formatter="formatTime" :dot-size="16" :lazy="true" :marks="false"
-                    :process-style="{ backgroundColor: '#FEB96E' }" />
+                    :process-style="{ backgroundColor: '#FEB96E' }" @change="onArrRangeChange"/>
             </div>
         </div>
     </div>
