@@ -96,7 +96,7 @@ const onArrRangeChange = (value, index) => {
 <style scoped>
 .slider-dropdown {
     padding: 1rem;
-    background: white;
+    background: var(--pos-grey);
     border: 1px solid #ccc;
     border-radius: 8px;
     min-width: 300px;
