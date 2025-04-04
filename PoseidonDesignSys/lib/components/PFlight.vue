@@ -120,7 +120,7 @@ const formatLongFlightDate = computed(() => {
     const weekday = props.flightDate.toLocaleDateString('en-US', { weekday: 'long' });
     const year = props.flightDate.getFullYear();
     const ordIndicator = getOrdIndicator(day);
-    return `${weekday}, ${month} ${day}${ordIndicator} ${year}`;
+    return `${weekday}, ${month} ${day}${ordIndicator}, ${year}`;
 });
 
 

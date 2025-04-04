@@ -19,7 +19,8 @@ const props = defineProps({
     financeMan: { type: Object, default: () => ({}) },
     design: { type: String, default: 'default' },
     autoApprove: { type: Boolean, default: false },
-    autoApproveThreshold: { type: Number, default: 0 }
+    autoApproveThreshold: { type: Number, default: 0 },
+    airline: { type: String, default: 'Airline' }
 });
 
 const emit = defineEmits(['eventClick', 'backClick', 'editClick', 'update']);
@@ -90,8 +91,8 @@ const emitUpdate = (field, value) => {
             </svg>
             <div class="p-event--itinerary-header">
                 <img :src="props.pictureLink" alt="Airline Logo" />
-                <h1>{{ props.organization.name }}</h1>
-                <h2>Flight itinerary</h2>
+                <h1>{{ props.airline }}</h1>
+                <h2>Flight Itinerary</h2>
 
             </div>
         </div>
