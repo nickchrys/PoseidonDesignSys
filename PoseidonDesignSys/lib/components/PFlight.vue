@@ -124,6 +124,29 @@ const formatLongFlightDate = computed(() => {
 });
 
 
+const eventData = localStorage.getItem('currentEvent')
+// Set the color of the price based on the autoapprove threshold
+// If the eventData is not null, parse it and check the autoapprove property
+// If autoapprove is true, check the price against the threshold. If false, return null
+// If the price is greater than 90% of the threshold, set color to red
+// If the price is less than 50% of the threshold, set color to green
+// Otherwise, set color to orange
+const priceColor = computed(() => {
+    if (eventData) {
+        const parsedEventData = JSON.parse(eventData);
+        if (parsedEventData.autoapprove) {
+            const threshold = parsedEventData.autoapprove_threshold;
+            const ratio = props.price / threshold;
+            if (ratio > .9) return 'var(--pos-red)';       // More than 90% of threshold → Expensive
+            if (ratio < 0.5) return 'var(--pos-green)';     // Below half threshold → Cheap
+            return 'var(--pos-orange)'; 
+        } else {
+            return null;
+        }
+    }
+});
+
+
 </script>
 
 <template>
@@ -228,7 +251,7 @@ const formatLongFlightDate = computed(() => {
             </div>
             <div class="class-price-container">
                 <h5 class="p-flight__class">{{ flightClass }}</h5>
-                <h5 class="p-flight__price">{{ price.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }}</h5>
+                <h5 class="p-flight__price" :style="{ color: priceColor }">{{ price.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }}</h5>
             </div>
         </template>
     </div>

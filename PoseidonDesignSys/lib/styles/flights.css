@@ -195,7 +195,7 @@
 }
 
 .p-flight__price {
-  color: var(--pos-green);
+  color: var(--pos-black);
   font-size: 14px;
   margin: 0;
 }
