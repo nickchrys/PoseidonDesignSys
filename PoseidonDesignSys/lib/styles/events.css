@@ -7,13 +7,25 @@
   position: relative;
   width: 335px;
   max-width: 335px;
-  height: 130px;
+  min-height: 130px;
+  max-height: 130px;
   border-radius: 5px;
   border-style: none;
-  box-shadow: var(--drop-shadow);
+
   margin-top: 1px;
   color: var(--pos-white);
 }
+
+.p-event--block {
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
+}
+
+.p-event--block:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4); /* Pop-out shadow */
+  cursor: pointer;
+}
+
 
 .p-event__budget {
   position: absolute;
