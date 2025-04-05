@@ -227,10 +227,10 @@ const priceColor = computed(() => {
                             <h3>{{ seatNumber }}</h3>
                         </div>
 
-                        <div class="p-flight--itinerary__info-container">
+                        <!-- <div class="p-flight--itinerary__info-container">
                             <h4>Type</h4>
                             <h3>{{ flightType }}</h3>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
