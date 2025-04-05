@@ -21,7 +21,6 @@
   border-style: none;
   height: 60px;
   width: 100%;
-  max-width: 330px;
   box-sizing: border-box;
   padding: 5%;
   transition: background-color 0.1s ease;
@@ -33,7 +32,6 @@
   border-radius: 6px;
   border-style: none;
   height: 40px;
-  width: 122px;
 }
 
 .p-textfield--login-small {
