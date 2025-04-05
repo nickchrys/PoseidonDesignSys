@@ -57,6 +57,11 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
+.p-finance__info a {
+  margin-bottom: 8px;
+
+}
+
 .p-finance__mail,
 .p-finance__phone {
   display: flex;
