@@ -16,6 +16,7 @@
     "vue": "^3.0.0"
   },
   "dependencies": {
+    "@vuepic/vue-datepicker": "^11.0.2",
     "vue-slider-component": "^4.1.0-beta.7"
   }
 }

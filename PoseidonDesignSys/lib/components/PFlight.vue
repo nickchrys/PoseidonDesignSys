@@ -124,6 +124,7 @@ const formatDuration = (duration) => {
 };
 
 const formatFlightDate = computed(() => {
+    console.log("SHORT",props.flightDate)
     const options = { weekday: 'short', month: 'short', day: 'numeric' };
     const date = props.flightDate.toLocaleDateString('en-US', options);
     const day = props.flightDate.getDate();
@@ -135,6 +136,7 @@ const formatFlightDate = computed(() => {
 });
 
 const formatLongFlightDate = computed(() => {
+    console.log("LONG",props.flightDate)
     const options = { weekday: 'long', month: 'long', day: 'numeric' };
     const date = props.flightDate.toLocaleDateString('en-US', options);
     const day = props.flightDate.getDate();
