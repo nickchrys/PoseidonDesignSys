@@ -75,7 +75,19 @@ const props = defineProps({
     design: {
         type: String,
         default: 'default',
-    }
+    },
+    itinerary: {
+        type: Array,
+        default: [],
+    },
+    flightDuration: {
+        type: String,
+        default: '(Calculated time)'
+    },
+    layoverDuration: {
+        type: String,
+        default: '00 hr 00 m'
+    },
 });
 
 const base = 'p-flight';
@@ -99,6 +111,16 @@ const formatTime = (time) => {
     const ampm = hours >= 12 ? 'PM' : 'AM';
     const formattedHours = hours % 12 || 12;
     return `${formattedHours}:${minutes} ${ampm}`;
+};
+
+const formatDuration = (duration) => {
+    const hoursMatch = duration.match(/(\d+)H/);
+    const minutesMatch = duration.match(/(\d+)M/);
+
+    const hours = hoursMatch ? `${hoursMatch[1]}h` : '';
+    const minutes = minutesMatch ? `${minutesMatch[1]}m` : '';
+
+    return [hours, minutes].filter(Boolean).join(' ');
 };
 
 const formatFlightDate = computed(() => {
@@ -173,7 +195,7 @@ const priceColor = computed(() => {
                                 <path fill="#000"
                                     d="M12 21.9q-.2 0-.375-.075T11.3 21.6l-5.6-5.575q-.275-.275-.275-.7T5.7 14.6q.3-.3.713-.3t.712.3L11 18.5v-6.175q0-.425.288-.712t.712-.288t.713.288t.287.712V18.5l3.9-3.9q.275-.275.688-.275t.712.3q.275.275.275.7t-.275.7L12.7 21.6q-.15.15-.325.225T12 21.9m0-12.575q-.425 0-.712-.287T11 8.325v-1q0-.425.288-.712T12 6.325t.713.288t.287.712v1q0 .425-.288.713T12 9.325m0-5q-.425 0-.712-.287T11 3.325t.288-.712t.712-.288t.713.288t.287.712t-.288.713t-.712.287" />
                             </svg>
-                            <p>(Calculated time)</p>
+                            <p>{{ formatDuration(flightDuration) }}</p>
                         </div>
 
                         <div class="p-flight--itinerary__arrive-container">
@@ -227,6 +249,12 @@ const priceColor = computed(() => {
                 <h5 class="p-flight__time">{{ formatTime(flightDepTime) }} - {{ formatTime(flightArrTime) }}</h5>
             </div>
             <h5 class="p-flight__price">{{ price.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }}</h5>
+        </template>
+
+        <template v-else-if="giveDesign.includes('p-flight--layover')">
+            <div class="p-flight--layover__container">
+                <h4>Layover: {{ layoverDuration }}</h4>
+            </div>
         </template>
 
         <template v-else>

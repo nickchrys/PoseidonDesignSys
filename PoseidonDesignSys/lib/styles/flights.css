@@ -1,5 +1,22 @@
 /*=============-P-FLIGHT-===============================================================*/
 
+.p-flight--layover__container {
+  height: 50px;
+  width: 343px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--pos-grey);
+  box-shadow: var(--drop-shadow);
+  border-radius: 6px;
+  color: black;
+}
+
+.p-flight--layover__container h4 {
+  text-align: center;
+}
+
 .p-flight--block, .p-flight--shop, .p-flight--finance{
   height: 102px;
   width: 335px;
