@@ -250,7 +250,9 @@ const priceColor = computed(() => {
                 <h5 class="p-flight__date">{{ formatFlightDate }}</h5>
                 <h5 class="p-flight__time">{{ formatTime(flightDepTime) }} - {{ formatTime(flightArrTime) }}</h5>
             </div>
+            <div class="class-price-container">
             <h5 class="p-flight__price">{{ price.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }}</h5>
+            </div>
         </template>
 
         <template v-else-if="giveDesign.includes('p-flight--layover')">
