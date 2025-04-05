@@ -69,9 +69,7 @@
   row-gap: 10px;
   width: 334.05px;
   padding: 6px;
-  background-color: var(--pos-inner-yellow);
-  border-radius: 10px;
-  box-shadow: var(--inner-shadow);
+
   align-items: center;
 }
 
