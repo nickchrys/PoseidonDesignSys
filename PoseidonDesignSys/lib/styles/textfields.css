@@ -127,8 +127,6 @@
 }
 
 #Dates {
-  max-height: 1.75rem; /* 28px */
-  height: 1.75rem; /* 28px */
   width: 8.125rem; /* 130px */
   max-width: 8.125rem; /* 130px */
   color: var(--pos-white);
@@ -137,7 +135,6 @@
   scrollbar-color: transparent transparent;
   padding: 0;
   margin: 0;
-  margin-top: 0.9375rem; /* 15px */
   text-align: center; 
   border-radius: 0.625rem; /* 10px */
   background: rgba(217, 217, 217, 0.3);
