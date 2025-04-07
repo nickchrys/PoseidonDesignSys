@@ -122,6 +122,12 @@
   margin: 0;
 }
 
+.p-event--header-edit .p-event-dates {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .p-event--small-header {
   color: var(--pos-white);
   background: var(--top-gradient) !important;

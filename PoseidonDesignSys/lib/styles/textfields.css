@@ -15,25 +15,38 @@
 .p-textfield--textarea-edit,
 .p-textfield--login-small, 
 .dp__input {
+  background-color: var(--pos-grey);
+  color: black;
+  font-size: 20px;
+  border-radius: 20px;
+  border-style: none;
+  height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5%;
+  transition: background-color 0.1s ease;
+  border: 2px solid transparent;
+}
+
+.p-textfield--small {
+  font-size: 16px;
+  border-radius: 6px;
+  border-style: none;
+  height: 40px;
+}
+
+.dp__input {
   background-color: var(--pos-grey) !important;
   color: black !important;
-  font-size: 20px !important;
-  border-radius: 20px !important;
+  font-size: 16px !important;
+  border-radius: 6px !important;
   border-style: none !important;
-  height: 60px !important;
+  height: 40px !important;
   width: 100% !important;
   box-sizing: border-box !important;
   padding: 5%;
   transition: background-color 0.1s ease !important;
   border: 2px solid transparent !important;
-}
-
-.p-textfield--small,
-.dp__input {
-  font-size: 16px !important;
-  border-radius: 6px !important;
-  border-style: none !important;
-  height: 40px !important;
 }
 
 .p-textfield--login-small {
@@ -48,10 +61,7 @@
   min-height: auto;
   height: 150px;
   font-family: Lato, sans-serif;
-  scrollbar-color: var(--gradient-bg-color) transparent;
-  scrollbar-width: thin;
   box-shadow: none;
-  scrollbar-gutter: stable both-edges;
   margin-bottom: 30px;
   margin-top: 5px;
 }
@@ -102,17 +112,14 @@
 }
 
 #Dates {
-  max-height: 28px;
-  height: 28px;
-  width: 130px;
-  max-width: 130px; 
+
+  max-width: 140px; 
   color: var(--pos-white);
   box-shadow: none;
   font-size: 16px;
   scrollbar-color: transparent transparent;
   padding: 0;
   margin: 0;
-  margin-top: 15px;
   text-align: center; 
   border-radius: 10px;
   background: rgba(217, 217, 217, 0.3);
@@ -150,5 +157,7 @@
   outline: none;
 }
 
-
+textarea.p-textfield--textarea-edit::placeholder {
+  color: white;
+}
 
