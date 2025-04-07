@@ -2,6 +2,8 @@
 import { computed, ref } from 'vue';
 import PTextField from './PTextField.vue';
 import { format, parseISO } from 'date-fns';
+import VueDatePicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css'
 
 
 const props = defineProps({
@@ -20,7 +22,8 @@ const props = defineProps({
     design: { type: String, default: 'default' },
     autoApprove: { type: Boolean, default: false },
     autoApproveThreshold: { type: Number, default: 0 },
-    airline: { type: String, default: 'Airline' }
+    airline: { type: String, default: 'Airline' },
+    eventDateRange: { type: Object, default: [] }
 });
 
 const emit = defineEmits(['eventClick', 'backClick', 'editClick', 'update']);
@@ -72,12 +75,15 @@ const editableStartDate = ref(props.startDate);
 const editableEndDate = ref(props.endDate);
 
 const emitUpdate = (field, value) => {
-    if (field === 'name') editableName.value = value;
-    if (field === 'startDate') editableStartDate.value = formatDateForBackend(value);
-    if (field === 'endDate') editableEndDate.value = formatDateForBackend(value);
+    if (field === 'name') value = value;
+    if (field === 'startDate') value = formatDateForBackend(value);
+    if (field === 'endDate') value = formatDateForBackend(value);
     emit('update', { field, value });
 };
+
+console.log(props.eventDateRange.value)
 </script>
+
 
 
 <template>
@@ -127,11 +133,19 @@ const emitUpdate = (field, value) => {
 
             <!-- Event Details -->
             <h3 v-if="giveDesign.includes('p-event--header-edit')" class="p-event__dates">
-                <PTextField v-model="editableStartDate" design="" id="Dates" type="date"
-                    @input="value => emitUpdate('startDate', value)" />
-                -
-                <PTextField v-model="editableEndDate" design="" id="Dates" type="date"
-                    @input="value => emitUpdate('endDate', value)" />
+                <!-- <PTextField v-model="editableStartDate" design="" id="Dates" type="date" -->
+                <!-- @input="value => emitUpdate('startDate', value)" /> -->
+                <VueDatePicker v-model="editableStartDate" id="Dates" :enable-time-picker="false"
+                    :placeholder="'Start Date'" exactMatch="true"
+                    :config="{ closeOnAutoApply: false, keepActionRow: true }" auto-apply hide-input-icon
+                    @update:model-value="value => emitUpdate('startDate', value)"></VueDatePicker>
+                <p>to</p>
+                <VueDatePicker v-model="editableEndDate" id="Dates" :enable-time-picker="false"
+                    :placeholder="'End Date'" exactMatch="true"
+                    :config="{ closeOnAutoApply: false, keepActionRow: true }" auto-apply hide-input-icon
+                    @update:model-value="value => emitUpdate('endDate', value)"></VueDatePicker>
+                <!-- <PTextField v-model="editableEndDate" design="" id="Dates" type="date" -->
+                <!-- @input="value => emitUpdate('endDate', value)" /> -->
             </h3>
             <h3 v-else-if="!giveDesign.includes('p-event--small-header')" class="p-event__dates">{{
                 formatDate(startDate) }} - {{ formatDate(endDate) }}</h3>
