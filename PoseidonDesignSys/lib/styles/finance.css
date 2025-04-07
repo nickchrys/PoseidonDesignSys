@@ -1,46 +1,46 @@
 /*================-P-FINANCE-==================================================================*/
 
 .p-finance {
-  max-height: 155px;
-  min-height: 155px;
-  max-width: 335px;
-  min-width: 335px;
+  max-height: 9.6875rem;    /* 155px */
+  min-height: 9.6875rem;    /* 155px */
+  max-width: 20.9375rem;    /* 335px */
+  min-width: 20.9375rem;    /* 335px */
   display: flex;
   flex-direction: row;
-  border-radius: 6px;
+  border-radius: 0.375rem;  /* 6px */
   background-color: var(--pos-grey);
   box-shadow: var(--drop-shadow);
   color: black;
-  padding-left: 5px;
-  margin-bottom: 15px;
+  padding-left: 0.3125rem;  /* 5px */
+  margin-bottom: 0.9375rem; /* 15px */
 }
 
 .p-finance h1 {
-  font-size: 24px;
+  font-size: 1.5rem;       /* 24px */
   font-weight: 600;
   margin: 0;
   padding: 0;
 }
 
 .p-finance h2 {
-  font-size: 15px;
+  font-size: 0.9375rem;     /* 15px */
   font-weight: 500;
   margin: 0;
-  padding-bottom: 1px;
-  padding-left: 4px;
+  padding-bottom: 0.0625rem; /* 1px */
+  padding-left: 0.25rem;    /* 4px */
 }
 
 .p-finance h3 {
-  font-size: 13px;
+  font-size: 0.8125rem;     /* 13px */
   font-weight: 400;
   margin: 0;
-  padding-top: 2px;
+  padding-top: 0.125rem;    /* 2px */
 }
 
 .finance-button-pic-container {
   display: flex;
-  gap: 8px;
-  padding-left: 10px;
+  gap: 0.5rem;            /* 8px */
+  padding-left: 0.625rem;   /* 10px */
   align-items: center;
 }
 
@@ -51,52 +51,50 @@
 .p-finance__info {
   display: flex;
   flex-direction: column;
-  padding-top: 23px;
-  padding-left: 15px;
+  padding-top: 1.4375rem;   /* 23px */
+  padding-left: 0.9375rem;  /* 15px */
   text-align: left;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 .p-finance__info a {
-  margin-bottom: 8px;
-
+  margin-bottom: 0.5rem;    /* 8px */
 }
 
 .p-finance__mail,
 .p-finance__phone {
   display: flex;
   flex-direction: row;
-  gap: 4px;
-  padding-bottom: 2px;
+  gap: 0.25rem;           /* 4px */
+  padding-bottom: 0.125rem; /* 2px */
 }
 
-
 .p-finance--invite, .p-finance--new-user {
-  min-width: 315px;
-  max-width: 315px;
-  min-height: 95px;
-  max-height: 95px;
+  min-width: 19.6875rem;    /* 315px */
+  max-width: 19.6875rem;    /* 315px */
+  min-height: 5.9375rem;    /* 95px */
+  max-height: 5.9375rem;    /* 95px */
   display: flex; 
   justify-content: left; 
   align-items: center; 
   flex-direction: row;
-  gap: 15px;
-  border-radius: 6px;
+  gap: 0.9375rem;         /* 15px */
+  border-radius: 0.375rem;  /* 6px */
   background-color: var(--pos-grey);
   box-shadow: var(--drop-shadow);
   color: black;
 }
 
 .p-finance--invite .pic-container {
-  padding-left: 10px;
+  padding-left: 0.625rem;   /* 10px */
 }
 
 .p-finance--invite h1{
-  font-size: 24px;
+  font-size: 1.5rem;        /* 24px */
   font-weight: 600;
-  margin-bottom: 35px;
+  margin-bottom: 2.1875rem;  /* 35px */
 }
 
 .p-finance--invite.selected {
-  border: 2px solid var(--pos-yellow);
+  border: 0.125rem solid var(--pos-yellow); /* 2px */
 }

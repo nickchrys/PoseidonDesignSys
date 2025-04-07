@@ -2,10 +2,10 @@
 
 .p-profilepic--small {
   background-color: var(--pos-grey);
-  border: 2px solid var(--pos-yellow);
+  border: 0.125rem solid var(--pos-yellow); /* 2px */
   box-shadow: var(--drop-shadow);
-  height: 50px;
-  width: 50px;
+  height: 3.125rem; /* 50px */
+  width: 3.125rem; /* 50px */
   border-radius: 100%;
 }
 
@@ -18,10 +18,10 @@
 
 .p-profilepic--finance {
   background-color: var(--pos-grey);
-  border: 2px solid var(--pos-yellow);
+  border: 0.125rem solid var(--pos-yellow); /* 2px */
   box-shadow: var(--drop-shadow);
-  height: 100px;
-  width: 100px;
+  height: 6.25rem; /* 100px */
+  width: 6.25rem; /* 100px */
   border-radius: 100%;
 }
 
@@ -34,10 +34,10 @@
 
 .p-profilepic--big {
   background-color: var(--pos-grey);
-  border: 2px solid var(--pos-yellow);
+  border: 0.125rem solid var(--pos-yellow); /* 2px */
   box-shadow: var(--drop-shadow);
-  height: 190px;
-  width: 190px;
+  height: 11.875rem; /* 190px */
+  width: 11.875rem; /* 190px */
   border-radius: 100%;
 }
 
@@ -50,10 +50,10 @@
 
 .p-profilepic--med {
   background-color: var(--pos-grey);
-  border: 2px solid var(--pos-yellow);
+  border: 0.125rem solid var(--pos-yellow); /* 2px */
   box-shadow: var(--drop-shadow);
-  height: 75px;
-  width: 75px;
+  height: 4.6875rem; /* 75px */
+  width: 4.6875rem; /* 75px */
   border-radius: 100%;
 }
 
