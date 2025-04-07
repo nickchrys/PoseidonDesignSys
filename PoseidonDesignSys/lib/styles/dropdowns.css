@@ -1,7 +1,7 @@
 /*=====================-PDROPDOWN-=============================================================*/
 
 .p-dropdown--flight, .p-dropdown--login, .p-button--dropdown {
-  padding: 0.3125rem 0 0.5625rem 0.5625rem; /* 5px 0px 9px 9px */
+  padding: 1% 0% 1% 0.5625rem; /* 5px 0px 9px 9px */
   color: black;
   font-size: 0.875rem; /* 14px */
   font-weight: bold;

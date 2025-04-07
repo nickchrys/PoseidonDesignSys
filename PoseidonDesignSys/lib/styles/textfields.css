@@ -21,11 +21,14 @@
   border-radius: 20px;
   border-style: none;
   height: 60px;
-  width: 100%;
   box-sizing: border-box;
   padding: 5%;
   transition: background-color 0.1s ease;
   border: 2px solid transparent;
+}
+
+.p-textfield {
+  width: 100%;
 }
 
 .p-textfield--small {
@@ -47,13 +50,16 @@
   padding: 5%;
   transition: background-color 0.1s ease !important;
   border: 0.125rem solid transparent !important; /* 2px */
+  padding-left: 10% !important; /* 10% padding on the left */
 }
 
 .p-textfield--small,
 .dp__input {
   font-size: 1rem !important; /* 16px */
+  font-family: Inter, sans-serif !important;
   border-radius: 0.375rem !important; /* 6px */
   border-style: none !important;
+  font-weight: 400 !important;
   height: 2.5rem !important; /* 40px */
 }
 
@@ -156,6 +162,8 @@
 
 .p-textfield--small:focus {
   outline: 0.125rem solid var(--pos-yellow); /* 2px */
+  background-color: rgb(255, 233, 209);
+
 }
 
 .p-textfield__textarea-container:focus-within,
@@ -170,5 +178,28 @@
 
 textarea.p-textfield--textarea-edit::placeholder {
   color: white;
+}
+
+.p-textfield--small#map:focus {
+  border: var(--pos-yellow) 0.09375rem solid; /* 1.5px */
+  outline: var(--pos-yellow) 0.09375rem solid; /* 1.5px */
+  background-color: rgb(255, 233, 209);
+}
+
+
+@media only screen and (max-width: 56rem) {
+  /* 896px */
+  .p-textfield--small {
+    width: 100%;
+  }
+  .p-textfield--login-small {
+    width: 100%;
+  }
+  .p-textfield--textarea {
+    width: 100%;
+  }
+  .p-textfield--textarea-edit {
+    width: 100%;
+  }
 }
 

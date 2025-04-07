@@ -107,3 +107,18 @@
   background-clip: text;
   color: transparent;
 }
+
+@media only screen and (max-width: 56rem) { /* 896px */
+  .p-button--gradient {
+    width: 100%;
+  }
+  .p-button--gradient-small {
+    width: 100%;
+  }
+  .p-button--shop {
+    width: 100%;
+  }
+  .p-button--planner {
+    width: 100%;
+  }
+}
