@@ -19,6 +19,10 @@ const props = defineProps({
         type: String,
         default: '',
         validator: (value) => ['event', 'flight', 'login'].includes(value)
+    },
+    description: {
+        type: String,
+        default: ''
     }
 });
 
@@ -35,10 +39,10 @@ const toggleDropDown = () => {
     dropDown.value = !dropDown.value;
 }
 
-const selectOption = (option) => {
+const selectOption = (field, option) => {
     dropDown.value = false;
     dropDownLabel.value = option;
-    emit('option-selected', option);
+    emit('option-selected', {field, option});
 };
 </script>
 
@@ -53,7 +57,7 @@ const selectOption = (option) => {
             </svg>
         </div>
         <ul v-if="dropDown" :class="`${giveDesign}__menu`">
-            <li v-for="option in options" :value="option" @click="selectOption(option)">
+            <li v-for="option in options" :value="option" @click="selectOption(description, option)">
                 {{ option }}
             </li>
         </ul>
