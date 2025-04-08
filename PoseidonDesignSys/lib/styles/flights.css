@@ -1,15 +1,18 @@
 /*=============-P-FLIGHT-===============================================================*/
 
 .p-flight--layover__container {
-  height: 3.125rem;               /* 50px */
-  width: 21.4375rem;              /* 343px */
+  height: 3.125rem;
+  /* 50px */
+  width: 21.4375rem;
+  /* 343px */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: var(--pos-grey);
   box-shadow: var(--drop-shadow);
-  border-radius: 0.375rem;        /* 6px */
+  border-radius: 0.375rem;
+  /* 6px */
   color: black;
 }
 
@@ -17,17 +20,20 @@
   text-align: center;
 }
 
-.p-flight--block, 
-.p-flight--shop, 
+.p-flight--block,
+.p-flight--shop,
 .p-flight--finance {
-  height: 6.375rem;              /* 102px */
-  width: 20.9375rem;             /* 335px */
+  height: 6.375rem;
+  /* 102px */
+  width: 20.9375rem;
+  /* 335px */
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: var(--pos-grey);
   box-shadow: var(--drop-shadow);
-  border-radius: 0.375rem;        /* 6px */
+  border-radius: 0.375rem;
+  /* 6px */
   color: black;
 }
 
@@ -37,17 +43,23 @@
   align-items: center;
   background-color: var(--pos-grey);
   box-shadow: var(--drop-shadow);
-  border-radius: 0.375rem;        /* 6px */
+  border-radius: 0.375rem;
+  /* 6px */
   color: black;
-  width: 21.4375rem;             /* 343px */
-  height: 16.875rem;             /* 270px */
+  width: 21.4375rem;
+  /* 343px */
+  height: 16.875rem;
+  /* 270px */
 }
 
 .p-flight--itinerary__date {
   margin: 0;
-  padding-bottom: 0.1875rem;      /* 3px */
-  padding-left: 1.5625rem;        /* 25px */
-  font-size: 1.25rem;             /* 20px */
+  padding-bottom: 0.1875rem;
+  /* 3px */
+  padding-left: 1.5625rem;
+  /* 25px */
+  font-size: 1.25rem;
+  /* 20px */
   font-weight: 600;
   align-content: center;
   text-align: center;
@@ -58,8 +70,10 @@
   flex-direction: row;
   align-items: center;
   color: black;
-  width: 19.5625rem;             /* 313px */
-  padding-bottom: 0.5625rem;      /* 9px */
+  width: 19.5625rem;
+  /* 313px */
+  padding-bottom: 0.5625rem;
+  /* 9px */
   padding-left: 2%;
 }
 
@@ -72,7 +86,8 @@
 }
 
 .p-flight--itinerary__depart-container {
-  width: 13.75rem;              /* 220px */
+  width: 13.75rem;
+  /* 220px */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -80,7 +95,8 @@
 }
 
 .p-flight--itinerary__arrive-container {
-  width: 13.75rem;              /* 220px */
+  width: 13.75rem;
+  /* 220px */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -91,7 +107,8 @@
   display: flex;
   flex-direction: column;
   color: black;
-  padding-left: 0.8125rem;       /* 13px */
+  padding-left: 0.8125rem;
+  /* 13px */
 }
 
 .p-flight--itinerary__place h2,
@@ -103,72 +120,92 @@
 }
 
 .p-flight--itinerary__place h2 {
-  font-size: 2rem;              /* 32px */
+  font-size: 2rem;
+  /* 32px */
   font-weight: 600;
 }
 
 .p-flight--itinerary__place h3 {
-  font-size: 1.25rem;           /* 20px */
+  font-size: 1.25rem;
+  /* 20px */
   font-weight: 500;
 }
 
 .p-flight--itinerary__place h4 {
-  font-size: 0.8125rem;         /* 13px */
+  font-size: 0.8125rem;
+  /* 13px */
   font-weight: 500;
-  max-height: 0.8125rem;         /* 13px */
-  min-width: 5.625rem;           /* 90px */
+  max-height: 0.8125rem;
+  /* 13px */
+  min-width: 5.625rem;
+  /* 90px */
 }
 
 .p-flight--itinerary__time h3 {
-  font-size: 1.625rem;          /* 26px */
+  font-size: 1.625rem;
+  /* 26px */
   font-weight: 500;
-  max-height: 1.625rem;          /* 26px */
-  width: 7.5rem;                /* 120px */
-  margin-right: 3.125rem;         /* 50px */
+  max-height: 1.625rem;
+  /* 26px */
+  width: 7.5rem;
+  /* 120px */
+  margin-right: 3.125rem;
+  /* 50px */
   line-height: 1.5;
 }
 
 .p-flight--itinerary__info {
-  width: 5.9375rem;             /* 95px */
+  width: 5.9375rem;
+  /* 95px */
   display: flex;
   flex-direction: column;
   align-self: flex-start;
   align-items: flex-end;
   text-align: right;
   color: black;
-  gap: 0.75rem;                /* 12px */
-  margin-left: 0.75rem;         /* 12px */
-  padding-top: 0.3125rem;        /* 5px */
+  gap: 0.75rem;
+  /* 12px */
+  margin-left: 0.75rem;
+  /* 12px */
+  padding-top: 0.3125rem;
+  /* 5px */
 }
 
 .p-flight--itinerary__info h3 {
-  font-size: 1.25rem;           /* 20px */
+  font-size: 1.25rem;
+  /* 20px */
   font-weight: 600;
   margin: 0;
   line-height: 1.1;
 }
 
 .p-flight--itinerary__info h4 {
-  font-size: 1rem;              /* 16px */
+  font-size: 1rem;
+  /* 16px */
   font-weight: 400;
   margin: 0;
   line-height: 1;
 }
 
 .p-flight--itinerary__info-container {
-  width: 6.25rem;               /* 100px */
-  height: 2.4375rem;            /* 39px */
+  width: 6.25rem;
+  /* 100px */
+  height: 2.4375rem;
+  /* 39px */
 }
 
 .p-flight--itinerary p {
-  font-size: 0.8125rem;         /* 13px */
+  font-size: 0.8125rem;
+  /* 13px */
 }
 
 .p-flight--itinerary__arrow {
-  padding-top: 0.5rem;          /* 8px */
+  padding-top: 0.5rem;
+  /* 8px */
   display: flex;
   flex-direction: row;
-  padding-left: 1.5625rem;      /* 25px */
+  padding-left: 1.5625rem;
+  /* 25px */
 }
 
 .p-flight--itinerary__arrow p {
@@ -176,7 +213,8 @@
 }
 
 .p-flight__info {
-  min-width: 9.875rem;          /* 158px */
+  min-width: 9.875rem;
+  /* 158px */
   text-align: center;
 }
 
@@ -188,14 +226,18 @@
 .p-flight__details {
   display: flex;
   flex-wrap: wrap;
-  width: 8.6875rem;             /* 139px */
-  padding-left: 5%;       /* 5px */
+  width: 8.6875rem;
+  /* 139px */
+  padding-left: 5%;
+  /* 5px */
 }
 
 .p-flight__date {
-  font-size: 1.25rem;           /* 20px */
+  font-size: 1.25rem;
+  /* 20px */
   font-weight: 400;
-  max-height: 1.625rem;          /* 26px */
+  max-height: 1.625rem;
+  /* 26px */
   margin: 0;
 }
 
@@ -203,57 +245,73 @@
   flex: 1 1 35%;
   margin: 0;
   font-weight: 400;
-  font-size: 0.8125rem;         /* 13px */
+  font-size: 0.8125rem;
+  /* 13px */
 }
 
 .p-flight__time {
-  font-size: 1rem;              /* 16px */
+  font-size: 1rem;
+  /* 16px */
   font-weight: 400;
   margin: 0;
 }
 
 .p-flight__class {
-  font-size: 0.8125rem;         /* 13px */
+  font-size: 0.8125rem;
+  /* 13px */
   font-weight: 400;
   margin: 0;
 }
 
 .p-flight__price {
   color: var(--pos-black);
-  font-size: 0.875rem;          /* 14px */
+  font-size: 0.875rem;
+  /* 14px */
   margin: 0;
 }
 
 .p-flight__airline-logo {
-  height: 3.4375rem;            /* 55px */
-  width: 3.4375rem;             /* 55px */
-  font-size: 0.8125rem;         /* 13px */
+  height: 3.4375rem;
+  /* 55px */
+  width: 3.4375rem;
+  /* 55px */
+  font-size: 0.8125rem;
+  /* 13px */
 }
 
 .p-flight__airline-logo[alt] {
-  font-size: 0.4375rem;         /* 7px */
-  width: 3.625rem;              /* 58px */
+  font-size: 0.4375rem;
+  /* 7px */
+  width: 3.625rem;
+  /* 58px */
 }
 
 .p-flight__airline-text {
-  font-size: 0.75rem;           /* 12px */
+  font-size: 0.75rem;
+  /* 12px */
   line-height: 1;
   font-weight: 600;
   margin: 0;
-  width: 3.625rem;              /* 58px */
+  width: 3.625rem;
+  /* 58px */
   text-align: center;
 }
 
 .p-flight__airline {
-  margin-left: 0.9375rem;       /* 15px */
-  margin-right: 0.9375rem;      /* 15px */
-  height: 5.125rem;             /* 82px */
-  width: 3.625rem;              /* 58px */
+  margin-left: 0.9375rem;
+  /* 15px */
+  margin-right: 0.9375rem;
+  /* 15px */
+  height: 5.125rem;
+  /* 82px */
+  width: 3.625rem;
+  /* 58px */
   padding-left: 1%;
 }
 
 .p-flight--finance {
-  margin-bottom: 2%;      /* 10px */
+  margin-bottom: 2%;
+  /* 10px */
 }
 
 .p-flight--finance .p-flight__info h5 {
@@ -262,25 +320,31 @@
   justify-content: center;
   text-align: left;
   line-height: 1.2;
-  
+
 }
 
 .p-flight--finance__name {
   margin: 0;
-  font-size: 1.25rem;           /* 20px */
+  font-size: 1.25rem;
+  /* 20px */
   font-weight: 400;
 }
 
 .p-flight--finance .p-flight__class {
-  font-size: 1rem;              /* 16px */
-  padding-bottom: 0.0625rem;     /* 1px */
+  font-size: 1rem;
+  /* 16px */
+  padding-bottom: 0.0625rem;
+  /* 1px */
 }
 
-.p-flight--finance .p-flight__date, 
+.p-flight--finance .p-flight__date,
 .p-flight--finance .p-flight__time {
-  font-size: 0.8125rem;         /* 13px */
-  height: 1.125rem;             /* 18px */
-  padding-bottom: 0.0625rem;     /* 1px */
+  font-size: 0.8125rem;
+  /* 13px */
+  height: 1.125rem;
+  /* 18px */
+  padding-bottom: 0.0625rem;
+  /* 1px */
 }
 
 .p-flight--finance .p-flight__price {
@@ -291,11 +355,13 @@
 }
 
 .p-flight--finance .p-flight__airline-logo {
-  padding-top: 0.3125rem;       /* 5px */
+  padding-top: 0.3125rem;
+  /* 5px */
 }
 
 .p-flight--finance .p-flight__airline-text {
-  font-size: 0.75rem;           /* 12px */
+  font-size: 0.75rem;
+  /* 12px */
   line-height: 0.6;
 }
 
@@ -303,7 +369,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 5.3125rem;             /* 85px */
+  width: 5.3125rem;
+  /* 85px */
   position: relative;
   text-align: center;
 }
@@ -318,6 +385,8 @@
   background-color: var(--pos-grey);
   color: black;
   border-radius: 1rem;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 .p-flight--desktop-block .p-flight__airline {
@@ -449,12 +518,143 @@
   text-align: center;
 }
 
-@media only screen and (max-width: 56rem) { /* 896px */
+.p-flight--desktop-itinerary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70rem;
+  height: 10rem;
+  background-color: var(--pos-grey);
+  color: black;
+  border-radius: 1rem;
+}
+
+.itnry-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  height: 0%;
+  padding-bottom: 1%;
+}
+
+.itnry-desktop-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 3%;
+}
+
+.p-flight--desktop-itinerary .p-flight__airline,
+.p-flight--desktop-itinerary .itnry-arrival-container,
+.p-flight--desktop-itinerary .itnry-plane-section,
+.p-flight--desktop-itinerary .itnry-departure-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.p-flight--desktop-itinerary .itnry-departure-container {
+  align-items: flex-end;
+}
+
+.p-flight--desktop-itinerary .itnry-plane-section {
+  align-items: center;
+}
+
+.p-flight--desktop-itinerary .itnry-arrival-container {
+  width: 20%;
+  height: 100%;
+  margin-bottom: 4%;
+  align-items: left;
+}
+
+.itnry-header {
+  background-color: var(--gradient-bg-color);
+  width: 100%;
+  height: 15%;
+  border-radius: 1rem;
+  color: white;
+}
+
+.itnry-header h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0%;
+  padding-left: 1%;
+}
+
+.itnry-arrival-container h2,
+.itnry-departure-container h2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin: 0%;
+  line-height: 1;
+}
+
+.itnry-arrival-container h3,
+.itnry-departure-container h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 1%;
+}
+
+.itnry-arrival-container h4,
+.itnry-departure-container h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0%;
+  margin-left: 1%;
+}
+
+.itnry-plane-section h5 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0%;
+}
+
+.itnry-plane-section {
+  width: 20%;
+  height: 100%;
+  gap: 8%;
+  margin-bottom: 4%;
+}
+
+.p-flight--desktop-itinerary .itnry-desktop-container .itnry-departure-container {
+  width: 20%;
+  height: 100%;
+  margin-bottom: 4%;
+}
+
+.p-flight--desktop-itinerary .p-flight__airline {
+  width: 20%;
+  height: 50%;
+  margin-bottom: 4%;
+}
+
+.p-flight--desktop-itinerary .p-flight__airline p {
+  font-size: 1.2rem;
+}
+
+.p-flight--desktop-itinerary .p-flight__airline-logo {
+  text-align: center;
+}
+
+@media only screen and (max-width: 56rem) {
+
+  /* 896px */
   .p-flight--layover__container {
     width: 100%;
   }
 
-  .p-flight--block, 
+  .p-flight--block,
   .p-flight--shop {
     width: 85%;
   }
@@ -475,4 +675,6 @@
   .p-flight--itinerary__arrive-container {
     width: auto;
   }
+
+  .p-flight--desktop-itinerary {}
 }

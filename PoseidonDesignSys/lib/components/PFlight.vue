@@ -242,35 +242,67 @@ const priceColor = computed(() => {
         </template>
 
         <template v-else-if="giveDesign.includes('p-flight--desktop-block')">
-        <div :class="giveDesign">
-            <div class="p-flight__airline">
-                <img class="p-flight__airline-logo" :src="logoURL" :alt="`${airline} Logo`" />
-                <div class="p-flight__airline-time">
-                    <h3 class="p-flight__time">{{ formatTime(flightDepTime) }} - {{ formatTime(flightArrTime) }}</h3>
-                    <h5 class="p-flight__airline-text">{{ airline }}</h5>
+            <div :class="giveDesign">
+                <div class="p-flight__airline">
+                    <img class="p-flight__airline-logo" :src="logoURL" :alt="`${airline} Logo`" />
+                    <div class="p-flight__airline-time">
+                        <h3 class="p-flight__time">{{ formatTime(flightDepTime) }} - {{ formatTime(flightArrTime) }}
+                        </h3>
+                        <h5 class="p-flight__airline-text">{{ airline }}</h5>
+                    </div>
+                </div>
+                <div class="p-flight__duration-codes">
+                    <h3 class="p-flight__duration">{{ formatDuration(flightDuration) }}</h3>
+                    <h5 class="p-flight__codes">{{ origin }}-{{ destination }}</h5>
+                </div>
+
+                <h3 class="p-flight__type">{{ flightType }}</h3>
+
+                <div class="p-flight__flight-number-seats">
+                    <h3 class="p-flight__flight-number">Flight {{ flightNumber }}</h3>
+                    <h5 class="p-flight__seats">Gate {{ flightGate }}</h5>
+                </div>
+
+                <div class="p-flight__price-container">
+                    <h5 class="p-flight__class">{{ flightClass }}</h5>
+                    <h5 class="p-flight__price" :style="{ color: priceColor }">{{
+                        Math.round(price).toLocaleString('en-US',
+                            { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 }) }}
+                    </h5>
+                </div>
+
+            </div>
+
+        </template>
+
+        <template v-else-if="giveDesign.includes('p-flight--desktop-itinerary')">
+            <div class="itnry-header">
+                <h3>Flight {{ flightNumber }}</h3>
+                <h3> Class: {{ flightClass }}</h3>
+            </div>
+            <div class="itnry-desktop-container">
+                <div class="p-flight__airline">
+                    <img class="p-flight__airline-logo" :src="logoURL" :alt="`${airline} Logo`" />
+                    <p class="p-flight__airline-text">{{ airline }}</p>
+                </div>
+
+                <div class="itnry-arrival-container">
+                    <h2 class="itnry-arrival__time">{{ formatTime(flightArrTime) }}</h2>
+                    <h3 class="itnry-arrival__place">{{ destination }}</h3>
+                    <h4 class="itnry-arrival__city">City, State</h4>
+                </div>
+                <div class="itnry-plane-section">
+                    <h5 class="itnry-date">{{ formatFlightDate }}</h5>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 1200 1200"><path fill="#4c365d" d="M321 1164h120l269.28-480.06H1020s180 0 180-83.94c0-84-180-84-180-84H710.28L441 36H321l149.28 480H255.06L120 395.94H0l96.06 204L0 804h120l135.06-120.06h215.22z"/></svg>
+                    <h5 class="flight-duration">{{ formatDuration(flightDuration) }}</h5>
+                </div>
+                <div class="itnry-departure-container">
+                    <h2 class="itnry-departure__time">{{ formatTime(flightDepTime) }}</h2>
+                    <h3 class="itnry-departure__place">{{ origin }}</h3>
+                    <h4 class="itnry-departure__city">City, State</h4>
                 </div>
             </div>
-            <div class="p-flight__duration-codes">
-                <h3 class="p-flight__duration">{{ formatFlightDate }}</h3>
-                <h5 class="p-flight__codes">{{ origin }}-{{ destination }}</h5>
-            </div>
-
-            <h3 class="p-flight__type">{{ flightType }}</h3>
-
-            <div class="p-flight__flight-number-seats">
-                <h3 class="p-flight__flight-number">Flight {{ flightNumber }}</h3>
-                <h5 class="p-flight__seats">Gate {{ flightGate }}</h5>
-            </div>
-
-            <div class="p-flight__price-container">
-                <h5 class="p-flight__class">{{ flightClass }}</h5>
-                <h5 class="p-flight__price" :style="{ color: priceColor }">{{ Math.round(price).toLocaleString('en-US',
-                    { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 }) }}</h5>
-            </div>
-
-        </div>
-
-    </template>
+        </template>
 
         <template v-else-if="giveDesign.includes('p-flight--finance')">
             <div class="p-flight__airline">
