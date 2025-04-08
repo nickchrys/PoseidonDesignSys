@@ -7,7 +7,7 @@ const props = defineProps({
     flightDate: {
         type: Date,
         default: new Date(2025, 1, 1),
-        
+
     },
     flightID: {
         type: String,
@@ -21,12 +21,12 @@ const props = defineProps({
     origin: {
         type: String,
         default: 'QWE',
-        
+
     },
     destination: {
         type: String,
         default: 'ZXC',
-        
+
     },
     flightDepTime: {
         type: String,
@@ -163,7 +163,7 @@ const priceColor = computed(() => {
             const ratio = props.price / threshold;
             if (ratio > .9) return 'var(--pos-red)';       // More than 90% of threshold → Expensive
             if (ratio < 0.5) return 'var(--pos-green)';     // Below half threshold → Cheap
-            return 'var(--pos-yellow)'; 
+            return 'var(--pos-yellow)';
         } else {
             return null;
         }
@@ -172,6 +172,8 @@ const priceColor = computed(() => {
 
 
 </script>
+
+
 
 <template>
 
@@ -239,6 +241,37 @@ const priceColor = computed(() => {
             </div>
         </template>
 
+        <template v-else-if="giveDesign.includes('p-flight--desktop-block')">
+        <div :class="giveDesign">
+            <div class="p-flight__airline">
+                <img class="p-flight__airline-logo" :src="logoURL" :alt="`${airline} Logo`" />
+                <div class="p-flight__airline-time">
+                    <h3 class="p-flight__time">{{ formatTime(flightDepTime) }} - {{ formatTime(flightArrTime) }}</h3>
+                    <h5 class="p-flight__airline-text">{{ airline }}</h5>
+                </div>
+            </div>
+            <div class="p-flight__duration-codes">
+                <h3 class="p-flight__duration">{{ formatFlightDate }}</h3>
+                <h5 class="p-flight__codes">{{ origin }}-{{ destination }}</h5>
+            </div>
+
+            <h3 class="p-flight__type">{{ flightType }}</h3>
+
+            <div class="p-flight__flight-number-seats">
+                <h3 class="p-flight__flight-number">Flight {{ flightNumber }}</h3>
+                <h5 class="p-flight__seats">Gate {{ flightGate }}</h5>
+            </div>
+
+            <div class="p-flight__price-container">
+                <h5 class="p-flight__class">{{ flightClass }}</h5>
+                <h5 class="p-flight__price" :style="{ color: priceColor }">{{ Math.round(price).toLocaleString('en-US',
+                    { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 }) }}</h5>
+            </div>
+
+        </div>
+
+    </template>
+
         <template v-else-if="giveDesign.includes('p-flight--finance')">
             <div class="p-flight__airline">
                 <img class="p-flight__airline-logo" :src="logoURL" :alt="`${airline} Logo`" />
@@ -251,7 +284,8 @@ const priceColor = computed(() => {
                 <h5 class="p-flight__time">{{ formatTime(flightDepTime) }} - {{ formatTime(flightArrTime) }}</h5>
             </div>
             <div class="class-price-container">
-            <h5 class="p-flight__price">{{ price.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }}</h5>
+                <h5 class="p-flight__price">{{ price.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }}
+                </h5>
             </div>
         </template>
 
@@ -270,7 +304,7 @@ const priceColor = computed(() => {
                 <div class="date-time-container">
                     <h5 class="p-flight__date">{{ formatFlightDate }}</h5>
                     <h5 class="p-flight__time">{{ formatTime(flightDepTime) }} - {{ formatTime(flightArrTime)
-                        }}
+                    }}
                     </h5>
                 </div>
                 <div class="p-flight__details">
@@ -283,7 +317,8 @@ const priceColor = computed(() => {
             </div>
             <div class="class-price-container">
                 <h5 class="p-flight__class">{{ flightClass }}</h5>
-                <h5 class="p-flight__price" :style="{ color: priceColor }">{{ Math.round(price).toLocaleString('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 }) }}</h5>
+                <h5 class="p-flight__price" :style="{ color: priceColor }">{{ Math.round(price).toLocaleString('en-US',
+                    { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 }) }}</h5>
             </div>
         </template>
     </div>

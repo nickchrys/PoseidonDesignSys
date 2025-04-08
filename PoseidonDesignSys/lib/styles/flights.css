@@ -308,6 +308,147 @@
   text-align: center;
 }
 
+.p-flight--desktop-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 65rem;
+  height: 7rem;
+  background-color: var(--pos-grey);
+  color: black;
+  border-radius: 1rem;
+}
+
+.p-flight--desktop-block .p-flight__airline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 35%;
+}
+
+.p-flight--desktop-block .p-flight__airline-logo {
+  height: 80%;
+  width: 60%;
+  padding-right: 10%;
+}
+
+.p-flight--desktop-block .p-flight__airline-time {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+}
+
+.p-flight--desktop-block .p-flight__time {
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 100%;
+  height: 35%;
+  padding-top: 7%;
+  margin-top: 1%;
+  text-align: left;
+}
+
+.p-flight--desktop-block .p-flight__airline-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  width: 100%;
+  text-align: left;
+}
+
+.p-flight--desktop-block .p-flight__duration-codes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  justify-content: flex-start;
+  width: 18%;
+}
+
+.p-flight--desktop-block .p-flight__duration {
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 100%;
+  height: 50%;
+  text-align: left;
+  margin: 0;
+}
+
+.p-flight--desktop-block .p-flight__codes {
+  font-size: 0.9rem;
+  font-weight: 500;
+  width: 100%;
+  height: 50%;
+  margin: 0;
+  padding-top: 4%;
+  text-align: left;
+}
+
+.p-flight--desktop-block .p-flight__type {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  justify-content: flex-start;
+  width: 15%;
+}
+
+.p-flight--desktop-block .p-flight__flight-number-seats {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 15%;
+  height: 50%;
+}
+
+.p-flight--desktop-block .p-flight__flight-number {
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 100%;
+  height: 50%;
+  margin: 0;
+}
+
+.p-flight--desktop-block .p-flight__seats {
+  font-size: 0.9rem;
+  font-weight: 500;
+  width: 100%;
+  height: 0%;
+  margin: 0;
+}
+
+.p-flight--desktop-block .p-flight__price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 10%;
+  height: 10%;
+  font-size: 1.2rem;
+}
+
+.p-flight--desktop-block .p-flight__class {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.p-flight--desktop-block .p-flight__price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
 @media only screen and (max-width: 56rem) { /* 896px */
   .p-flight--layover__container {
     width: 100%;

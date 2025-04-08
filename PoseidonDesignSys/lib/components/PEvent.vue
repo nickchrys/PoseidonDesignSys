@@ -147,7 +147,7 @@ console.log(props.eventDateRange.value)
                 <!-- <PTextField v-model="editableEndDate" design="" id="Dates" type="date" -->
                 <!-- @input="value => emitUpdate('endDate', value)" /> -->
             </h3>
-            <h3 v-else-if="!giveDesign.includes('p-event--small-header')" class="p-event__dates">{{
+            <h3 v-else-if="!giveDesign.includes('p-event--small-header') && !giveDesign.includes('p-event--desktop-header')" class="p-event__dates">{{
                 formatDate(startDate) }} - {{ formatDate(endDate) }}</h3>
             <h3 v-if="giveDesign.includes('p-event--block-finance')" class="p-event__budget"
                 :style="{ color: budgetColor }">

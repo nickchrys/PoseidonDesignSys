@@ -1,14 +1,20 @@
 /*=====================-PDROPDOWN-=============================================================*/
 
-.p-dropdown--flight, .p-dropdown--login, .p-button--dropdown {
-  padding: 1% 0% 1% 0.5625rem; /* 5px 0px 9px 9px */
+.p-dropdown--flight,
+.p-dropdown--login,
+.p-button--dropdown {
+  padding: 1% 0% 1% 0.5625rem;
+  /* 5px 0px 9px 9px */
   color: black;
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
+  /* 14px */
   font-weight: bold;
-  border-radius: 0.375rem; /* 6px */
+  border-radius: 0.375rem;
+  /* 6px */
   background-color: var(--pos-grey);
   border-style: none;
-  height: 1.8125rem; /* 29px */
+  height: 1.8125rem;
+  /* 29px */
 }
 
 .dropdown-trigger {
@@ -18,15 +24,19 @@
   cursor: pointer;
 }
 
-.p-dropdown--flight, .p-dropdown--login {
+.p-dropdown--flight,
+.p-dropdown--login {
   position: relative;
   display: flex;
   flex-direction: row;
   color: black;
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
+  /* 14px */
   font-weight: bold;
-  border-radius: 0.375rem; /* 6px */
-  height: 1.8125rem; /* 29px */
+  border-radius: 0.375rem;
+  /* 6px */
+  height: 1.8125rem;
+  /* 29px */
   width: fit-content;
   background-color: var(--pos-grey);
   box-shadow: var(--drop-shadow);
@@ -34,39 +44,49 @@
 
 .p-dropdown__container {
   display: flex;
-  gap: 0.625rem; /* 10px */
+  gap: 0.625rem;
+  /* 10px */
   align-items: center;
 }
 
-.p-dropdown--flight__icon, .p-dropdown--login__icon {
-  padding: 0.75rem 0.4375rem 0.75rem 0.4375rem; /* 12px 7px 12px 7px */
+.p-dropdown--flight__icon,
+.p-dropdown--login__icon {
+  padding: 0.75rem 0.4375rem 0.75rem 0.4375rem;
+  /* 12px 7px 12px 7px */
 }
 
-.p-dropdown--flight__menu, .p-dropdown--login__menu {
+.p-dropdown--flight__menu,
+.p-dropdown--login__menu {
   display: block;
   position: absolute;
-  margin-top: 0.1875rem; /* 3px */
+  margin-top: 0.1875rem;
+  /* 3px */
   top: 100%;
   padding-left: 0%;
   right: 0;
   z-index: 1;
   color: black;
-  border-radius: 0.375rem; /* 6px */
+  border-radius: 0.375rem;
+  /* 6px */
   width: fit-content;
   min-width: 100%;
   background-color: var(--pos-grey);
   box-shadow: var(--drop-shadow);
 }
 
-.p-dropdown--flight__menu li, .p-dropdown--login__menu li {
-  padding: 0.3125rem; /* 5px */
-  font-size: 0.75rem; /* 12px */
+.p-dropdown--flight__menu li,
+.p-dropdown--login__menu li {
+  padding: 0.3125rem;
+  /* 5px */
+  font-size: 0.75rem;
+  /* 12px */
   font-weight: 400;
   cursor: pointer;
   list-style-type: none;
 }
 
-.p-dropdown--flight__menu li:hover, .p-dropdown--login__menu li:hover {
+.p-dropdown--flight__menu li:hover,
+.p-dropdown--login__menu li:hover {
   background-color: var(--pos-dark-grey);
 }
 
@@ -76,8 +96,10 @@
   flex-direction: row;
   color: black;
   font-weight: bold;
-  border-radius: 0.375rem; /* 6px */
-  height: 2.5rem; /* 40px */
+  border-radius: 0.375rem;
+  /* 6px */
+  height: 2.5rem;
+  /* 40px */
   width: fit-content;
   background-color: var(--pos-grey);
   box-shadow: var(--drop-shadow);
@@ -86,42 +108,54 @@
 /* Overrides for .p-dropdown--login */
 .p-dropdown--login {
   color: black;
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.25rem;
+  /* 20px */
   font-weight: bold;
-  border-radius: 1.25rem; /* 20px */
-  height: 3.125rem; /* 50px */
-  width: 9.125rem; /* 146px (approx.) */
+  border-radius: 1.25rem;
+  /* 20px */
+  height: 3.125rem;
+  /* 50px */
+  width: 9.125rem;
+  /* 146px (approx.) */
   background-color: var(--pos-grey);
   box-shadow: var(--drop-shadow);
 }
 
 .p-dropdown--event .p-button--dropdown {
-  padding: 0.3125rem 0 0.5625rem 0.5625rem; /* 5px 0px 9px 9px */
+  padding: 0.3125rem 0 0.5625rem 0.5625rem;
+  /* 5px 0px 9px 9px */
   color: black;
-  font-size: 1rem; /* 16px */
+  font-size: 1rem;
+  /* 16px */
   font-weight: bold;
-  border-radius: 0.375rem; /* 6px */
+  border-radius: 0.375rem;
+  /* 6px */
   background-color: var(--pos-grey);
   border-style: none;
-  height: 2.5rem; /* 40px */
-  width: 5.625rem; /* 90px */
+  height: 2.5rem;
+  /* 40px */
+  width: 5.625rem;
+  /* 90px */
 }
 
 .p-dropdown--event__icon {
-  padding: 0.75rem 0.4375rem 0.75rem 0.4375rem; /* 12px 7px 12px 7px */
+  padding: 0.75rem 0.4375rem 0.75rem 0.4375rem;
+  /* 12px 7px 12px 7px */
 }
 
 .p-dropdown--event__menu {
   display: block;
   position: absolute;
-  margin-top: 0.1875rem; /* 3px */
+  margin-top: 0.1875rem;
+  /* 3px */
   top: 100%;
   padding-left: 0%;
   left: 0;
   right: 0;
   z-index: 1;
   color: black;
-  border-radius: 0.375rem; /* 6px */
+  border-radius: 0.375rem;
+  /* 6px */
   width: fit-content;
   min-width: 100%;
   background-color: var(--pos-grey);
@@ -129,8 +163,10 @@
 }
 
 .p-dropdown--event__menu li {
-  padding: 0.3125rem; /* 5px */
-  font-size: 0.75rem; /* 12px */
+  padding: 0.3125rem;
+  /* 5px */
+  font-size: 0.75rem;
+  /* 12px */
   font-weight: 400;
   cursor: pointer;
   list-style-type: none;
@@ -142,11 +178,31 @@
 
 .p-button--dropdown .p-button__label {
   margin: 0;
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
+  /* 14px */
 }
 
 .p-dropdown--login .p-button__label {
   margin: 0;
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.25rem;
+  /* 20px */
   text-align: center;
+}
+
+@media only screen and (min-width: 48rem) {
+  .p-dropdown--flight {
+    width: 16rem;
+    max-width: 100%;
+    height: 30%;
+  }
+
+  .p-dropdown--flight label {
+    
+  }
+
+  .p-dropdown--flight__icon {
+    position: absolute;
+    left: 87%;
+  }
+
 }
