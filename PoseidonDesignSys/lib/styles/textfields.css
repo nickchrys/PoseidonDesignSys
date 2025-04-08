@@ -27,6 +27,19 @@
   border: 2px solid transparent;
 }
 
+#dob .dp__input {
+  background-color: var(--pos-grey) !important;
+  color: black !important;
+  font-size: 20px !important;
+  border-radius: 20px !important;
+  border-style: none !important;
+  height: 60px !important;
+  box-sizing: border-box !important;
+  padding: 5% !important;
+  transition: background-color 0.1s ease !important;
+  border: 2px solid transparent !important;
+}
+
 .planner-dates .dp__input {
   background-color: var(--pos-grey) !important;
   color: black !important;
