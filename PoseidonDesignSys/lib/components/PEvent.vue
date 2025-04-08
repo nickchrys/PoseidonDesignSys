@@ -81,7 +81,6 @@ const emitUpdate = (field, value) => {
     emit('update', { field, value });
 };
 
-console.log(props.eventDateRange.value)
 </script>
 
 
