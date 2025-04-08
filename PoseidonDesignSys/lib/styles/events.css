@@ -149,22 +149,27 @@
     /* Ensure the content is responsive */
 }
 
+.p-event--header-edit .p-event__details {
+  bottom: 33%
+}
+
 .p-event--header .p-event__details h2,
 .p-event--header .p-event__details h4,
 .p-event--header-edit .p-event__details h2,
 .p-event--header-edit .p-event__details h4 {
-    font-size: 2.375rem;
+    font-size: clamp(1.5rem, 5vw, 2.375rem);
     font-weight: 400;
     height: 2.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .p-event--header .p-event__details h4,
 .p-event--header-edit .p-event__details h4 {
-    font-size: 2.25rem;
     /* 36px */
     height: 2.25rem;
     /* 36px */
-    white-space: nowrap;
 }
 
 .p-event--header .p-event__dates,
@@ -176,10 +181,12 @@
     font-weight: 200;
 }
 
-.p-event--header-edit .p-event-dates {
+.p-event--header-edit .p-event__dates {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0;
+    gap: 0.5rem
 }
 
 .p-event--small-header {

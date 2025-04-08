@@ -27,6 +27,32 @@
   border: 2px solid transparent;
 }
 
+#dob .dp__input {
+  background-color: var(--pos-grey) !important;
+  color: black !important;
+  font-size: 20px !important;
+  border-radius: 20px !important;
+  border-style: none !important;
+  height: 60px !important;
+  box-sizing: border-box !important;
+  padding: 5% !important;
+  transition: background-color 0.1s ease !important;
+  border: 2px solid transparent !important;
+}
+
+.planner-dates .dp__input {
+  background-color: var(--pos-grey) !important;
+  color: black !important;
+  font-size: 20px !important;
+  border-radius: 20px !important;
+  border-style: none !important;
+  height: 60px !important;
+  box-sizing: border-box !important;
+  padding: 5% !important;
+  transition: background-color 0.1s ease !important;
+  border: 2px solid transparent !important;
+}
+
 .p-textfield {
   width: 100%;
 }
@@ -104,7 +130,6 @@
 #Title, #Title .p-textfield__textarea-container, #Title .p-textfield--textarea-edit {
   resize: none;
   max-height: 2.4375rem; /* 39px */
-  width: 12.5rem; /* 200px */
   max-width: 21.875rem; /* 350px */
   color: var(--pos-white);
   box-shadow: none;
@@ -127,17 +152,13 @@
 }
 
 #Dates {
-  max-height: 1.75rem; /* 28px */
-  height: 1.75rem; /* 28px */
-  width: 8.125rem; /* 130px */
-  max-width: 8.125rem; /* 130px */
+  max-width: 9rem; /* 130px */
   color: var(--pos-white);
   box-shadow: none;
   font-size: 1rem; /* 16px */
   scrollbar-color: transparent transparent;
   padding: 0;
   margin: 0;
-  margin-top: 0.9375rem; /* 15px */
   text-align: center; 
   border-radius: 0.625rem; /* 10px */
   background: rgba(217, 217, 217, 0.3);
