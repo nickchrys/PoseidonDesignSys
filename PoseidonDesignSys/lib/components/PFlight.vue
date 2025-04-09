@@ -1,6 +1,7 @@
 <script setup>
 
 import { computed } from 'vue'
+import { formatISODurationShort, formatISODurationLong } from '../../../../src/assets/scripts/durationParse';
 
 const props = defineProps({
     Label: String,
@@ -134,28 +135,6 @@ const formatTime = (time) => {
     return `${formattedHours}:${minutes} ${ampm}`;
 };
 
-const formatDuration = (duration) => {
-    const hoursMatch = duration.match(/(\d+)H/);
-    const minutesMatch = duration.match(/(\d+)M/);
-
-    const hours = hoursMatch ? `${hoursMatch[1]}h` : '';
-    const minutes = minutesMatch ? `${minutesMatch[1]}m` : '';
-
-    return [hours, minutes].filter(Boolean).join(' ');
-};
-
-
-
-const formatLongDuration = (duration) => {
-    const hoursMatch = duration.match(/(\d+)H/);
-    const minutesMatch = duration.match(/(\d+)M/);
-
-    const hours = hoursMatch ? `${hoursMatch[1]} hour` : '';
-    const minutes = minutesMatch ? `${minutesMatch[1]} minutes` : '';
-
-    return [hours, minutes].filter(Boolean).join(' & ');
-};
-
 const formatFlightDate = computed(() => {
     // console.log("SHORT",props.flightDate)
     const options = { weekday: 'short', month: 'short', day: 'numeric' };
@@ -221,7 +200,7 @@ const priceColor = computed(() => {
                             <div class="p-flight--itinerary__place">
                                 <h3>Departure</h3>
                                 <h2>{{ origin }}</h2>
-                                <h4>{{ originCity }}</h4>
+                                <h4>City, State</h4>
                             </div>
                             <div class="p-flight--itinerary__time">
                                 <h3>{{ formatTime(flightDepTime) }}</h3>
@@ -232,14 +211,14 @@ const priceColor = computed(() => {
                                 <path fill="#000"
                                     d="M12 21.9q-.2 0-.375-.075T11.3 21.6l-5.6-5.575q-.275-.275-.275-.7T5.7 14.6q.3-.3.713-.3t.712.3L11 18.5v-6.175q0-.425.288-.712t.712-.288t.713.288t.287.712V18.5l3.9-3.9q.275-.275.688-.275t.712.3q.275.275.275.7t-.275.7L12.7 21.6q-.15.15-.325.225T12 21.9m0-12.575q-.425 0-.712-.287T11 8.325v-1q0-.425.288-.712T12 6.325t.713.288t.287.712v1q0 .425-.288.713T12 9.325m0-5q-.425 0-.712-.287T11 3.325t.288-.712t.712-.288t.713.288t.287.712t-.288.713t-.712.287" />
                             </svg>
-                            <p>( {{ formatDuration(flightDuration) }} )</p>
+                            <p>{{ formatDuration(flightDuration) }}</p>
                         </div>
 
                         <div class="p-flight--itinerary__arrive-container">
                             <div class="p-flight--itinerary__place">
                                 <h3>Arrival</h3>
                                 <h2>{{ destination }}</h2>
-                                <h4>{{ destinationCity }}</h4>
+                                <h4>City, State</h4>
                             </div>
                             <div class="p-flight--itinerary__time">
                                 <h3>{{ formatTime(flightArrTime) }}</h3>
@@ -330,7 +309,7 @@ const priceColor = computed(() => {
                         <path fill="#4c365d"
                             d="M321 1164h120l269.28-480.06H1020s180 0 180-83.94c0-84-180-84-180-84H710.28L441 36H321l149.28 480H255.06L120 395.94H0l96.06 204L0 804h120l135.06-120.06h215.22z" />
                     </svg>
-                    <h5 class="flight-duration">{{ flightDuration }}</h5>
+                    <h5 class="flight-duration">{{ formatISODurationLong(flightDuration) }}</h5>
                 </div>
                 <div class="itnry-departure-container">
                     <h2 class="itnry-departure__time">{{ formatTime(flightArrTime) }}</h2>
