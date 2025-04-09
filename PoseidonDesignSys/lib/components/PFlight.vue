@@ -285,7 +285,7 @@ const priceColor = computed(() => {
                     </div>
                 </div>
                 <div class="p-flight__duration-codes">
-                    <h3>{{ formatDuration(flightDuration) }}</h3>
+                    <h3>{{ flightDuration }}</h3>
                     <h5 class="p-flight__codes">{{ origin }}-{{ destination }}</h5>
                 </div>
 
@@ -330,7 +330,7 @@ const priceColor = computed(() => {
                         <path fill="#4c365d"
                             d="M321 1164h120l269.28-480.06H1020s180 0 180-83.94c0-84-180-84-180-84H710.28L441 36H321l149.28 480H255.06L120 395.94H0l96.06 204L0 804h120l135.06-120.06h215.22z" />
                     </svg>
-                    <h5 class="flight-duration">{{ formatLongDuration(flightDuration) }}</h5>
+                    <h5 class="flight-duration">{{ flightDuration }}</h5>
                 </div>
                 <div class="itnry-departure-container">
                     <h2 class="itnry-departure__time">{{ formatTime(flightArrTime) }}</h2>
