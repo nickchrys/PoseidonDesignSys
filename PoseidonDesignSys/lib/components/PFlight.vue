@@ -264,7 +264,7 @@ const priceColor = computed(() => {
                     </div>
                 </div>
                 <div class="p-flight__duration-codes">
-                    <h3 class="p-flight__duration">{{ formatDuration(flightDuration) }}</h3>
+                    <h3 class="p-flight__duration">{{ flightDuration }}</h3>
                     <h5 class="p-flight__codes">{{ origin }}-{{ destination }}</h5>
                 </div>
 
