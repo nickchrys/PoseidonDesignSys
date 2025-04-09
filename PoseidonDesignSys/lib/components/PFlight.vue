@@ -20,13 +20,20 @@ const props = defineProps({
     },
     origin: {
         type: String,
-        default: 'QWE',
-
+        default: 'AAA',
+    },
+    originCity: {
+        type: String,
+        default: 'City',
     },
     destination: {
         type: String,
-        default: 'ZXC',
+        default: 'BBB',
 
+    },
+    destinationCity: {
+        type: String,
+        default: 'City',
     },
     flightDepTime: {
         type: String,
@@ -50,11 +57,11 @@ const props = defineProps({
     },
     flightType: {
         type: String,
-        default: 'Nonstop'
+        default: 'Type'
     },
     flightClass: {
         type: String,
-        default: 'Economy'
+        default: 'Class'
     },
     flightGate: {
         type: String,
@@ -77,8 +84,8 @@ const props = defineProps({
         default: 'default',
     },
     itinerary: {
-        type: Array,
-        default: [],
+        type: Object,
+        default: {},
     },
     flightDuration: {
         type: String,
@@ -87,6 +94,20 @@ const props = defineProps({
     layoverDuration: {
         type: String,
         default: '00 hr 00 m'
+    },
+    currentIndex: {
+        type: Number,
+        required: false,
+        default: 1
+    },
+    totalFlights: {
+        type: Number,
+        required: false,
+        default: 1
+    },
+    depOrArr: {
+        type: String,
+        default: ''
     },
 });
 
@@ -264,7 +285,7 @@ const priceColor = computed(() => {
                     </div>
                 </div>
                 <div class="p-flight__duration-codes">
-                    <h3 class="p-flight__duration">{{ formatDuration(flightDuration) }}</h3>
+                    <h3>{{ formatDuration(flightDuration) }}</h3>
                     <h5 class="p-flight__codes">{{ origin }}-{{ destination }}</h5>
                 </div>
 
@@ -289,7 +310,7 @@ const priceColor = computed(() => {
 
         <template v-else-if="giveDesign.includes('p-flight--desktop-itinerary')">
             <div class="itnry-header">
-                <h3>Flight <b>{{ itinerary }} of {{ itinerary.length }}</b> {{ flightNumber }}</h3>
+                <h3>Flight {{ flightNumber }} - <b>{{ currentIndex }} of {{ totalFlights }}</b> </h3>
                 <h3 class="itnry-class">Class: {{ flightClass }}</h3>
             </div>
             <div class="itnry-desktop-container">
@@ -300,18 +321,21 @@ const priceColor = computed(() => {
 
                 <div class="itnry-arrival-container">
                     <h2 class="itnry-arrival__time">{{ formatTime(flightDepTime) }}</h2>
-                    <h3 class="itnry-arrival__place">{{ destination }}</h3>
-                    <h4 class="itnry-arrival__city">City, State</h4>
+                    <h3 class="itnry-arrival__place">{{ origin }}</h3>
+                    <h4 class="itnry-arrival__city">{{ originCity }}</h4>
                 </div>
                 <div class="itnry-plane-section">
                     <h5 class="itnry-date">{{ formatLongFlightDate }}</h5>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="3.7em" height="3.7em" viewBox="0 0 1200 1200"><path fill="#4c365d" d="M321 1164h120l269.28-480.06H1020s180 0 180-83.94c0-84-180-84-180-84H710.28L441 36H321l149.28 480H255.06L120 395.94H0l96.06 204L0 804h120l135.06-120.06h215.22z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="3.7em" height="3.7em" viewBox="0 0 1200 1200">
+                        <path fill="#4c365d"
+                            d="M321 1164h120l269.28-480.06H1020s180 0 180-83.94c0-84-180-84-180-84H710.28L441 36H321l149.28 480H255.06L120 395.94H0l96.06 204L0 804h120l135.06-120.06h215.22z" />
+                    </svg>
                     <h5 class="flight-duration">{{ formatLongDuration(flightDuration) }}</h5>
                 </div>
                 <div class="itnry-departure-container">
                     <h2 class="itnry-departure__time">{{ formatTime(flightArrTime) }}</h2>
-                    <h3 class="itnry-departure__place">{{ origin }}</h3>
-                    <h4 class="itnry-departure__city">City, State</h4>
+                    <h3 class="itnry-departure__place">{{ destination }}</h3>
+                    <h4 class="itnry-departure__city">{{ destinationCity }}</h4>
                 </div>
             </div>
         </template>
@@ -348,7 +372,7 @@ const priceColor = computed(() => {
                 <div class="date-time-container">
                     <h5 class="p-flight__date">{{ formatFlightDate }}</h5>
                     <h5 class="p-flight__time">{{ formatTime(flightDepTime) }} - {{ formatTime(flightArrTime)
-                    }}
+                        }}
                     </h5>
                 </div>
                 <div class="p-flight__details">

@@ -1,6 +1,6 @@
 <script setup>
 
-import { ref, computed, watch, defineExpose } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { format } from 'date-fns';
 
 const emit = defineEmits(['update:description', 'update:modelValue', 'input', 'update:label'])
