@@ -153,9 +153,10 @@ const emitUpdate = (field, value) => {
                 Budget<br />{{ Math.round((currentBudget / maxBudget) * 100) }}%
             </h3>
             <div class="p-event__details">
-                <h2 v-if="!giveDesign.includes('p-event--small-header')">{{ props.organization.name }}</h2>
-                <h4 v-if="!giveDesign.includes('p-event--header-edit')">{{ eventName }}</h4>
-                <h4 v-else>
+                <h2 v-if="!giveDesign.includes('p-event--small-header')">{{ eventName }}</h2>
+                <h4 v-if="!giveDesign.includes('p-event--header-edit') && !giveDesign.includes('p-event--desktop-header')">{{ props.organization.name }}</h4>
+                <h4 v-if="giveDesign.includes('p-event--desktop-header')">Hosted by {{ props.organization.name }}</h4>
+                <h4 v-else-if="giveDesign.includes('p-event--header-edit')">
                     <PTextField v-model="editableName" design="textarea-edit" id="Title" :description="eventName"
                         @update:modelValue="value => emitUpdate('name', value)" />
                 </h4>
