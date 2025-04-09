@@ -328,19 +328,28 @@
 @media only screen and (min-width: 48rem) {
     .p-event--block {
         flex: 0 0 auto;
-        /* Prevent shrinking or growing */
         width: 22.563rem;
-        /* Set the new width */
         max-width: 22.563rem;
-        /* Ensure consistent sizing */
         height: 11.375rem;
-        /* Set the new height */
         max-height: 11.375rem;
-        /* Ensure consistent sizing */
         border-radius: 0.3125rem;
-        /* Optional: Keep the border radius */
         margin: 0.5rem;
-        /* Add spacing between blocks */
+    }
+
+    .p-event--desktop-header .p-event__details {
+        padding-bottom: 2%;
+    }
+
+    .p-event--desktop-header .p-event__details h2{
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+    .p-event--desktop-header .p-event__details h4{
+        font-size: 2rem;
+        font-weight: 400;
+        margin: 0;
+        padding-bottom: 0;
     }
 
 
