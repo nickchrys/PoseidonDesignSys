@@ -116,9 +116,24 @@
     width: 100%;
   }
   .p-button--shop {
-    width: 100%;
+    width: 20rem !important;
   }
   .p-button--planner {
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 48rem) { /* 768px */
+  .p-button--gradient {
+    min-width: 100%;
+  }
+  .p-button--gradient-small {
+    min-width: 100%;
+  }
+  .p-button--shop {
+    min-width: 100%;
+  }
+  .p-button--planner {
+    min-width: 100%;
   }
 }

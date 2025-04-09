@@ -156,7 +156,6 @@
 
 .p-flight--itinerary__info {
   width: 5.9375rem;
-  /* 95px */
   display: flex;
   flex-direction: column;
   align-self: flex-start;
@@ -164,11 +163,8 @@
   text-align: right;
   color: black;
   gap: 0.75rem;
-  /* 12px */
   margin-left: 0.75rem;
-  /* 12px */
   padding-top: 0.3125rem;
-  /* 5px */
 }
 
 .p-flight--itinerary__info h3 {
@@ -502,7 +498,7 @@
   text-align: center;
   justify-content: center;
   width: 10%;
-  height: 10%;
+  height: 5%;
   font-size: 1.2rem;
 }
 
@@ -522,23 +518,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 70rem;
-  height: 10rem;
+  justify-content: flex-start;
+  width: 60rem;
+  height: 12rem;
   background-color: var(--pos-grey);
   color: black;
-  border-radius: 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 .itnry-header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: flex-start;
+  gap: 0;
+  background-color: var(--gradient-bg-color);
   width: 100%;
-  height: 0%;
+  height: 15%;
+  color: white;
+  padding-top: 1%;
   padding-bottom: 1%;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.itnry-header .itnry-class {
+  margin-left: auto;
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center; /* Optional: Aligns content vertically */
+  justify-content: flex-end; /* Ensures content inside aligns to the right */
 }
 
 .itnry-desktop-container {
@@ -548,7 +556,9 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  margin-top: 3%;
+  margin-top: 2%;
+  margin-bottom: 3%;
+  padding-top: 0%;
 }
 
 .p-flight--desktop-itinerary .p-flight__airline,
@@ -563,9 +573,12 @@
 
 .p-flight--desktop-itinerary .itnry-departure-container {
   align-items: flex-end;
+  margin-left: auto;
+  margin-right: 3%;
 }
 
 .p-flight--desktop-itinerary .itnry-plane-section {
+  width: 33%;
   align-items: center;
 }
 
@@ -574,14 +587,6 @@
   height: 100%;
   margin-bottom: 4%;
   align-items: left;
-}
-
-.itnry-header {
-  background-color: var(--gradient-bg-color);
-  width: 100%;
-  height: 15%;
-  border-radius: 1rem;
-  color: white;
 }
 
 .itnry-header h3 {
@@ -623,8 +628,8 @@
 .itnry-plane-section {
   width: 20%;
   height: 100%;
-  gap: 8%;
-  margin-bottom: 4%;
+  gap: 5%;
+  margin-bottom: 1.5%;
 }
 
 .p-flight--desktop-itinerary .itnry-desktop-container .itnry-departure-container {
@@ -634,24 +639,41 @@
 }
 
 .p-flight--desktop-itinerary .p-flight__airline {
-  width: 20%;
-  height: 50%;
-  margin-bottom: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  height: 100%;
+  margin-bottom: 0%;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
-.p-flight--desktop-itinerary .p-flight__airline p {
-  font-size: 1.2rem;
+.p-flight--desktop-itinerary .p-flight__airline-text {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin: 0;
+  width: auto; /* Optional: Adjust width if needed */
+  text-align: center;
+  padding-top: 10%;
+  padding-bottom: 15%;
+
 }
 
 .p-flight--desktop-itinerary .p-flight__airline-logo {
-  text-align: center;
+  height: 5rem;
+  width: 5rem;
 }
 
-@media only screen and (max-width: 56rem) {
+@media only screen and (min-width: 48rem) { /* 768px */
 
   /* 896px */
   .p-flight--layover__container {
     width: 100%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    box-shadow: none;
+    background-color: var(--pos-yellow);
   }
 
   .p-flight--block,
@@ -677,4 +699,5 @@
   }
 
   .p-flight--desktop-itinerary {}
+
 }

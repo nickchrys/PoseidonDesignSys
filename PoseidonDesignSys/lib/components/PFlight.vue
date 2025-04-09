@@ -123,6 +123,18 @@ const formatDuration = (duration) => {
     return [hours, minutes].filter(Boolean).join(' ');
 };
 
+
+
+const formatLongDuration = (duration) => {
+    const hoursMatch = duration.match(/(\d+)H/);
+    const minutesMatch = duration.match(/(\d+)M/);
+
+    const hours = hoursMatch ? `${hoursMatch[1]} hour` : '';
+    const minutes = minutesMatch ? `${minutesMatch[1]} minutes` : '';
+
+    return [hours, minutes].filter(Boolean).join(' & ');
+};
+
 const formatFlightDate = computed(() => {
     // console.log("SHORT",props.flightDate)
     const options = { weekday: 'short', month: 'short', day: 'numeric' };
@@ -277,8 +289,8 @@ const priceColor = computed(() => {
 
         <template v-else-if="giveDesign.includes('p-flight--desktop-itinerary')">
             <div class="itnry-header">
-                <h3>Flight {{ flightNumber }}</h3>
-                <h3> Class: {{ flightClass }}</h3>
+                <h3>Flight <b>{{ itinerary }} of {{ itinerary.length }}</b> {{ flightNumber }}</h3>
+                <h3 class="itnry-class">Class: {{ flightClass }}</h3>
             </div>
             <div class="itnry-desktop-container">
                 <div class="p-flight__airline">
@@ -287,17 +299,17 @@ const priceColor = computed(() => {
                 </div>
 
                 <div class="itnry-arrival-container">
-                    <h2 class="itnry-arrival__time">{{ formatTime(flightArrTime) }}</h2>
+                    <h2 class="itnry-arrival__time">{{ formatTime(flightDepTime) }}</h2>
                     <h3 class="itnry-arrival__place">{{ destination }}</h3>
                     <h4 class="itnry-arrival__city">City, State</h4>
                 </div>
                 <div class="itnry-plane-section">
-                    <h5 class="itnry-date">{{ formatFlightDate }}</h5>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 1200 1200"><path fill="#4c365d" d="M321 1164h120l269.28-480.06H1020s180 0 180-83.94c0-84-180-84-180-84H710.28L441 36H321l149.28 480H255.06L120 395.94H0l96.06 204L0 804h120l135.06-120.06h215.22z"/></svg>
-                    <h5 class="flight-duration">{{ formatDuration(flightDuration) }}</h5>
+                    <h5 class="itnry-date">{{ formatLongFlightDate }}</h5>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="3.7em" height="3.7em" viewBox="0 0 1200 1200"><path fill="#4c365d" d="M321 1164h120l269.28-480.06H1020s180 0 180-83.94c0-84-180-84-180-84H710.28L441 36H321l149.28 480H255.06L120 395.94H0l96.06 204L0 804h120l135.06-120.06h215.22z"/></svg>
+                    <h5 class="flight-duration">{{ formatLongDuration(flightDuration) }}</h5>
                 </div>
                 <div class="itnry-departure-container">
-                    <h2 class="itnry-departure__time">{{ formatTime(flightDepTime) }}</h2>
+                    <h2 class="itnry-departure__time">{{ formatTime(flightArrTime) }}</h2>
                     <h3 class="itnry-departure__place">{{ origin }}</h3>
                     <h4 class="itnry-departure__city">City, State</h4>
                 </div>
