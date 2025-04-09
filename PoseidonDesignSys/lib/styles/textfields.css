@@ -2,10 +2,13 @@
 
 @keyframes border-fill {
   0% {
-    border-color: transparent; /* Start with no border */
+    border-color: transparent;
+    /* Start with no border */
   }
+
   100% {
-    border-color: var(--pos-yellow); /* End with the desired border color */
+    border-color: var(--pos-yellow);
+    /* End with the desired border color */
   }
 }
 
@@ -13,7 +16,7 @@
 .p-textfield--small,
 .p-textfield--textarea,
 .p-textfield--textarea-edit,
-.p-textfield--login-small, 
+.p-textfield--login-small,
 .dp__input {
   background-color: var(--pos-grey);
   color: black;
@@ -67,84 +70,111 @@
 .dp__input {
   background-color: var(--pos-grey) !important;
   color: black !important;
-  font-size: 1.25rem !important; /* 20px */
-  border-radius: 1.25rem !important; /* 20px */
+  font-size: 1.25rem !important;
+  /* 20px */
+  border-radius: 1.25rem !important;
+  /* 20px */
   border-style: none !important;
-  height: 3.75rem !important; /* 60px */
+  height: 3.75rem !important;
+  /* 60px */
   width: 100% !important;
   box-sizing: border-box !important;
   padding: 5%;
   transition: background-color 0.1s ease !important;
-  border: 0.125rem solid transparent !important; /* 2px */
-  padding-left: 10% !important; /* 10% padding on the left */
+  border: 0.125rem solid transparent !important;
+  /* 2px */
+  padding-left: 10% !important;
+  /* 10% padding on the left */
 }
 
 .p-textfield--small,
 .dp__input {
-  font-size: 1rem !important; /* 16px */
+  font-size: 1rem !important;
+  /* 16px */
   font-family: Inter, sans-serif !important;
-  border-radius: 0.375rem !important; /* 6px */
+  border-radius: 0.375rem !important;
+  /* 6px */
   border-style: none !important;
   font-weight: 400 !important;
-  height: 2.5rem !important; /* 40px */
+  height: 2.5rem !important;
+  /* 40px */
 }
 
 .p-textfield--login-small {
-  width: 9.75rem; /* 156px */
-  height: 3.75rem; /* 60px */
+  width: 9.75rem;
+  /* 156px */
+  height: 3.75rem;
+  /* 60px */
 }
 
 .p-textfield--textarea,
 .p-textfield--textarea-edit {
   resize: none;
-  max-height: 31.25rem; /* 500px */
+  max-height: 31.25rem;
+  /* 500px */
   min-height: auto;
-  height: 9.375rem; /* 150px */
+  height: 9.375rem;
+  /* 150px */
   font-family: Lato, sans-serif;
   box-shadow: none;
   scrollbar-gutter: stable both-edges;
-  margin-bottom: 1.875rem; /* 30px */
-  margin-top: 0.3125rem; /* 5px */
+  margin-bottom: 1.875rem;
+  /* 30px */
+  margin-top: 0.3125rem;
+  /* 5px */
 }
 
 .p-textfield__textarea-container,
 .p-textfield--textarea-edit .p-textfield__textarea-container {
   position: relative;
   background-color: var(--pos-grey);
-  border-radius: 1.25rem; /* 20px */
+  border-radius: 1.25rem;
+  /* 20px */
   border-style: none;
-  padding-right: 0.625rem; /* 10px */
+  padding-right: 0.625rem;
+  /* 10px */
   box-shadow: var(--drop-shadow);
   box-sizing: border-box;
 }
 
 .p-textfield__char-counter {
   position: absolute;
-  bottom: 0.5rem; /* 8px */
-  left: 1.25rem;  /* 20px */
-  font-size: 0.75rem; /* 12px */
+  bottom: 0.5rem;
+  /* 8px */
+  left: 1.25rem;
+  /* 20px */
+  font-size: 0.75rem;
+  /* 12px */
   color: var(--pos-dark-grey);
   pointer-events: none;
 }
 
-#Title, #Title .p-textfield__textarea-container, #Title .p-textfield--textarea-edit {
+#Title,
+#Title .p-textfield__textarea-container,
+#Title .p-textfield--textarea-edit {
   resize: none;
-  max-height: 2.4375rem; /* 39px */
-  max-width: 21.875rem; /* 350px */
+  max-height: 2.4375rem;
+  /* 39px */
+  max-width: 21.875rem;
+  /* 350px */
   color: var(--pos-white);
   box-shadow: none;
-  font-size: 2rem; /* 32px */
+  font-size: 2rem;
+  /* 32px */
   scrollbar-color: transparent transparent;
   padding: 0;
   margin: 0;
-  margin-top: 0; /* originally "margin-top: px;" converted to 0 */
-  text-align: center; 
-  border-radius: 0.625rem; /* 10px */
+  margin-top: 0;
+  /* originally "margin-top: px;" converted to 0 */
+  text-align: center;
+  border-radius: 0.625rem;
+  /* 10px */
   background: rgba(217, 217, 217, 0.1);
 }
 
 #Title .p-textfield--textarea-edit {
-  outline: var(--pos-grey) 0.09375rem solid; /* 1.5px */
+  outline: var(--pos-grey) 0.09375rem solid;
+  /* 1.5px */
 }
 
 #Title .p-textfield__char-counter {
@@ -152,17 +182,21 @@
 }
 
 #Dates {
-  max-width: 9rem; /* 130px */
+  max-width: 9rem;
+  /* 130px */
   color: var(--pos-white);
   box-shadow: none;
-  font-size: 1rem; /* 16px */
+  font-size: 1rem;
+  /* 16px */
   scrollbar-color: transparent transparent;
   padding: 0;
   margin: 0;
-  text-align: center; 
-  border-radius: 0.625rem; /* 10px */
+  text-align: center;
+  border-radius: 0.625rem;
+  /* 10px */
   background: rgba(217, 217, 217, 0.3);
-  border: var(--pos-white) 0.09375rem solid; /* 1.5px */
+  border: var(--pos-white) 0.09375rem solid;
+  /* 1.5px */
 }
 
 #Dates::placeholder {
@@ -170,30 +204,28 @@
 }
 
 #Dates:focus {
-  border: var(--pos-yellow) 0.09375rem solid; /* 1.5px */
-  outline: var(--pos-yellow) 0.09375rem solid; /* 1.5px */
+  border: var(--pos-yellow) 0.09375rem solid;
+  /* 1.5px */
+  outline: var(--pos-yellow) 0.09375rem solid;
+  /* 1.5px */
   margin: auto;
 }
 
-.p-textfield:focus {
+.p-textfield:focus, .p-textfield--small:focus, .p-textfield--textarea:focus, .p-textfield--textarea-edit:focus, .p-textfield--login-small:focus, .dp__input:focus {
   background-color: rgb(255, 233, 209);
   animation: border-fill 0.1s forwards;
   outline: none;
 }
 
-.p-textfield--small:focus {
-  outline: 0.125rem solid var(--pos-yellow); /* 2px */
+.p-textfield--small:focus, .p-textfield--login-small:focus {
+  outline: 0.125rem solid var(--pos-yellow);
+  /* 2px */
   background-color: rgb(255, 233, 209);
-
-}
-
-.p-textfield__textarea-container:focus-within,
-.p-textfield--textarea-edit .p-textfield__textarea-container:focus-within {
-  outline: 0.125rem solid var(--pos-yellow); /* 2px */
 }
 
 .p-textfield--textarea:focus,
-.p-textfield--textarea-edit:focus {
+.p-textfield--textarea-edit:focus,
+.p-textfield--login-small:focus {
   outline: none;
 }
 
@@ -202,25 +234,53 @@ textarea.p-textfield--textarea-edit::placeholder {
 }
 
 .p-textfield--small#map:focus {
-  border: var(--pos-yellow) 0.09375rem solid; /* 1.5px */
-  outline: var(--pos-yellow) 0.09375rem solid; /* 1.5px */
+  border: var(--pos-yellow) 0.09375rem solid;
+  /* 1.5px */
+  outline: var(--pos-yellow) 0.09375rem solid;
+  /* 1.5px */
   background-color: rgb(255, 233, 209);
 }
 
 
 @media only screen and (max-width: 56rem) {
+
   /* 896px */
   .p-textfield--small {
     width: 100%;
   }
+
   .p-textfield--login-small {
     width: 100%;
+    margin-top: 1%;
   }
+
   .p-textfield--textarea {
     width: 100%;
   }
+
   .p-textfield--textarea-edit {
     width: 100%;
   }
 }
 
+@media only screen and (min-width: 48rem) {
+  .p-textfield {
+    width: 100%;
+  }
+
+  .p-textfield--small {
+    width: 100%;
+  }
+
+  .p-textfield--textarea {
+    width: 100%;
+  }
+
+  .p-textfield--textarea-edit {
+    width: 100%;
+  }
+
+  .p-textfield--login-small {
+    width: 100%;
+  }
+}
