@@ -154,14 +154,15 @@ const emitUpdate = (field, value) => {
                 <!-- <PTextField v-model="editableEndDate" design="" id="Dates" type="date" -->
                 <!-- @input="value => emitUpdate('endDate', value)" /> -->
             </h3>
-            <h3 v-else-if="!giveDesign.includes('p-event--small-header') && !giveDesign.includes('p-event--desktop-header')" class="p-event__dates">{{
+            <h3 v-else-if="design=='p-event--small-header'" class="p-event__dates"></h3>
+            <h3 v-else-if="!giveDesign.includes('p-event--small-header') || !giveDesign.includes('p-event--desktop-header')" class="p-event__dates">{{
                 formatDate(startDate) }} - {{ formatDate(endDate) }}</h3>
             <h3 v-if="giveDesign.includes('p-event--block-finance')" class="p-event__budget"
                 :style="{ color: budgetColor }">
                 Budget<br />{{ Math.round((currentBudget / maxBudget) * 100) }}%
             </h3>
             <div class="p-event__details">
-                <h2 v-if="!giveDesign.includes('p-event--small-header')">{{ eventName }}</h2>
+                <h2>{{ eventName }}</h2>
                 <h4 v-if="!giveDesign.includes('p-event--header-edit') && !giveDesign.includes('p-event--desktop-header')">{{ props.organization.name }}</h4>
                 <h4 v-if="giveDesign.includes('p-event--desktop-header')">Hosted by {{ props.organization.name }}</h4>
                 <h4 v-else-if="giveDesign.includes('p-event--header-edit')">
