@@ -149,6 +149,11 @@
   pointer-events: none;
 }
 
+.p-textfield__clear {
+  font-size: 3.5rem;
+  color: var(--pos-white);
+}
+
 #Title,
 #Title .p-textfield__textarea-container,
 #Title .p-textfield--textarea-edit {
