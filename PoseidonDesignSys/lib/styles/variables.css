@@ -22,6 +22,12 @@
   --top-gradient: linear-gradient(158deg, var(--gradient-bg-color) 0%, var(--pos-blue) 100%);
   --side-gradient: linear-gradient(79deg, var(--pos-blue) 61%, var(--gradient-bg-color) 100%);
   --gradient: linear-gradient(85deg, var(--gradient-bg-color) 12%, #566688cc 52%, #00000000 100%);
+  --gradient-2: linear-gradient(
+    83.44deg,
+    rgba(76, 54, 93, 1) 11.500000208616257%,
+    rgba(86, 102, 136, 0.8) 51.99999809265137%,
+    rgb(203, 203, 210, 0.7) 100%
+  );
 
   /*-Shadows-*/
 
