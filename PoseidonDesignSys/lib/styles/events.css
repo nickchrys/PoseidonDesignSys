@@ -184,6 +184,19 @@
     font-weight: 500;
 }
 
+.p-event--small-header .p-event__dates {
+    display: none;
+}
+
+.p-event--small-header .p-event__details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: static;
+    text-align: center;
+}
+
 .more-icon {
     position: absolute;
     right: 0.6875rem;
