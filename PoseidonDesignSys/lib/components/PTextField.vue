@@ -101,7 +101,7 @@ defineExpose({
     </template>
 
     <template v-else>
-        <input ref="inputRef" :class="giveDesign" v-model="input" :type="type" :placeholder="label"
+        <input ref="inputRef" autocomplete="on" :class="giveDesign" v-model="input" :type="type" :placeholder="label"
             @input="e => updateValue(e.target.value)" />
     </template>
 </template>

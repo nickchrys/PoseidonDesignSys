@@ -1,11 +1,12 @@
 <script setup>
-
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { PButton } from './index'
 
-const emit = defineEmits(['option-selected']);
-
 const props = defineProps({
+    modelValue: {
+        type: [String, Number],
+        default: ''
+    },
     dropDownLabel: {
         type: String,
         required: true
@@ -13,7 +14,12 @@ const props = defineProps({
     options: {
         type: Array,
         required: true,
-        validator: (value) => value.every(item => typeof item === 'string')
+        validator: (value) =>
+            value.every(
+                item =>
+                    typeof item === 'string' ||
+                    (typeof item === 'object' && item !== null && 'label' in item)
+            )
     },
     design: {
         type: String,
@@ -26,14 +32,13 @@ const props = defineProps({
     }
 });
 
+const emit = defineEmits(['update:modelValue', 'option-selected']);
+
 const base = 'p-dropdown';
-const giveDesign = computed(() => {
-    const design = props.design !== 'default' ? `${base}--${props.design}` : base;
-    return design
-})
+const giveDesign = computed(() => props.design !== 'default' ? `${base}--${props.design}` : base);
 
 const dropDown = ref(false);
-const dropDownLabel = ref(props.dropDownLabel);
+const internalLabel = ref(props.dropDownLabel);
 
 const toggleDropDown = () => {
     dropDown.value = !dropDown.value;
@@ -41,16 +46,32 @@ const toggleDropDown = () => {
 
 const selectOption = (field, option) => {
     dropDown.value = false;
-    dropDownLabel.value = option;
-    emit('option-selected', {field, option});
-};
+    internalLabel.value = typeof option === 'object' ? option.label : option;
+    emit('update:modelValue', typeof option === 'object' ? option.value : option);
+    emit('option-selected', { field, option });
+}
+
+// Watch for external changes in v-model
+watch(
+    () => props.modelValue,
+    (newVal) => {
+        const selected = props.options.find(
+            o => typeof o === 'object' ? o.value === newVal : o === newVal
+        );
+        if(selected) {
+            internalLabel.value = typeof selected === 'object' ? selected.label : selected;
+        } else {
+            internalLabel.value = props.dropDownLabel;
+        }
+    },
+    { immediate: true }
+);
 </script>
 
 <template>
-
     <div :class="giveDesign">
         <div class="dropdown-trigger" @click="toggleDropDown">
-            <PButton design="dropdown" :label="dropDownLabel"></PButton>
+            <PButton design="dropdown" :label="internalLabel"></PButton>
             <svg :class="`${giveDesign}__icon`" xmlns="http://www.w3.org/2000/svg" width="9" height="4"
                 viewBox="0 0 9 4">
                 <path fill="currentColor" d="M4.5 4L0 0h9L4.5 4z" />
@@ -58,7 +79,7 @@ const selectOption = (field, option) => {
         </div>
         <ul v-if="dropDown" :class="`${giveDesign}__menu`">
             <li v-for="option in options" :value="option" @click="selectOption(description, option)">
-                {{ option }}
+                {{ typeof option === 'object' ? option.label : option }}
             </li>
         </ul>
     </div>
