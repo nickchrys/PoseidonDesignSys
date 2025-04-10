@@ -7,6 +7,11 @@
   transition: background-color 0.1s ease;
 }
 
+.hiddenB {
+  visibility: hidden;
+  cursor: none;
+}
+
 .p-button__label {
   margin: 0;
   font-size: 1.25rem; /* 20px */
