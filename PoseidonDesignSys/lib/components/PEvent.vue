@@ -87,7 +87,15 @@ const emitUpdate = (field, value) => {
 
 <template>
 
-    <template v-if="giveDesign.includes('p-event--itinerary-header')">
+    <template v-if="giveDesign.includes('p-event--org-block')">
+        <div :class="giveDesign">
+            <div class="org-container">
+                <h1>{{ props.organization.name }}</h1>
+            </div>
+        </div>
+    </template>
+
+    <template v-else-if="giveDesign.includes('p-event--itinerary-header')">
         <div :class="giveDesign">
             <svg class="back-icon" @click="handleBackClick" xmlns="http://www.w3.org/2000/svg" width="16" height="32"
                 viewBox="0 0 16 32">

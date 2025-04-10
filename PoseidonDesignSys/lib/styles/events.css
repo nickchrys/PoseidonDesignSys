@@ -6,14 +6,11 @@
 .p-event--block-planner {
     position: relative;
     width: 20.9375rem;
-    /* 335px */
     max-width: 20.9375rem;
     height: 8.125rem;
     border-radius: 0.3125rem;
-    /* 5px */
     border-style: none;
     margin-top: 0.0625rem;
-    /* 1px */
     color: var(--pos-white);
 }
 
@@ -299,6 +296,28 @@
     color: var(--pos-white);
 }
 
+.org-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.375rem;
+    align-items: center;
+    background-color: var(--pos-grey);
+    box-shadow: var(--drop-shadow);
+    border-radius: 0.375rem;
+}
+
+.p-event--org-block {
+    position: relative;
+    width: 24rem;
+    border-radius: 0.3125rem;
+    border-style: none;
+    margin-top: 0.0625rem;
+    color: var(--pos-white);
+}
+
 @media only screen and (max-width: 56rem) {
 
     /* Make event blocks stretch full-width on smaller screens */
@@ -340,12 +359,12 @@
         padding-bottom: 2%;
     }
 
-    .p-event--desktop-header .p-event__details h2{
+    .p-event--desktop-header .p-event__details h2 {
         font-size: 3rem;
         font-weight: 500;
     }
 
-    .p-event--desktop-header .p-event__details h4{
+    .p-event--desktop-header .p-event__details h4 {
         font-size: 2rem;
         font-weight: 400;
         margin: 0;
