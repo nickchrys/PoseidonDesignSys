@@ -83,6 +83,13 @@
   background-color: var(--pos-grey);
   box-shadow: var(--drop-shadow);
   color: black;
+  overflow-y: hidden;
+  word-wrap: break-all;
+  padding-right: 1em; /* 16px slightly wider to account for emails that just barely dont line break and end up looking off*/
+}
+
+.p-finance--invite h1, .p-finance--new-user h1{
+  overflow-x: hidden; /* hide overflow but make it scrollable for worst case scenarios like emails that are super long */
 }
 
 .p-finance--invite .pic-container {

@@ -34,6 +34,16 @@ const giveDesign = computed(() => {
     return props.design !== 'default' ? `p-finance--${props.design}` : 'p-finance';
 });
 
+
+// Check if the label contains an email and insert zero width space before the @ symbol
+const formattedLabel = computed(() => {
+  const emailRegex = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/; // Regular expression to match email addresses
+  if (emailRegex.test(props.name)) {
+    return props.email.replace('@', '&#8203;@'); // Insert a breaking zero-width space before the @ symbol
+  }
+  return props.name; // Return the label as-is if it's not an email
+});
+
 </script>
 
 <template>
@@ -44,7 +54,7 @@ const giveDesign = computed(() => {
                     <PProfilePic design='med' :profileImage="profileImage" />
                 </div>
                 <div class="p-finance__info">
-                    <h1>{{ name }}</h1>
+                    <h1 v-html=formattedLabel></h1>
                 </div>
             </div>
     </template>
