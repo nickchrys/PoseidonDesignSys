@@ -98,8 +98,6 @@ const emitUpdate = (field, value) => {
 
 </script>
 
-
-
 <template>
 
     <template v-if="giveDesign.includes('p-event--org-block')">
@@ -172,7 +170,7 @@ const emitUpdate = (field, value) => {
                 <!-- @input="value => emitUpdate('endDate', value)" /> -->
             </h3>
             <h3 v-else-if="design == 'p-event--small-header'" class="p-event__dates"></h3>
-            <h3 v-else-if="!giveDesign.includes('p-event--small-header') || !giveDesign.includes('p-event--desktop-header')"
+            <h3 v-else-if="!giveDesign.includes('p-event--small-header') && !giveDesign.includes('p-event--desktop-header')"
                 class="p-event__dates">{{
                     formatDate(startDate) }} - {{ formatDate(endDate) }}</h3>
             <h3 v-if="giveDesign.includes('p-event--block-finance')" class="p-event__budget"
