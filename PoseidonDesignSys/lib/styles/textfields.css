@@ -19,27 +19,35 @@
 .p-textfield--login-small {
   background-color: var(--pos-grey);
   color: black;
-  font-size: 1.25rem; /* 20px */
-  border-radius: 1.25rem; /* 20px */
+  font-size: 1.25rem;
+  /* 20px */
+  border-radius: 1.25rem;
+  /* 20px */
   border-style: none;
-  height: 3.75rem; /* 60px */
+  height: 3.75rem;
+  /* 60px */
   box-sizing: border-box;
   padding: 5%;
   transition: background-color 0.1s ease;
-  border: 0.125rem solid transparent; /* 2px */
+  border: 0.125rem solid transparent;
+  /* 2px */
   font-family: var(--font-primary);
 }
 
 .dp__input {
   background-color: var(--pos-grey);
   color: black;
-  font-size: 1.25rem; /* 20px */
-  border-radius: 1.25rem; /* 20px */
+  font-size: 1.25rem;
+  /* 20px */
+  border-radius: 1.25rem;
+  /* 20px */
   border-style: none;
-  height: 3.75rem; /* 60px */
+  height: 3.75rem;
+  /* 60px */
   box-sizing: border-box;
   transition: background-color 0.1s ease;
-  border: 0.125rem solid transparent; /* 2px */
+  border: 0.125rem solid transparent;
+  /* 2px */
 }
 
 .dp__input::placeholder {
@@ -87,15 +95,13 @@
 }
 
 .p-textfield--small {
-  font-size: 1rem !important;
-  /* 16px */
-  font-family: Inter, sans-serif !important;
-  border-radius: 0.375rem !important;
-  /* 6px */
-  border-style: none !important;
-  font-weight: 400 !important;
-  height: 2.5rem !important;
-  /* 40px */
+  font-size: 1rem;
+  font-family: Inter, sans-serif;
+  border-radius: 0.375rem;
+  border-style: none ;
+  font-weight: 400;
+  height: 2.5rem ;
+  
 }
 
 .p-textfield--login-small {
@@ -214,13 +220,19 @@
   margin: auto;
 }
 
-.p-textfield:focus, .p-textfield--small:focus, .p-textfield--textarea:focus, .p-textfield--textarea-edit:focus, .p-textfield--login-small:focus, .dp__input:focus {
+.p-textfield:focus,
+.p-textfield--small:focus,
+.p-textfield--textarea:focus,
+.p-textfield--textarea-edit:focus,
+.p-textfield--login-small:focus,
+.dp__input:focus {
   background-color: rgb(255, 233, 209);
   animation: border-fill 0.1s forwards;
   outline: none;
 }
 
-.p-textfield--small:focus, .p-textfield--login-small:focus {
+.p-textfield--small:focus,
+.p-textfield--login-small:focus {
   outline: 0.125rem solid var(--pos-yellow);
   /* 2px */
   background-color: rgb(255, 233, 209);
@@ -263,6 +275,13 @@ textarea.p-textfield--textarea-edit::placeholder {
 
   .p-textfield--textarea-edit {
     width: 100%;
+  }
+
+  html body div#app div.event-page div.event-content div#flight-search.p-dropdown__container.show input#map.form-control.p-textfield--small.pac-target-input {
+    font-size: 19px;
+    border-radius: 16px;
+    border-style: none;
+    height: 40%;
   }
 }
 
