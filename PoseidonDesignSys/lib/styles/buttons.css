@@ -34,7 +34,6 @@
 }
 
 .p-button--gradient {
-  color: var(--pos-yellow);
   font-size: 1rem; /* 16px */
   font-weight: bold;
   border-radius: 0.375rem; /* 6px */
@@ -44,17 +43,20 @@
   box-shadow: var(--drop-shadow);
 }
 
+.p-button--gradient .p-button__label {
+  color: var(--pos-yellow);
+}
+
 .p-button--gradient-small .p-button__label {
-  font-size: 0.75rem; /* 12px */
+  font-size: 1rem; /* 12px */
 }
 
 .p-button--gradient-small {
   color: var(--pos-yellow);
-  font-size: 0.75rem; /* 12px */
   font-weight: bold;
   border-radius: 0.375rem; /* 6px */
-  height: 1.6875rem; /* 27px */
-  width: 6.375rem; /* 102px */
+  height: 3rem; /* 27px */
+  width: 7rem; /* 102px */
   background: var(--side-gradient);
   box-shadow: var(--drop-shadow);
 }
@@ -126,6 +128,7 @@
   .p-button--planner {
     width: 100%;
   }
+
 }
 
 @media only screen and (min-width: 48rem) { /* 768px */
@@ -135,7 +138,7 @@
     min-width: 50%;
   }
   .p-button--gradient {
-    min-width: 100%;
+    min-width: 15%;
   }
   /* .p-button--gradient-small {
     min-width: 50%;
@@ -144,8 +147,8 @@
     min-width: 100%;
   }
   .p-button--planner {
-    width: 6rem;
-    height: 8.125rem; /* 130px */
+    width: 9rem;
+    height: 11rem;
     border-radius: 0.3125rem;
     display: inline-flex;
     flex-direction: column;
