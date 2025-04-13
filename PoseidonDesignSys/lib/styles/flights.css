@@ -211,7 +211,8 @@
 .p-flight__info {
   min-width: 9.875rem;
   /* 158px */
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .date-time-container {
@@ -306,6 +307,7 @@
 }
 
 .p-flight--finance {
+  display: flex;
   margin-bottom: 2%;
 
   /* 10px */
@@ -319,20 +321,10 @@
   text-overflow: ellipsis;
 }
 
-
-.p-flight--finance .p-flight__info h5 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  line-height: 1.2;
-
-}
-
 .p-flight--finance__name {
   margin: 0;
-  font-size: 1.25rem;
-  /* 20px */
+  font-size: 1.125rem;
+  /* 18px */
   font-weight: 400;
 }
 
@@ -356,8 +348,7 @@
 .p-flight--finance .p-flight__price {
   font-size: 100%;
   font-weight: 600;
-  text-align: right;
-  padding-right: 10%;
+  text-align: center;
 }
 
 .p-flight--finance .p-flight__airline-logo {
@@ -692,7 +683,7 @@
   }
 
   .p-flight--finance {
-    width: 100%;
+    width: fit-content;
   }
 
   .p-flight--itinerary {

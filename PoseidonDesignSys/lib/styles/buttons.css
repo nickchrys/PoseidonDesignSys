@@ -138,9 +138,9 @@
   .p-button--gradient {
     min-width: 100%;
   }
-  .p-button--gradient-small {
+  /* .p-button--gradient-small {
     min-width: 50%;
-  }
+  } */
   .p-button--shop {
     min-width: 100%;
   }
