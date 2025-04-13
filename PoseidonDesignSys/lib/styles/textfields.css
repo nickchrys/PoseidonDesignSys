@@ -16,21 +16,39 @@
 .p-textfield--small,
 .p-textfield--textarea,
 .p-textfield--textarea-edit,
-.p-textfield--login-small,
-.dp__input {
+.p-textfield--login-small {
   background-color: var(--pos-grey);
   color: black;
-  font-size: 20px;
-  border-radius: 20px;
+  font-size: 1.25rem; /* 20px */
+  border-radius: 1.25rem; /* 20px */
   border-style: none;
-  height: 60px;
+  height: 3.75rem; /* 60px */
   box-sizing: border-box;
   padding: 5%;
   transition: background-color 0.1s ease;
-  border: 2px solid transparent;
+  border: 0.125rem solid transparent; /* 2px */
+  font-family: var(--font-primary);
 }
 
-#dob .dp__input {
+.dp__input {
+  background-color: var(--pos-grey);
+  color: black;
+  font-size: 1.25rem; /* 20px */
+  border-radius: 1.25rem; /* 20px */
+  border-style: none;
+  height: 3.75rem; /* 60px */
+  box-sizing: border-box;
+  transition: background-color 0.1s ease;
+  border: 0.125rem solid transparent; /* 2px */
+}
+
+.dp__input::placeholder {
+  opacity: 1 !important;
+  font-family: var(--font-primary) !important;
+  font-weight: 400 !important;
+}
+
+/* #dob .dp__input {
   background-color: var(--pos-grey) !important;
   color: black !important;
   font-size: 20px !important;
@@ -54,7 +72,8 @@
   padding: 5% !important;
   transition: background-color 0.1s ease !important;
   border: 2px solid transparent !important;
-}
+} */
+
 
 .p-textfield {
   width: 100%;
@@ -67,28 +86,7 @@
   height: 40px;
 }
 
-.dp__input {
-  background-color: var(--pos-grey) !important;
-  color: black !important;
-  font-size: 1.25rem !important;
-  /* 20px */
-  border-radius: 1.25rem !important;
-  /* 20px */
-  border-style: none !important;
-  height: 3.75rem !important;
-  /* 60px */
-  width: 100% !important;
-  box-sizing: border-box !important;
-  padding: 5%;
-  transition: background-color 0.1s ease !important;
-  border: 0.125rem solid transparent !important;
-  /* 2px */
-  padding-left: 10% !important;
-  /* 10% padding on the left */
-}
-
-.p-textfield--small,
-.dp__input {
+.p-textfield--small {
   font-size: 1rem !important;
   /* 16px */
   font-family: Inter, sans-serif !important;
