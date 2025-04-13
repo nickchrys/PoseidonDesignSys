@@ -28,6 +28,9 @@
     rgba(86, 102, 136, 0.8) 51.99999809265137%,
     rgb(203, 203, 210, 0.7) 100%
   );
+  --gradient-3: linear-gradient(to right, var(--gradient-bg-color), transparent);
+  --gradient-4: linear-gradient(to left, var(--gradient-bg-color), transparent);
+
 
   /*-Shadows-*/
 
