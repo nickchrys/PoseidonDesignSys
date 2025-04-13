@@ -359,7 +359,8 @@
 
 @media only screen and (min-width: 48rem) {
     .p-event--block-finance,
-    .p-event--block {
+    .p-event--block,
+    .p-event--block-planner {
         flex: 0 0 auto;
         width: 22.563rem;
         max-width: 22.563rem;
