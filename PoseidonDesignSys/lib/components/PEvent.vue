@@ -133,7 +133,7 @@ const emitUpdate = (field, value) => {
         }">
             <!-- Back Icon -->
             <svg v-if="giveDesign.includes('p-event--header') || giveDesign.includes('p-event--header-edit') || giveDesign.includes('p-event--small-header')"
-                class="back-icon" @click="handleBackClick" xmlns="http://www.w3.org/2000/svg" width="16" height="32"
+                class="back-icon" @click="handleBackClick" xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem"
                 viewBox="0 0 16 32">
                 <path fill="currentColor" fill-rule="evenodd"
                     d="m3.343 12l7.071 7.071L9 20.485l-7.778-7.778a1 1 0 0 1 0-1.414L9 3.515l1.414 1.414z" />
