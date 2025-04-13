@@ -213,6 +213,7 @@
   /* 158px */
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .date-time-container {
@@ -304,6 +305,9 @@
   width: 3.625rem;
   /* 58px */
   padding-left: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .p-flight--finance {
