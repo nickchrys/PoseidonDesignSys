@@ -370,10 +370,10 @@
     .p-event--block,
     .p-event--block-planner {
         flex: 0 0 auto;
-        width: 22.563rem;
-        max-width: 22.563rem;
-        height: 11.375rem;
-        max-height: 11.375rem;
+        width: 20rem;
+        max-width: 20rem;
+        height: 10rem;
+        max-height: 10rem;
         border-radius: 0.3125rem;
         margin: 0.5rem;
     }
@@ -393,6 +393,41 @@
         margin: 0;
         padding-bottom: 0;
     }
+    
+
+
+}
+
+@media only screen and (min-width: 1920px) {
+
+    .p-event--block-finance,
+    .p-event--block,
+    .p-event--block-planner {
+        flex: 0 0 auto;
+        width: 30rem;
+        max-width: 30rem;
+        height: 15rem;
+        max-height: 15rem;
+        border-radius: 0.3125rem;
+        margin: 0.5rem;
+    }
+
+    .p-event--desktop-header .p-event__details {
+        padding-bottom: 2%;
+    }
+
+    .p-event--desktop-header .p-event__details h2 {
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+    .p-event--desktop-header .p-event__details h4 {
+        font-size: 2rem;
+        font-weight: 400;
+        margin: 0;
+        padding-bottom: 0;
+    }
+    
 
 
 }
