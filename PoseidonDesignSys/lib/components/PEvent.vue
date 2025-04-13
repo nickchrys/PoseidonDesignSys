@@ -70,6 +70,21 @@ const handleBackClick = (e) => {
     emit('backClick');
 };
 
+const imageSrc = ref(props.pictureLink);
+
+const onImageError = () => {
+    imageSrc.value = ''; // Clear image source so fallback style is used
+};
+
+// Computed property for background style
+const eventBackground = computed(() => {
+    // If imageSrc is empty, use the fallback side-gradient
+    return imageSrc.value
+        ? `var(--gradient), url(${imageSrc.value})`
+        : 'var(--side-gradient)';
+});
+
+
 const editableName = ref(props.name);
 const editableStartDate = ref(props.startDate);
 const editableEndDate = ref(props.endDate);
@@ -112,12 +127,12 @@ const emitUpdate = (field, value) => {
     </template>
 
     <template v-else>
-        <div :class="giveDesign" @click="handleEventClick(event)" :style="{
-            background: `var(--gradient), url(${props.pictureLink})`,
+        <div :class="giveDesign" @click="handleEventClick(event)" :style="{ 
+            background: eventBackground,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center'
-            }">
+        }">
             <!-- Back Icon -->
             <svg v-if="giveDesign.includes('p-event--header') || giveDesign.includes('p-event--header-edit') || giveDesign.includes('p-event--small-header')"
                 class="back-icon" @click="handleBackClick" xmlns="http://www.w3.org/2000/svg" width="16" height="32"

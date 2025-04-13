@@ -309,14 +309,16 @@
 .p-flight--finance {
   display: flex;
   margin-bottom: 2%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+
   /* 10px */
 }
 
-.p-flight--finance:hover {
-  overflow-x:auto;
+.p-flight--finance .p-flight--finance__name {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .p-flight--finance__name {
