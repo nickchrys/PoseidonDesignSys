@@ -338,6 +338,14 @@
     color: var(--pos-white);
 }
 
+.modal .toastModal {
+    color: var(--pos-yellow);
+    background: var(--top-gradient);
+    padding: 3rem;
+    border-radius: 0.3125rem;
+    margin: 1rem;
+}
+
 @media only screen and (max-width: 56rem) {
 
     /* Make event blocks stretch full-width on smaller screens */
