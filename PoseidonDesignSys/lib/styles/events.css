@@ -444,9 +444,10 @@
 
     .event-desktop-contentBox input {
         all: unset;
-        font-size: 3.5rem;
+        font-size: 3rem;
         color: var(--pos-white);
         margin-left: 1rem;
+        width: 97%;
     }
 
     .event-desktop-contentBox label {
@@ -460,7 +461,7 @@
         flex-direction: column;
         justify-content: end;
         align-items: left;
-        width: 80%;
+        width: 90%;
         height: 100%;
         background: var(--gradient-3);
         padding-left: 2rem;
@@ -476,10 +477,9 @@
 
     .event-desktop-contentBox .event-desktop-contentBox__textField {
         background: rgba(128, 128, 128, 0.4);
-        height: 4rem;
-        width: 20rem;
         overflow: hidden;
-        padding: 1.5rem;
+        padding: 1rem;
+        padding-left: 0;
         border-radius: 1.25rem;
         border: 0.0625rem solid var(--pos-grey);
     }
@@ -634,87 +634,7 @@
         font-weight: 500;
     }
 
-}
-
-@media only screen and (min-width: 1920px) {
-
-    .p-event--block-finance,
-    .p-event--block,
-    .p-event--block-planner {
-        flex: 0 0 auto;
-        width: 30rem;
-        max-width: 30rem;
-        height: 15rem;
-        max-height: 15rem;
-        border-radius: 0.3125rem;
-        margin: 0.5rem;
-    }
-
-    .p-event--desktop-header .p-event__details {
-        padding-bottom: 2%;
-    }
-
-    .p-event--desktop-header .p-event__details h2 {
-        font-size: 3rem;
-        font-weight: 500;
-    }
-
-    .p-event--desktop-header .p-event__details h4 {
-        font-size: 2rem;
-        font-weight: 400;
-        margin: 0;
-        padding-bottom: 0;
-    }
-    
-      /* PLANNERCREATE */
-    .event-desktop-contentBox {
-        width: 95%;
-        max-width: 80rem;
-        /* align-self: flex-start;
-        margin-left: 10rem; */
-    }
-
-    .event-form__desktop {
-        width: 60%;
-        max-width: 70rem;
-        /* align-self: flex-start;
-        margin-left: 10rem; */
-        /* align-items: unset; */
-    }
-
-    #editView .home-header-desktop {
-        margin-top: 3.1rem;
-    }
-
-    .event-form__desktop--topbar {
-        width: 70rem;
-        margin-left: -1rem;
-    }
-
-    .event-page-desktop {
-        scale: 1.25;
-        margin-top: 5.75rem;
-    }
-    .event-page-desktop .home-header-desktop {
-        scale:0.895;
-        margin-top: 1.20rem;
-    }
-
-    .event-page-desktop .home-header__text-desktop {
-        scale: 0.90;
-    }
-
-    .event-page-desktop .home-header-desktop p {
-        font-size: 20px;
-    }
-
-    .event-page-desktop .p-event--desktop-header {
-        width:80rem;
-        max-width: 95%;
-    }
-
-    .event-page-desktop .event-desktop-content {
-        width:70rem;
-        max-width: 95%;
+    .editEvent-desktop-content .event-date-desktop {
+        width: 150%;
     }
 }
