@@ -382,7 +382,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  width: 65rem;
+  width: 50rem;
   height: 7rem;
   background-color: var(--pos-grey);
   color: black;
@@ -396,7 +396,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  width: 35%;
+  width: 50%;
 }
 
 .p-flight--desktop-block .p-flight__airline-logo {
@@ -419,9 +419,12 @@
   font-weight: 500;
   width: 100%;
   height: 35%;
-  padding-top: 7%;
   margin-top: 1%;
   text-align: left;
+}
+
+.p-flight--desktop-block .p-flight__date {
+  padding-top: 2%;
 }
 
 .p-flight--desktop-block .p-flight__airline-text {
@@ -437,7 +440,12 @@
   /* align-items: center; */
   text-align: left;
   justify-content: flex-start;
-  width: 18%;
+  width: 17%;
+}
+
+.p-flight--desktop-block .p-flight__duration-codes h3 {
+  font-size: 1.3rem;
+  margin: 0;
 }
 
 .p-flight--desktop-block .p-flight__duration {
@@ -450,7 +458,7 @@
 }
 
 .p-flight--desktop-block .p-flight__codes {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: 500;
   width: 100%;
   height: 50%;
@@ -465,7 +473,7 @@
   align-items: left;
   text-align: left;
   justify-content: flex-start;
-  width: 15%;
+  width: 17%;
 }
 
 .p-flight--desktop-block .p-flight__flight-number-seats {
