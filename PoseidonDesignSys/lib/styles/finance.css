@@ -26,15 +26,12 @@
   font-size: 0.9375rem;     /* 15px */
   font-weight: 500;
   margin: 0;
-  padding-bottom: 0.0625rem; /* 1px */
-  padding-left: 0.25rem;    /* 4px */
 }
 
 .p-finance h3 {
-  font-size: 0.8125rem;     /* 13px */
-  font-weight: 400;
+  font-size: .9rem;     /* 13px */
+  font-weight: 600;
   margin: 0;
-  padding-top: 0.125rem;    /* 2px */
 }
 
 .finance-button-pic-container {
@@ -52,21 +49,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   text-align: left;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-}
-
-.p-finance__info a {
-  margin-bottom: 0.5rem;    /* 8px */
+  width: 100%;
 }
 
 .p-finance__mail,
 .p-finance__phone {
   display: flex;
   flex-direction: row;
-  gap: 0.25rem;           /* 4px */
-  padding-bottom: 0.125rem; /* 2px */
+  justify-content: left;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .p-finance--invite, .p-finance--new-user {

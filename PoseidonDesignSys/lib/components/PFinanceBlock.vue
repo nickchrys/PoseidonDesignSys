@@ -80,6 +80,8 @@ const formattedLabel = computed(() => {
             <div class="p-finance__info">
                 <h1>{{ name }}</h1>
                 <h2>{{ jobTitle }}</h2>
+
+                <div class="icon-container ">
                 <a :href="`mailto:${email}`" style="text-decoration: none; color: inherit;">
                     <div class="p-finance__mail">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -106,6 +108,7 @@ const formattedLabel = computed(() => {
                         <h3>{{ phoneNum.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3') }}</h3>
                     </div>
                 </a>
+            </div>
             </div>
         </div>
 
