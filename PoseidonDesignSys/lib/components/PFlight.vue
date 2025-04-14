@@ -258,6 +258,7 @@ const priceColor = computed(() => {
                 <div class="p-flight__airline">
                     <img class="p-flight__airline-logo" :src="logoURL" :alt="`${airline} Logo`" />
                     <div class="p-flight__airline-time">
+                        <h3 class="p-flight__date">{{ formatLongFlightDate }}</h3>
                         <h3 class="p-flight__time">{{ formatTime(flightDepTime) }} - {{ formatTime(flightArrTime) }}
                         </h3>
                         <h5 class="p-flight__airline-text">{{ airline }}</h5>
@@ -266,12 +267,14 @@ const priceColor = computed(() => {
                 <div class="p-flight__duration-codes">
                     <div class="p-flight__left-wrapper">
                         <h3>{{formatISODurationShort(flightDuration) }}</h3>
-                        <h5 class="p-flight__codes">{{ origin }}-{{ destination }}</h5>
+                        <h5 class="p-flight__codes">{{ origin }} - {{ destination }}</h5>
                     </div>
                 </div>
 
                 <h3 class="p-flight__type">{{ flightType }}</h3>
-
+            </div>
+        </template>
+<!-- 
                 <div class="p-flight__flight-number-seats">
                     <div class="p-flight__left-wrapper">
                         <h3 class="p-flight__flight-number">Flight {{ flightNumber }}</h3>
@@ -372,6 +375,7 @@ const priceColor = computed(() => {
                     { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 }) }}</h5>
             </div>
         </template>
+ -->
     </div>
 
 </template>

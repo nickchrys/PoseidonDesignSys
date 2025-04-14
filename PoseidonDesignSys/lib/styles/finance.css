@@ -51,8 +51,8 @@
 .p-finance__info {
   display: flex;
   flex-direction: column;
-  padding-top: 1.4375rem;   /* 23px */
-  padding-left: 0.9375rem;  /* 15px */
+  justify-content: center;
+  align-items: flex-start;
   text-align: left;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
@@ -70,10 +70,9 @@
 }
 
 .p-finance--invite, .p-finance--new-user {
-  min-width: 19.6875rem;    /* 315px */
-  max-width: 19.6875rem;    /* 315px */
-  min-height: 5.9375rem;    /* 95px */
-  max-height: 5.9375rem;    /* 95px */
+  width: 21rem;
+  height: 6rem;
+  max-height: 50%;
   display: flex; 
   justify-content: left; 
   align-items: center; 
@@ -83,13 +82,13 @@
   background-color: var(--pos-grey);
   box-shadow: var(--drop-shadow);
   color: black;
-  overflow: hidden;
   word-wrap: break-all;
-  padding-right: 1em; /* 16px slightly wider to account for emails that just barely dont line break and end up looking off*/
 }
 
-.p-finance--invite:hover, .p-finance--new-user:hover{
-  overflow-x: auto; /* hide overflow but make it scrollable for worst case scenarios like emails that are super long */
+.p-finance--invite .p-finance__info {
+  width: 60%;
+  text-align: center;
+  align-items: center;
 }
 
 .p-finance--invite .pic-container {
@@ -97,11 +96,45 @@
 }
 
 .p-finance--invite h1{
-  font-size: 1.5rem;        /* 24px */
+  font-size: clamp(1.5rem, 2vw, 1rem); /* minimum 1rem, dynamic in-between, maximum 1.5rem */
   font-weight: 600;
-  margin-bottom: 2.1875rem;  /* 35px */
 }
 
 .p-finance--invite.selected {
   border: 0.125rem solid var(--pos-yellow); /* 2px */
+}
+
+/*------------------DESKTOP STYLES OVER 1080p ---------------------*/
+
+@media screen and (min-width: 1920px) {
+  .finance-dashboard-desktop {
+    scale: 1.25;
+    margin-top: 5.75rem;
+}
+.finance-dashboard-desktop .home-header-desktop {
+    scale:0.895;
+    margin-top: 1.20rem;
+}
+
+.finance-dashboard-desktop .home-header__text-desktop {
+    scale: 0.90;
+}
+
+.finance-dashboard-desktop .home-header-desktop p {
+    font-size: 20px;
+}
+
+.finance-dashboard-desktop .p-event--desktop-header {
+    width:80rem;
+    max-width: 95%;
+}
+
+.finance-dashboard-desktop .finance-desktop-content {
+    width:70rem;
+    max-width: 95%;
+}
+.finance-dashboard-desktop .finance-items-cont {
+  width:70rem;
+  overflow-x: auto;
+}
 }

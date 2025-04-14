@@ -35,7 +35,7 @@
 }
 
 .dp__input {
-  background-color: var(--pos-grey);
+  background-color: var(--pos-grey) !important;
   color: black;
   font-size: 1.25rem;
   /* 20px */
@@ -54,6 +54,11 @@
   opacity: 1 !important;
   font-family: var(--font-primary) !important;
   font-weight: 400 !important;
+}
+
+.p-event__dates .dp__input {
+  background-color: transparent !important;
+  color: white;
 }
 
 /* #dob .dp__input {
