@@ -476,9 +476,9 @@
         border: 0.0625rem solid var(--pos-grey);
     }
 
-    .event-desktop-contentBox .event-desktop-contentBox__textField :hover{
+    /* .event-desktop-contentBox .event-desktop-contentBox__textField:hover{
         overflow-x: auto;
-    }
+    } */
 
     .event-desktop-container {
         background-color: var(--pos-inner-yellow);
