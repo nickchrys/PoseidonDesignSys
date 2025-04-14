@@ -689,16 +689,15 @@
 
     .event-page-desktop {
         scale: 1.25;
-        margin-top: 7rem;
+        margin-top: 5.75rem;
     }
     .event-page-desktop .home-header-desktop {
-        scale:0.89;
+        scale:0.895;
         margin-top: 1.20rem;
     }
 
     .event-page-desktop .home-header__text-desktop {
         scale: 0.90;
-        margin-top: 0.80rem;
     }
 
     .event-page-desktop .home-header-desktop p {
