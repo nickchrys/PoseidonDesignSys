@@ -187,7 +187,7 @@
 .p-flight--itinerary__info-container {
   width: 6.25rem;
   /* 100px */
-  height: 2.4375rem;
+  /* height: 2.4375rem; */
   /* 39px */
 }
 
@@ -306,7 +306,7 @@
   width: 3.625rem;
   /* 58px */
   padding-left: 1%;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
 }
