@@ -444,9 +444,10 @@
 
     .event-desktop-contentBox input {
         all: unset;
-        font-size: 3.5rem;
+        font-size: 3rem;
         color: var(--pos-white);
         margin-left: 1rem;
+        width: 97%;
     }
 
     .event-desktop-contentBox label {
@@ -460,7 +461,7 @@
         flex-direction: column;
         justify-content: end;
         align-items: left;
-        width: 80%;
+        width: 90%;
         height: 100%;
         background: var(--gradient-3);
         padding-left: 2rem;
@@ -476,10 +477,9 @@
 
     .event-desktop-contentBox .event-desktop-contentBox__textField {
         background: rgba(128, 128, 128, 0.4);
-        height: 4rem;
-        width: 20rem;
         overflow: hidden;
-        padding: 1.5rem;
+        padding: 1rem;
+        padding-left: 0;
         border-radius: 1.25rem;
         border: 0.0625rem solid var(--pos-grey);
     }
