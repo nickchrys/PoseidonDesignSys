@@ -727,7 +727,8 @@
 /*------------------DESKTOP STYLES OVER 1080p ---------------------*/
 
 @media screen and (min-width: 1920px) {
-  .itnry-container {
+  .p-flight--desktop-itinerary{
     scale: 1.15;
+    margin-top: 1rem;
   }
 }
