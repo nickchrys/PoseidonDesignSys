@@ -403,7 +403,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  flex-basis: 35%;
+  flex-basis: 45%;
 }
 
 .p-flight--desktop-block .p-flight__airline-logo {
@@ -428,10 +428,6 @@
   /* padding-top: 7%; */
   /* margin-top: 1%; */
   text-align: left;
-}
-
-.p-flight--desktop-block .p-flight__date {
-  padding-top: 2%;
 }
 
 .p-flight--desktop-block .p-flight__airline-text {
