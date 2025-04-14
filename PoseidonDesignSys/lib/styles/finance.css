@@ -101,19 +101,19 @@
   border: 0.125rem solid var(--pos-yellow); /* 2px */
 }
 
-/*------------------DESKTOP STYLES OVER 1080p ---------------------*/
+/* ------------------DESKTOP STYLES OVER 1080p ---------------------
 
 @media screen and (min-width: 1920px) {
   .finance-dashboard-desktop {
     scale: 1.25;
     margin-top: 5.75rem;
 }
-.finance-dashboard-desktop .home-header-desktop {
+/* .finance-dashboard-desktop .home-header-desktop {
     scale:0.895;
     margin-top: 1.20rem;
-}
+} */
 
-.finance-dashboard-desktop .home-header__text-desktop {
+/* .finance-dashboard-desktop .home-header__text-desktop {
     scale: 0.90;
 }
 
@@ -134,4 +134,4 @@
   width:70rem;
   overflow-x: auto;
 }
-}
+} */
