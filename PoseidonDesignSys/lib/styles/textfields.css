@@ -35,7 +35,7 @@
 }
 
 .dp__input {
-  background-color: var(--pos-grey);
+  background-color: var(--pos-grey) !important;
   color: black;
   font-size: 1.25rem;
   /* 20px */
