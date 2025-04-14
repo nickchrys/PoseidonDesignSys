@@ -273,7 +273,6 @@ const priceColor = computed(() => {
 
                 <h3 class="p-flight__type">{{ flightType }}</h3>
             </div>
-        </template>
 <!-- 
                 <div class="p-flight__flight-number-seats">
                     <div class="p-flight__left-wrapper">
@@ -281,17 +280,14 @@ const priceColor = computed(() => {
                         <h5 class="p-flight__seats">Gate {{ flightGate }}</h5>
                     </div>
                 </div>
-
-                <div class="p-flight__price-container">
-                    <h5 class="p-flight__class">{{ flightClass }}</h5>
-                    <h5 class="p-flight__price" :style="{ color: priceColor }">{{
-                        Math.round(price).toLocaleString('en-US',
-                            { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 }) }}
-                    </h5>
-                </div>
-
+ -->
+            <div class="p-flight__price-container">
+                <h5 class="p-flight__class">{{ flightClass }}</h5>
+                <h5 class="p-flight__price" :style="{ color: priceColor }">{{
+                    Math.round(price).toLocaleString('en-US',
+                        { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 }) }}
+                </h5>
             </div>
-
         </template>
 
         <template v-else-if="giveDesign.includes('p-flight--desktop-itinerary')">
@@ -375,7 +371,6 @@ const priceColor = computed(() => {
                     { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 }) }}</h5>
             </div>
         </template>
- -->
     </div>
 
 </template>
