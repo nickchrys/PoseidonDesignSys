@@ -634,4 +634,7 @@
         font-weight: 500;
     }
 
+    .editEvent-desktop-content .event-date-desktop {
+        width: 150%;
+    }
 }
