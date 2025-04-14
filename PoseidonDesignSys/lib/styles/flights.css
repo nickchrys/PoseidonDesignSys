@@ -730,9 +730,9 @@
 
 /*------------------DESKTOP STYLES OVER 1080p ---------------------*/
 
-@media screen and (min-width: 1920px) {
+/* @media screen and (min-width: 1920px) {
   .p-flight--desktop-itinerary{
     scale: 1.15;
     margin-top: 1rem;
   }
-}
+} */
