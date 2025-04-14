@@ -682,6 +682,10 @@
         /* align-items: unset; */
     }
 
+    #editView .home-header-desktop {
+        margin-top: 3.1rem;
+    }
+
     .event-form__desktop--topbar {
         width: 70rem;
         margin-left: -1rem;
