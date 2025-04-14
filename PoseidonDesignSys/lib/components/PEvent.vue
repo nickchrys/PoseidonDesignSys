@@ -178,7 +178,7 @@ const emitUpdate = (field, value) => {
                 Budget<br />{{ Math.round((currentBudget / maxBudget) * 100) }}%
             </h3>
             <div class="p-event__details">
-                <h2>{{ eventName }}</h2>
+                <h2 v-if="!giveDesign.includes('p-event--header-edit')">{{ eventName }}</h2>
                 <h4
                     v-if="!giveDesign.includes('p-event--header-edit') && !giveDesign.includes('p-event--desktop-header')">
                     {{ props.organization.name }}</h4>
