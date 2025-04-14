@@ -687,4 +687,31 @@
         margin-left: -1rem;
     }
 
+    .event-page-desktop {
+        scale: 1.25;
+        margin-top: 7rem;
+    }
+    .event-page-desktop .home-header-desktop {
+        scale:0.89;
+        margin-top: 1.20rem;
+    }
+
+    .event-page-desktop .home-header__text-desktop {
+        scale: 0.90;
+        margin-top: 0.80rem;
+    }
+
+    .event-page-desktop .home-header-desktop p {
+        font-size: 20px;
+    }
+
+    .event-page-desktop .p-event--desktop-header {
+        width:80rem;
+        max-width: 95%;
+    }
+
+    .event-page-desktop .event-desktop-content {
+        width:70rem;
+        max-width: 95%;
+    }
 }
