@@ -109,7 +109,7 @@
   margin-top: 3%;
 }
 
-/*------------------DESKTOP STYLES OVER 1080p ---------------------*/
+/* ------------------DESKTOP STYLES OVER 1080p ---------------------
 
 @media screen and (min-width: 1920px) {
   .finance-dashboard-desktop {
@@ -142,4 +142,4 @@
   width:70rem;
   overflow-x: auto;
 }
-}
+} */
