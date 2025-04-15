@@ -10,7 +10,7 @@ const props = defineProps({
     },
     name: {
         type: String,
-        default: 'FName LName'
+        default: ''
     },
     jobTitle: {
         type: String,
@@ -78,7 +78,8 @@ const formattedLabel = computed(() => {
                 <!-- <PButton design='gradient-small' label='Talk with me!' /> -->
             </div>
             <div class="p-finance__info">
-                <h1>{{ name }}</h1>
+                <h1 v-if="name">{{ name }}</h1>
+                <h1 v-else-if="!name">{{ email }}</h1>
                 <h2>{{ jobTitle }}</h2>
 
                 <div class="icon-container ">
