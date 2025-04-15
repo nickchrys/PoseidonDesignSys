@@ -704,7 +704,8 @@
   }
 
   .p-flight--finance {
-    width: fit-content;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .p-flight--itinerary {
