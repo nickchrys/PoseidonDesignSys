@@ -81,17 +81,17 @@
   word-wrap: break-all;
 }
 
-.p-finance--invite .p-finance__info {
+.p-finance--invite .p-finance__info, .p-finance--new-user .p-finance__info {
   width: 60%;
   text-align: center;
   align-items: center;
 }
 
-.p-finance--invite .pic-container {
+.p-finance--invite .pic-container,.p-finance--new-user .pic-container {
   padding-left: 0.625rem;   /* 10px */
 }
 
-.p-finance--invite h1{
+.p-finance--invite h1, .p-finance--new-user h1 {
   font-size: clamp(1.5rem, 2vw, 1rem); /* minimum 1rem, dynamic in-between, maximum 1.5rem */
   font-weight: 600;
 }
